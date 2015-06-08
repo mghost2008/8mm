@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self initNetwork];
+    [self initUserInfo];
     [self buildLayout];
     return YES;
 }
@@ -30,7 +32,57 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = self.rootTabController;
     [self.window makeKeyAndVisible];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(needLogin) name:NEED_LOGIN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeLoginView) name:CLOSE_LOGINVIEW object:nil];
+}
+
+//网络初始化
+- (void)initNetwork{
+    // 如果要检测网络状态的变化,必须用检测管理器的单例的startMonitoring
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    // 检测网络连接的单例,网络变化时的回调方法
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        self.networkStatusCode = status;
+        NSLog(@"网络：%@", self.networkStatusCode == 0 ? @"无连接":self.networkStatusCode == 1 ? @"3G" : self.networkStatusCode == 2 ? @"WIFI" : @"未知" );
+    }];
+    
+}
+
+- (void)initUserInfo{
+    self.userInfo = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"USER_INFO"]];
+    self.isLogin = [self.userInfo objectForKey:@"id"]?YES:NO;
+}
+
+- (MainTabBarControllerViewController *)rootTabController{
+    if (!_rootTabController) {
+        _rootTabController = [[MainTabBarControllerViewController alloc] init];
+    }
+    return _rootTabController;
+}
+
+- (LoginRootViewController *)loginController{
+    if (!_loginController) {
+        _loginController = [[LoginRootViewController alloc] init];
+    }
+    return _loginController;
+}
+
+- (void)needLogin{
+    [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
+    [self.window.rootViewController.view addSubview:self.loginController.view];
+    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear  animations:^{
+        [self.loginController.view setFrame:CGRectMake(0, 0, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
+    } completion:^(BOOL finish){}];
+}
+
+- (void)closeLoginView{
+    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear  animations:^{
+        [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
+    } completion:^(BOOL finish){
+        [self.loginController.view removeFromSuperview];
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

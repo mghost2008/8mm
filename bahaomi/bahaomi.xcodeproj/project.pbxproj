@@ -30,6 +30,13 @@
 		D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B681B25DCC400676882 /* FMDatabaseQueue.m */; };
 		D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B6B1B25DCC400676882 /* FMResultSet.m */; };
 		D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B721B25DFAF00676882 /* DBUtil.m */; };
+		D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B761B25E7AD00676882 /* MainTabBarControllerViewController.m */; };
+		D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B7A1B25E8E400676882 /* MyRootViewController.m */; };
+		D3E45B7E1B25E8FC00676882 /* IndexRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B7D1B25E8FC00676882 /* IndexRootViewController.m */; };
+		D3E45B811B25E92100676882 /* SubscribeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B801B25E92100676882 /* SubscribeRootViewController.m */; };
+		D3E45B841B25E93000676882 /* EventRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B831B25E93000676882 /* EventRootViewController.m */; };
+		D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B881B25EF1B00676882 /* LoginRootViewController.m */; };
+		D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -54,14 +61,6 @@
 		F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF491B259C3C0031C51D /* UIProgressView+AFNetworking.m */; };
 		F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF4B1B259C3C0031C51D /* UIRefreshControl+AFNetworking.m */; };
 		F671CF711B259C3C0031C51D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF4D1B259C3C0031C51D /* UIWebView+AFNetworking.m */; };
-		F671CF721B259C3C0031C51D /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F671CF4F1B259C3C0031C51D /* MJRefresh.bundle */; };
-		F671CF731B259C3C0031C51D /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF521B259C3C0031C51D /* MJRefreshBaseView.m */; };
-		F671CF741B259C3C0031C51D /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF541B259C3C0031C51D /* MJRefreshConst.m */; };
-		F671CF751B259C3C0031C51D /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF561B259C3C0031C51D /* MJRefreshFooterView.m */; };
-		F671CF761B259C3C0031C51D /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF581B259C3C0031C51D /* MJRefreshHeaderView.m */; };
-		F671CF771B259C3C0031C51D /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF5A1B259C3C0031C51D /* UIScrollView+MJExtension.m */; };
-		F671CF781B259C3C0031C51D /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF5C1B259C3C0031C51D /* UIScrollView+MJRefresh.m */; };
-		F671CF791B259C3C0031C51D /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF5E1B259C3C0031C51D /* UIView+MJExtension.m */; };
 		F671CF8A1B259F550031C51D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F671CF7B1B259F550031C51D /* libWeChatSDK.a */; };
 		F671CF8B1B259F550031C51D /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F671CF7F1B259F550031C51D /* libWeiboSDK.a */; };
 		F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F671CF871B259F550031C51D /* WeiboSDK.bundle */; };
@@ -116,6 +115,20 @@
 		D3E45B6B1B25DCC400676882 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		D3E45B711B25DFAF00676882 /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
 		D3E45B721B25DFAF00676882 /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
+		D3E45B751B25E7AD00676882 /* MainTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarControllerViewController.h; sourceTree = "<group>"; };
+		D3E45B761B25E7AD00676882 /* MainTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarControllerViewController.m; sourceTree = "<group>"; };
+		D3E45B791B25E8E400676882 /* MyRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRootViewController.h; sourceTree = "<group>"; };
+		D3E45B7A1B25E8E400676882 /* MyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRootViewController.m; sourceTree = "<group>"; };
+		D3E45B7C1B25E8FC00676882 /* IndexRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexRootViewController.h; sourceTree = "<group>"; };
+		D3E45B7D1B25E8FC00676882 /* IndexRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexRootViewController.m; sourceTree = "<group>"; };
+		D3E45B7F1B25E92100676882 /* SubscribeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeRootViewController.h; sourceTree = "<group>"; };
+		D3E45B801B25E92100676882 /* SubscribeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeRootViewController.m; sourceTree = "<group>"; };
+		D3E45B821B25E93000676882 /* EventRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRootViewController.h; sourceTree = "<group>"; };
+		D3E45B831B25E93000676882 /* EventRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRootViewController.m; sourceTree = "<group>"; };
+		D3E45B851B25EE3700676882 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		D3E45B871B25EF1B00676882 /* LoginRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRootViewController.h; sourceTree = "<group>"; };
+		D3E45B881B25EF1B00676882 /* LoginRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRootViewController.m; sourceTree = "<group>"; };
+		D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginRootViewController.xib; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -164,22 +177,6 @@
 		F671CF4B1B259C3C0031C51D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		F671CF4C1B259C3C0031C51D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		F671CF4D1B259C3C0031C51D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		F671CF4F1B259C3C0031C51D /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		F671CF501B259C3C0031C51D /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		F671CF511B259C3C0031C51D /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
-		F671CF521B259C3C0031C51D /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
-		F671CF531B259C3C0031C51D /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
-		F671CF541B259C3C0031C51D /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
-		F671CF551B259C3C0031C51D /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
-		F671CF561B259C3C0031C51D /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
-		F671CF571B259C3C0031C51D /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
-		F671CF581B259C3C0031C51D /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
-		F671CF591B259C3C0031C51D /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		F671CF5A1B259C3C0031C51D /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		F671CF5B1B259C3C0031C51D /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		F671CF5C1B259C3C0031C51D /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		F671CF5D1B259C3C0031C51D /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
-		F671CF5E1B259C3C0031C51D /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		F671CF7B1B259F550031C51D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		F671CF7C1B259F550031C51D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		F671CF7D1B259F550031C51D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -251,6 +248,7 @@
 				D3E45B3E1B25D7C700676882 /* Util.m */,
 				D3E45B711B25DFAF00676882 /* DBUtil.h */,
 				D3E45B721B25DFAF00676882 /* DBUtil.m */,
+				D3E45B851B25EE3700676882 /* Message.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -295,6 +293,42 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		D3E45B741B25E77E00676882 /* MainUI */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B861B25EEE800676882 /* LoginSubViews */,
+				D3E45B781B25E83500676882 /* MainTabSubViews */,
+				D3E45B751B25E7AD00676882 /* MainTabBarControllerViewController.h */,
+				D3E45B761B25E7AD00676882 /* MainTabBarControllerViewController.m */,
+			);
+			path = MainUI;
+			sourceTree = "<group>";
+		};
+		D3E45B781B25E83500676882 /* MainTabSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B791B25E8E400676882 /* MyRootViewController.h */,
+				D3E45B7A1B25E8E400676882 /* MyRootViewController.m */,
+				D3E45B7C1B25E8FC00676882 /* IndexRootViewController.h */,
+				D3E45B7D1B25E8FC00676882 /* IndexRootViewController.m */,
+				D3E45B7F1B25E92100676882 /* SubscribeRootViewController.h */,
+				D3E45B801B25E92100676882 /* SubscribeRootViewController.m */,
+				D3E45B821B25E93000676882 /* EventRootViewController.h */,
+				D3E45B831B25E93000676882 /* EventRootViewController.m */,
+			);
+			path = MainTabSubViews;
+			sourceTree = "<group>";
+		};
+		D3E45B861B25EEE800676882 /* LoginSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B871B25EF1B00676882 /* LoginRootViewController.h */,
+				D3E45B881B25EF1B00676882 /* LoginRootViewController.m */,
+				D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */,
+			);
+			path = LoginSubViews;
+			sourceTree = "<group>";
+		};
 		F671CEA21B259A230031C51D = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +351,7 @@
 		F671CEAD1B259A230031C51D /* bahaomi */ = {
 			isa = PBXGroup;
 			children = (
+				D3E45B741B25E77E00676882 /* MainUI */,
 				D3E45B391B25D7C700676882 /* Utils */,
 				F671CF241B259C3C0031C51D /* third */,
 				F671CEB21B259A230031C51D /* AppDelegate.h */,
@@ -362,7 +397,6 @@
 				F671CF7A1B259F550031C51D /* WeChatSDK */,
 				F671CF7E1B259F550031C51D /* WeiboSDK */,
 				F671CF251B259C3C0031C51D /* AFNetworking */,
-				F671CF4E1B259C3C0031C51D /* MJRefresh */,
 			);
 			path = third;
 			sourceTree = "<group>";
@@ -426,29 +460,6 @@
 				F671CF4D1B259C3C0031C51D /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
-		F671CF4E1B259C3C0031C51D /* MJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				F671CF4F1B259C3C0031C51D /* MJRefresh.bundle */,
-				F671CF501B259C3C0031C51D /* MJRefresh.h */,
-				F671CF511B259C3C0031C51D /* MJRefreshBaseView.h */,
-				F671CF521B259C3C0031C51D /* MJRefreshBaseView.m */,
-				F671CF531B259C3C0031C51D /* MJRefreshConst.h */,
-				F671CF541B259C3C0031C51D /* MJRefreshConst.m */,
-				F671CF551B259C3C0031C51D /* MJRefreshFooterView.h */,
-				F671CF561B259C3C0031C51D /* MJRefreshFooterView.m */,
-				F671CF571B259C3C0031C51D /* MJRefreshHeaderView.h */,
-				F671CF581B259C3C0031C51D /* MJRefreshHeaderView.m */,
-				F671CF591B259C3C0031C51D /* UIScrollView+MJExtension.h */,
-				F671CF5A1B259C3C0031C51D /* UIScrollView+MJExtension.m */,
-				F671CF5B1B259C3C0031C51D /* UIScrollView+MJRefresh.h */,
-				F671CF5C1B259C3C0031C51D /* UIScrollView+MJRefresh.m */,
-				F671CF5D1B259C3C0031C51D /* UIView+MJExtension.h */,
-				F671CF5E1B259C3C0031C51D /* UIView+MJExtension.m */,
-			);
-			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		F671CF7A1B259F550031C51D /* WeChatSDK */ = {
@@ -545,6 +556,7 @@
 				TargetAttributes = {
 					F671CEAA1B259A230031C51D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = KWMH6YM9LE;
 					};
 					F671CEBD1B259A230031C51D = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -576,10 +588,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */,
 				F671CF681B259C3C0031C51D /* LICENSE in Resources */,
 				F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
-				F671CF721B259C3C0031C51D /* MJRefresh.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,20 +614,17 @@
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
 				D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */,
-				F671CF731B259C3C0031C51D /* MJRefreshBaseView.m in Sources */,
-				F671CF771B259C3C0031C51D /* UIScrollView+MJExtension.m in Sources */,
 				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
 				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
 				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
+				D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */,
+				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
-				F671CF781B259C3C0031C51D /* UIScrollView+MJRefresh.m in Sources */,
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
 				D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */,
-				F671CF741B259C3C0031C51D /* MJRefreshConst.m in Sources */,
-				F671CF751B259C3C0031C51D /* MJRefreshFooterView.m in Sources */,
 				F671CF981B25A22D0031C51D /* SGActionView.m in Sources */,
 				F671CF661B259C3C0031C51D /* AFURLResponseSerialization.m in Sources */,
 				F671CF6D1B259C3C0031C51D /* UIButton+AFNetworking.m in Sources */,
@@ -628,10 +637,12 @@
 				F671CF711B259C3C0031C51D /* UIWebView+AFNetworking.m in Sources */,
 				F671CF991B25A22D0031C51D /* SGAlertMenu.m in Sources */,
 				F671CEB41B259A230031C51D /* AppDelegate.m in Sources */,
+				D3E45B7E1B25E8FC00676882 /* IndexRootViewController.m in Sources */,
 				F671CF6C1B259C3C0031C51D /* UIAlertView+AFNetworking.m in Sources */,
-				F671CF761B259C3C0031C51D /* MJRefreshHeaderView.m in Sources */,
+				D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */,
+				D3E45B841B25E93000676882 /* EventRootViewController.m in Sources */,
 				F671CF611B259C3C0031C51D /* AFHTTPSessionManager.m in Sources */,
-				F671CF791B259C3C0031C51D /* UIView+MJExtension.m in Sources */,
+				D3E45B811B25E92100676882 /* SubscribeRootViewController.m in Sources */,
 				F671CF6A1B259C3C0031C51D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F671CF601B259C3C0031C51D /* AFHTTPRequestOperationManager.m in Sources */,
 				F671CF9B1B25A22D0031C51D /* SGGridMenu.m in Sources */,
@@ -707,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -744,7 +755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -755,6 +766,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhiqiang yan (H54D52NNDC)";
 				INFOPLIST_FILE = bahaomi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -764,7 +776,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
-					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK/libWeiboSDK.a",
+					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -774,6 +786,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhiqiang yan (H54D52NNDC)";
 				INFOPLIST_FILE = bahaomi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -783,7 +796,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
-					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK/libWeiboSDK.a",
+					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
