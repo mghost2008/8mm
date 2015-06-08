@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3C1B25D7C700676882 /* NetworkUtil.m */; };
+		D3E45B401B25D7C700676882 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3E1B25D7C700676882 /* Util.m */; };
+		D3E45B421B25D8EB00676882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B411B25D8EB00676882 /* Foundation.framework */; };
+		D3E45B441B25D8F500676882 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B431B25D8F500676882 /* CoreText.framework */; };
+		D3E45B461B25D8FB00676882 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B451B25D8FB00676882 /* Security.framework */; };
+		D3E45B481B25D90200676882 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B471B25D90200676882 /* QuartzCore.framework */; };
+		D3E45B4A1B25D90900676882 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B491B25D90900676882 /* ImageIO.framework */; };
+		D3E45B4C1B25D91100676882 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B4B1B25D91100676882 /* UIKit.framework */; };
+		D3E45B4E1B25D91900676882 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B4D1B25D91900676882 /* CoreGraphics.framework */; };
+		D3E45B501B25D92000676882 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B4F1B25D92000676882 /* libsqlite3.0.dylib */; };
+		D3E45B521B25D92D00676882 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B511B25D92D00676882 /* libc++.dylib */; };
+		D3E45B541B25D93C00676882 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B531B25D93C00676882 /* libicucore.dylib */; };
+		D3E45B561B25D94400676882 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B551B25D94400676882 /* CoreLocation.framework */; };
+		D3E45B581B25D95200676882 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B571B25D95200676882 /* CoreTelephony.framework */; };
+		D3E45B5A1B25D95E00676882 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B591B25D95E00676882 /* MobileCoreServices.framework */; };
+		D3E45B5C1B25D96600676882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B5B1B25D96600676882 /* SystemConfiguration.framework */; };
+		D3E45B5E1B25D97000676882 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B5D1B25D97000676882 /* libz.dylib */; };
+		D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B621B25DCC400676882 /* FMDatabase.m */; };
+		D3E45B6D1B25DCC400676882 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B641B25DCC400676882 /* FMDatabaseAdditions.m */; };
+		D3E45B6E1B25DCC400676882 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B661B25DCC400676882 /* FMDatabasePool.m */; };
+		D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B681B25DCC400676882 /* FMDatabaseQueue.m */; };
+		D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B6B1B25DCC400676882 /* FMResultSet.m */; };
+		D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B721B25DFAF00676882 /* DBUtil.m */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -60,6 +83,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3E45B3A1B25D7C700676882 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		D3E45B3B1B25D7C700676882 /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
+		D3E45B3C1B25D7C700676882 /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtil.m; sourceTree = "<group>"; };
+		D3E45B3D1B25D7C700676882 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		D3E45B3E1B25D7C700676882 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		D3E45B411B25D8EB00676882 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D3E45B431B25D8F500676882 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D3E45B451B25D8FB00676882 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D3E45B471B25D90200676882 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D3E45B491B25D90900676882 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D3E45B4B1B25D91100676882 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D3E45B4D1B25D91900676882 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D3E45B4F1B25D92000676882 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		D3E45B511B25D92D00676882 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D3E45B531B25D93C00676882 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		D3E45B551B25D94400676882 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D3E45B571B25D95200676882 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D3E45B591B25D95E00676882 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D3E45B5B1B25D96600676882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D3E45B5D1B25D97000676882 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D3E45B611B25DCC400676882 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		D3E45B621B25DCC400676882 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		D3E45B631B25DCC400676882 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		D3E45B641B25DCC400676882 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		D3E45B651B25DCC400676882 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		D3E45B661B25DCC400676882 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		D3E45B671B25DCC400676882 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		D3E45B681B25DCC400676882 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D3E45B691B25DCC400676882 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		D3E45B6A1B25DCC400676882 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		D3E45B6B1B25DCC400676882 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		D3E45B711B25DFAF00676882 /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
+		D3E45B721B25DFAF00676882 /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +211,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E45B5E1B25D97000676882 /* libz.dylib in Frameworks */,
+				D3E45B5C1B25D96600676882 /* SystemConfiguration.framework in Frameworks */,
+				D3E45B5A1B25D95E00676882 /* MobileCoreServices.framework in Frameworks */,
+				D3E45B581B25D95200676882 /* CoreTelephony.framework in Frameworks */,
+				D3E45B561B25D94400676882 /* CoreLocation.framework in Frameworks */,
+				D3E45B541B25D93C00676882 /* libicucore.dylib in Frameworks */,
+				D3E45B521B25D92D00676882 /* libc++.dylib in Frameworks */,
+				D3E45B501B25D92000676882 /* libsqlite3.0.dylib in Frameworks */,
+				D3E45B4E1B25D91900676882 /* CoreGraphics.framework in Frameworks */,
+				D3E45B4C1B25D91100676882 /* UIKit.framework in Frameworks */,
+				D3E45B4A1B25D90900676882 /* ImageIO.framework in Frameworks */,
+				D3E45B481B25D90200676882 /* QuartzCore.framework in Frameworks */,
+				D3E45B461B25D8FB00676882 /* Security.framework in Frameworks */,
+				D3E45B441B25D8F500676882 /* CoreText.framework in Frameworks */,
+				D3E45B421B25D8EB00676882 /* Foundation.framework in Frameworks */,
 				F671CF8A1B259F550031C51D /* libWeChatSDK.a in Frameworks */,
 				F671CF8B1B259F550031C51D /* libWeiboSDK.a in Frameworks */,
 			);
@@ -170,9 +241,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3E45B391B25D7C700676882 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B3A1B25D7C700676882 /* Info.h */,
+				D3E45B3B1B25D7C700676882 /* NetworkUtil.h */,
+				D3E45B3C1B25D7C700676882 /* NetworkUtil.m */,
+				D3E45B3D1B25D7C700676882 /* Util.h */,
+				D3E45B3E1B25D7C700676882 /* Util.m */,
+				D3E45B711B25DFAF00676882 /* DBUtil.h */,
+				D3E45B721B25DFAF00676882 /* DBUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3E45B5F1B25D9A900676882 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B5D1B25D97000676882 /* libz.dylib */,
+				D3E45B5B1B25D96600676882 /* SystemConfiguration.framework */,
+				D3E45B591B25D95E00676882 /* MobileCoreServices.framework */,
+				D3E45B571B25D95200676882 /* CoreTelephony.framework */,
+				D3E45B551B25D94400676882 /* CoreLocation.framework */,
+				D3E45B531B25D93C00676882 /* libicucore.dylib */,
+				D3E45B511B25D92D00676882 /* libc++.dylib */,
+				D3E45B4F1B25D92000676882 /* libsqlite3.0.dylib */,
+				D3E45B4D1B25D91900676882 /* CoreGraphics.framework */,
+				D3E45B4B1B25D91100676882 /* UIKit.framework */,
+				D3E45B491B25D90900676882 /* ImageIO.framework */,
+				D3E45B471B25D90200676882 /* QuartzCore.framework */,
+				D3E45B451B25D8FB00676882 /* Security.framework */,
+				D3E45B431B25D8F500676882 /* CoreText.framework */,
+				D3E45B411B25D8EB00676882 /* Foundation.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		D3E45B601B25DCC400676882 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B611B25DCC400676882 /* FMDatabase.h */,
+				D3E45B621B25DCC400676882 /* FMDatabase.m */,
+				D3E45B631B25DCC400676882 /* FMDatabaseAdditions.h */,
+				D3E45B641B25DCC400676882 /* FMDatabaseAdditions.m */,
+				D3E45B651B25DCC400676882 /* FMDatabasePool.h */,
+				D3E45B661B25DCC400676882 /* FMDatabasePool.m */,
+				D3E45B671B25DCC400676882 /* FMDatabaseQueue.h */,
+				D3E45B681B25DCC400676882 /* FMDatabaseQueue.m */,
+				D3E45B691B25DCC400676882 /* FMDB.h */,
+				D3E45B6A1B25DCC400676882 /* FMResultSet.h */,
+				D3E45B6B1B25DCC400676882 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		F671CEA21B259A230031C51D = {
 			isa = PBXGroup;
 			children = (
+				D3E45B5F1B25D9A900676882 /* frameworks */,
 				F671CEAD1B259A230031C51D /* bahaomi */,
 				F671CEC11B259A230031C51D /* bahaomiTests */,
 				F671CEAC1B259A230031C51D /* Products */,
@@ -191,6 +317,7 @@
 		F671CEAD1B259A230031C51D /* bahaomi */ = {
 			isa = PBXGroup;
 			children = (
+				D3E45B391B25D7C700676882 /* Utils */,
 				F671CF241B259C3C0031C51D /* third */,
 				F671CEB21B259A230031C51D /* AppDelegate.h */,
 				F671CEB31B259A230031C51D /* AppDelegate.m */,
@@ -230,6 +357,7 @@
 		F671CF241B259C3C0031C51D /* third */ = {
 			isa = PBXGroup;
 			children = (
+				D3E45B601B25DCC400676882 /* fmdb */,
 				F671CF8D1B25A22D0031C51D /* SGActionView */,
 				F671CF7A1B259F550031C51D /* WeChatSDK */,
 				F671CF7E1B259F550031C51D /* WeiboSDK */,
@@ -473,23 +601,30 @@
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
+				D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */,
 				F671CF731B259C3C0031C51D /* MJRefreshBaseView.m in Sources */,
 				F671CF771B259C3C0031C51D /* UIScrollView+MJExtension.m in Sources */,
+				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
+				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
+				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
 				F671CF781B259C3C0031C51D /* UIScrollView+MJRefresh.m in Sources */,
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
+				D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */,
 				F671CF741B259C3C0031C51D /* MJRefreshConst.m in Sources */,
 				F671CF751B259C3C0031C51D /* MJRefreshFooterView.m in Sources */,
 				F671CF981B25A22D0031C51D /* SGActionView.m in Sources */,
 				F671CF661B259C3C0031C51D /* AFURLResponseSerialization.m in Sources */,
 				F671CF6D1B259C3C0031C51D /* UIButton+AFNetworking.m in Sources */,
+				D3E45B401B25D7C700676882 /* Util.m in Sources */,
 				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */,
+				D3E45B6D1B25DCC400676882 /* FMDatabaseAdditions.m in Sources */,
 				F671CF711B259C3C0031C51D /* UIWebView+AFNetworking.m in Sources */,
 				F671CF991B25A22D0031C51D /* SGAlertMenu.m in Sources */,
 				F671CEB41B259A230031C51D /* AppDelegate.m in Sources */,
@@ -502,6 +637,7 @@
 				F671CF9B1B25A22D0031C51D /* SGGridMenu.m in Sources */,
 				F671CF621B259C3C0031C51D /* AFNetworkReachabilityManager.m in Sources */,
 				F671CEB11B259A230031C51D /* main.m in Sources */,
+				D3E45B6E1B25DCC400676882 /* FMDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +762,10 @@
 					"$(PROJECT_DIR)/bahaomi/third/WeChatSDK",
 					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK",
 				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK/libWeiboSDK.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -640,6 +780,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/bahaomi/third/WeChatSDK",
 					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/bahaomi/third/WeiboSDK/libWeiboSDK/libWeiboSDK.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -698,6 +842,7 @@
 				F671CECA1B259A230031C51D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F671CECB1B259A230031C51D /* Build configuration list for PBXNativeTarget "bahaomiTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +851,7 @@
 				F671CECD1B259A230031C51D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
