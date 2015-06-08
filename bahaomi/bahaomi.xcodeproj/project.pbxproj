@@ -42,6 +42,11 @@
 		F671CF8A1B259F550031C51D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F671CF7B1B259F550031C51D /* libWeChatSDK.a */; };
 		F671CF8B1B259F550031C51D /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F671CF7F1B259F550031C51D /* libWeiboSDK.a */; };
 		F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F671CF871B259F550031C51D /* WeiboSDK.bundle */; };
+		F671CF981B25A22D0031C51D /* SGActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF8F1B25A22D0031C51D /* SGActionView.m */; };
+		F671CF991B25A22D0031C51D /* SGAlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF911B25A22D0031C51D /* SGAlertMenu.m */; };
+		F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF931B25A22D0031C51D /* SGBaseMenu.m */; };
+		F671CF9B1B25A22D0031C51D /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF951B25A22D0031C51D /* SGGridMenu.m */; };
+		F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF971B25A22D0031C51D /* SGSheetMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +138,16 @@
 		F671CF871B259F550031C51D /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		F671CF881B259F550031C51D /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		F671CF891B259F550031C51D /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
+		F671CF8E1B25A22D0031C51D /* SGActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGActionView.h; sourceTree = "<group>"; };
+		F671CF8F1B25A22D0031C51D /* SGActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGActionView.m; sourceTree = "<group>"; };
+		F671CF901B25A22D0031C51D /* SGAlertMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAlertMenu.h; sourceTree = "<group>"; };
+		F671CF911B25A22D0031C51D /* SGAlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAlertMenu.m; sourceTree = "<group>"; };
+		F671CF921B25A22D0031C51D /* SGBaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBaseMenu.h; sourceTree = "<group>"; };
+		F671CF931B25A22D0031C51D /* SGBaseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBaseMenu.m; sourceTree = "<group>"; };
+		F671CF941B25A22D0031C51D /* SGGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridMenu.h; sourceTree = "<group>"; };
+		F671CF951B25A22D0031C51D /* SGGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridMenu.m; sourceTree = "<group>"; };
+		F671CF961B25A22D0031C51D /* SGSheetMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSheetMenu.h; sourceTree = "<group>"; };
+		F671CF971B25A22D0031C51D /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +230,7 @@
 		F671CF241B259C3C0031C51D /* third */ = {
 			isa = PBXGroup;
 			children = (
+				F671CF8D1B25A22D0031C51D /* SGActionView */,
 				F671CF7A1B259F550031C51D /* WeChatSDK */,
 				F671CF7E1B259F550031C51D /* WeiboSDK */,
 				F671CF251B259C3C0031C51D /* AFNetworking */,
@@ -335,6 +351,23 @@
 			path = WeiboSDK;
 			sourceTree = "<group>";
 		};
+		F671CF8D1B25A22D0031C51D /* SGActionView */ = {
+			isa = PBXGroup;
+			children = (
+				F671CF8E1B25A22D0031C51D /* SGActionView.h */,
+				F671CF8F1B25A22D0031C51D /* SGActionView.m */,
+				F671CF901B25A22D0031C51D /* SGAlertMenu.h */,
+				F671CF911B25A22D0031C51D /* SGAlertMenu.m */,
+				F671CF921B25A22D0031C51D /* SGBaseMenu.h */,
+				F671CF931B25A22D0031C51D /* SGBaseMenu.m */,
+				F671CF941B25A22D0031C51D /* SGGridMenu.h */,
+				F671CF951B25A22D0031C51D /* SGGridMenu.m */,
+				F671CF961B25A22D0031C51D /* SGSheetMenu.h */,
+				F671CF971B25A22D0031C51D /* SGSheetMenu.m */,
+			);
+			path = SGActionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,6 +475,7 @@
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
 				F671CF731B259C3C0031C51D /* MJRefreshBaseView.m in Sources */,
 				F671CF771B259C3C0031C51D /* UIScrollView+MJExtension.m in Sources */,
+				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
@@ -449,12 +483,15 @@
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
 				F671CF741B259C3C0031C51D /* MJRefreshConst.m in Sources */,
 				F671CF751B259C3C0031C51D /* MJRefreshFooterView.m in Sources */,
+				F671CF981B25A22D0031C51D /* SGActionView.m in Sources */,
 				F671CF661B259C3C0031C51D /* AFURLResponseSerialization.m in Sources */,
 				F671CF6D1B259C3C0031C51D /* UIButton+AFNetworking.m in Sources */,
+				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */,
 				F671CF711B259C3C0031C51D /* UIWebView+AFNetworking.m in Sources */,
+				F671CF991B25A22D0031C51D /* SGAlertMenu.m in Sources */,
 				F671CEB41B259A230031C51D /* AppDelegate.m in Sources */,
 				F671CF6C1B259C3C0031C51D /* UIAlertView+AFNetworking.m in Sources */,
 				F671CF761B259C3C0031C51D /* MJRefreshHeaderView.m in Sources */,
@@ -462,6 +499,7 @@
 				F671CF791B259C3C0031C51D /* UIView+MJExtension.m in Sources */,
 				F671CF6A1B259C3C0031C51D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F671CF601B259C3C0031C51D /* AFHTTPRequestOperationManager.m in Sources */,
+				F671CF9B1B25A22D0031C51D /* SGGridMenu.m in Sources */,
 				F671CF621B259C3C0031C51D /* AFNetworkReachabilityManager.m in Sources */,
 				F671CEB11B259A230031C51D /* main.m in Sources */,
 			);
