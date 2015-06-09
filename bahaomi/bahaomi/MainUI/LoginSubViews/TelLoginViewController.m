@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self buildLayout];
-    NSLog(@"%f  %f ", self.view.frame.origin.x, self.view.frame.origin.y);
 }
 
 - (void)buildLayout{
@@ -25,6 +24,18 @@
     [self.pwdField setLeftViewMode:UITextFieldViewModeAlways];
     [self.telNumField setLeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"telnum"]]];
     [self.pwdField setLeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"password"]]];
+    [self.navigationItem setLeftBarButtonItem:self.closeItem];
+}
+
+- (UIBarButtonItem *)closeItem{
+    if (!_closeItem) {
+        _closeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backimg"] style:UIBarButtonItemStylePlain target:self action:@selector(closeTelLoginView)];
+    }
+    return _closeItem;
+}
+
+- (void)closeTelLoginView{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

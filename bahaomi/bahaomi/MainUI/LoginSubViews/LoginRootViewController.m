@@ -26,6 +26,13 @@
     return _telLoginController;
 }
 
+- (RegTelViewController *) regTelControler{
+    if (!_regTelControler) {
+        _regTelControler = [[RegTelViewController alloc] init];
+    }
+    return _regTelControler;
+}
+
 - (UINavigationController *) loginNav{
     if (!_loginNav) {
         _loginNav = [[UINavigationController alloc] initWithRootViewController:self.telLoginController];
@@ -33,20 +40,17 @@
     return  _loginNav;
 }
 
+- (UINavigationController *) regNav{
+    if (!_regNav) {
+        _regNav = [[UINavigationController alloc] initWithRootViewController:self.regTelControler];
+    }
+    return _regNav;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)closeLoginView:(UIButton *)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
@@ -64,6 +68,8 @@
 }
 
 - (IBAction)regUser:(UIButton *)sender {
+    [self.regTelControler setTitle:@"注册"];
+    [self presentViewController:self.regNav animated:YES completion:nil];
 }
 
 @end

@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Message.h"
 #import "TelLoginViewController.h"
+#import "RegTelViewController.h"
 
 @interface LoginRootViewController : UIViewController
 
 @property (strong, nonatomic) TelLoginViewController *telLoginController;
+@property (strong, nonatomic) RegTelViewController *regTelControler;
 @property (strong, nonatomic) UINavigationController *loginNav;
+@property (strong, nonatomic) UINavigationController *regNav;
 
 - (IBAction)closeLoginView:(UIButton *)sender;
 - (IBAction)telLogin:(UIButton *)sender;

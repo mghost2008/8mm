@@ -1,5 +1,5 @@
 //
-//  TelLoginViewController.h
+//  RegPwdViewController.h
 //  bahaomi
 //
 //  Created by  王国众 on 15/6/9.
@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BHM_TextField.h"
 
-@interface TelLoginViewController : UIViewController
+@interface RegPwdViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet BHM_TextField *telNumField;
 @property (weak, nonatomic) IBOutlet BHM_TextField *pwdField;
-@property (strong, nonatomic) UIBarButtonItem *closeItem;
 
 @end
