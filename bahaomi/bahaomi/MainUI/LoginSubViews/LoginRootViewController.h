@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "Message.h"
+#import "TelLoginViewController.h"
 
 @interface LoginRootViewController : UIViewController
+
+@property (strong, nonatomic) TelLoginViewController *telLoginController;
+@property (strong, nonatomic) UINavigationController *loginNav;
 
 - (IBAction)closeLoginView:(UIButton *)sender;
 - (IBAction)telLogin:(UIButton *)sender;
 - (IBAction)weiboLogin:(UIButton *)sender;
 - (IBAction)weixinLogin:(UIButton *)sender;
 - (IBAction)regUser:(UIButton *)sender;
-
 
 @end

@@ -37,6 +37,9 @@
 		D3E45B841B25E93000676882 /* EventRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B831B25E93000676882 /* EventRootViewController.m */; };
 		D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B881B25EF1B00676882 /* LoginRootViewController.m */; };
 		D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */; };
+		D3E45B8F1B26652300676882 /* BHM_TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B8E1B26652300676882 /* BHM_TextField.m */; };
+		D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B911B26665400676882 /* TelLoginViewController.m */; };
+		D3E45B941B26665400676882 /* TelLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B921B26665400676882 /* TelLoginViewController.xib */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -129,6 +132,11 @@
 		D3E45B871B25EF1B00676882 /* LoginRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRootViewController.h; sourceTree = "<group>"; };
 		D3E45B881B25EF1B00676882 /* LoginRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRootViewController.m; sourceTree = "<group>"; };
 		D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginRootViewController.xib; sourceTree = "<group>"; };
+		D3E45B8D1B26652300676882 /* BHM_TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHM_TextField.h; sourceTree = "<group>"; };
+		D3E45B8E1B26652300676882 /* BHM_TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHM_TextField.m; sourceTree = "<group>"; };
+		D3E45B901B26665400676882 /* TelLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelLoginViewController.h; sourceTree = "<group>"; };
+		D3E45B911B26665400676882 /* TelLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelLoginViewController.m; sourceTree = "<group>"; };
+		D3E45B921B26665400676882 /* TelLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelLoginViewController.xib; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -296,6 +304,7 @@
 		D3E45B741B25E77E00676882 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3E45B8C1B2664EF00676882 /* Component */,
 				D3E45B861B25EEE800676882 /* LoginSubViews */,
 				D3E45B781B25E83500676882 /* MainTabSubViews */,
 				D3E45B751B25E7AD00676882 /* MainTabBarControllerViewController.h */,
@@ -325,8 +334,20 @@
 				D3E45B871B25EF1B00676882 /* LoginRootViewController.h */,
 				D3E45B881B25EF1B00676882 /* LoginRootViewController.m */,
 				D3E45B891B25EF1B00676882 /* LoginRootViewController.xib */,
+				D3E45B901B26665400676882 /* TelLoginViewController.h */,
+				D3E45B911B26665400676882 /* TelLoginViewController.m */,
+				D3E45B921B26665400676882 /* TelLoginViewController.xib */,
 			);
 			path = LoginSubViews;
+			sourceTree = "<group>";
+		};
+		D3E45B8C1B2664EF00676882 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D3E45B8D1B26652300676882 /* BHM_TextField.h */,
+				D3E45B8E1B26652300676882 /* BHM_TextField.m */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		F671CEA21B259A230031C51D = {
@@ -590,6 +611,7 @@
 			files = (
 				D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */,
 				F671CF681B259C3C0031C51D /* LICENSE in Resources */,
+				D3E45B941B26665400676882 /* TelLoginViewController.xib in Resources */,
 				F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
@@ -611,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
+				D3E45B8F1B26652300676882 /* BHM_TextField.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
 				D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */,
@@ -618,6 +641,7 @@
 				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
+				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
 				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
 				D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */,
 				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,

@@ -19,6 +19,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (TelLoginViewController *) telLoginController{
+    if (!_telLoginController) {
+        _telLoginController = [[TelLoginViewController alloc] init];
+    }
+    return _telLoginController;
+}
+
+- (UINavigationController *) loginNav{
+    if (!_loginNav) {
+        _loginNav = [[UINavigationController alloc] initWithRootViewController:self.telLoginController];
+    }
+    return  _loginNav;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,6 +53,8 @@
 }
 
 - (IBAction)telLogin:(UIButton *)sender {
+    [self.telLoginController setTitle:@"手机号登陆"];
+    [self presentViewController:self.loginNav animated:YES completion:nil];
 }
 
 - (IBAction)weiboLogin:(UIButton *)sender {
