@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Info.h"
 #import "Message.h"
 #import "TelLoginViewController.h"
 #import "RegTelViewController.h"

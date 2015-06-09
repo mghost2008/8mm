@@ -7,6 +7,7 @@
 //
 
 #import "LoginRootViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginRootViewController ()
 
@@ -62,9 +63,24 @@
 }
 
 - (IBAction)weiboLogin:(UIButton *)sender {
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = WEIBO_APP_REDIRECT_URI;
+    request.scope = @"all";
+    [WeiboSDK sendRequest:request];
 }
 
 - (IBAction)weixinLogin:(UIButton *)sender {
+    //构造SendAuthReq结构体
+    SendAuthReq* req =[[SendAuthReq alloc ] init ];
+    req.scope = @"snsapi_userinfo" ;
+    req.state = @"123" ;
+    //第三方向微信终端发送一个SendAuthReq消息结构
+    //检测是否安装微信
+    if ([WXApi isWXAppInstalled]) {
+        [WXApi sendReq:req];
+    }else{
+        [WXApi sendAuthReq:req viewController:self delegate:(AppDelegate *)[[UIApplication sharedApplication] delegate] ];
+    }
 }
 
 - (IBAction)regUser:(UIButton *)sender {

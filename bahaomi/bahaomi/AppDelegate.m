@@ -137,4 +137,59 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma weixinSDK delegate method
+- (void) onReq:(BaseReq *)req{}
+
+- (void) onResp:(BaseResp *)resp {
+    if([resp isKindOfClass:[SendAuthResp class]])
+    {
+        SendAuthResp *temp = (SendAuthResp*)resp;
+        
+        NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
+        NSString *strMsg = [NSString stringWithFormat:@"code:%@,state:%@,errcode:%d", temp.code, temp.state, temp.errCode];
+        NSLog(@"%@%@", strTitle, strMsg);
+        [self getAccess_token:temp.code];
+    }
+}
+
+-(void)getAccess_token:(NSString *)code{
+    NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",WEIXIN_APP_ID,WEIXIN_APP_SECRET,code];
+    NSURL *zoneUrl = [NSURL URLWithString:url];
+    NSString *zoneStr = [NSString stringWithContentsOfURL:zoneUrl encoding:NSUTF8StringEncoding error:nil];
+    NSData *data = [zoneStr dataUsingEncoding:NSUTF8StringEncoding];
+    if (data) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@", dic);
+        //保持用户的sina微博信息,设置登陆成功
+        [self.userInfo setValue:dic forKey:@"wx_info"];
+        self.isLogin = YES;
+        //持久化用户信息
+        [self.userDefaults setObject:self.userInfo forKey:@"USER_INFO"];
+        [self.userDefaults synchronize];
+        [self postMessage];
+    }
+}
+
+#pragma weiboSDK delegate method
+- (void) didReceiveWeiboResponse:(WBBaseResponse *)response{
+    
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+        NSString *title = NSLocalizedString(@"认证结果", nil);
+        NSString *message = [NSString stringWithFormat:@"%@: %d\nresponse.userId: %@\nresponse.accessToken: %@\n%@: %@\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken],  NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil), response.requestUserInfo];
+        NSLog(@"%@",title);
+        NSLog(@"%@",message);
+        [self performSelectorOnMainThread:@selector(loginSuccess) withObject:self waitUntilDone:NO];
+        //保持用户的sina微博信息,设置登陆成功
+        [self.userInfo setValue:response.userInfo forKey:@"wb_info"];
+        self.isLogin = YES;
+        //持久化用户信息
+        [self.userDefaults setObject:self.userInfo forKey:@"USER_INFO"];
+        [self.userDefaults synchronize];
+        [self postMessage];
+    }
+}
+
+- (void) didReceiveWeiboRequest:(WBBaseRequest *)request{}
+
 @end

@@ -9,7 +9,7 @@
 #import "MainTabBarControllerViewController.h"
 #import "LoginRootViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate,WXApiDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MainTabBarControllerViewController *rootTabController;
