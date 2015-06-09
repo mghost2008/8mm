@@ -46,6 +46,9 @@
 		D3E45B9E1B267CBE00676882 /* RegPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B9C1B267CBE00676882 /* RegPwdViewController.xib */; };
 		D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */; };
 		D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */; };
+		D3E4D4D61B275C4F00BF2942 /* ViewPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4D51B275C4F00BF2942 /* ViewPageController.m */; };
+		D3E4D4D91B275D3A00BF2942 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4D81B275D3A00BF2942 /* NewsListViewController.m */; };
+		D3E4D4DC1B275D5C00BF2942 /* DynamicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4DB1B275D5C00BF2942 /* DynamicListViewController.m */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -153,6 +156,12 @@
 		D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMainViewController.m; sourceTree = "<group>"; };
 		D3E4D4CE1B27585500BF2942 /* MySettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingsViewController.h; sourceTree = "<group>"; };
 		D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySettingsViewController.m; sourceTree = "<group>"; };
+		D3E4D4D41B275C4F00BF2942 /* ViewPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPageController.h; sourceTree = "<group>"; };
+		D3E4D4D51B275C4F00BF2942 /* ViewPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPageController.m; sourceTree = "<group>"; };
+		D3E4D4D71B275D3A00BF2942 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		D3E4D4D81B275D3A00BF2942 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		D3E4D4DA1B275D5C00BF2942 /* DynamicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicListViewController.h; sourceTree = "<group>"; };
+		D3E4D4DB1B275D5C00BF2942 /* DynamicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicListViewController.m; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -320,6 +329,9 @@
 		D3E45B741B25E77E00676882 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3E4D4D31B275C1900BF2942 /* Index */,
+				D3E4D4D21B275C0D00BF2942 /* Subscribe */,
+				D3E4D4D11B275BFE00BF2942 /* Event */,
 				D3E4D4CA1B27541300BF2942 /* My */,
 				D3E45B8C1B2664EF00676882 /* Component */,
 				D3E45B861B25EEE800676882 /* LoginSubViews */,
@@ -382,6 +394,33 @@
 				D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */,
 			);
 			path = My;
+			sourceTree = "<group>";
+		};
+		D3E4D4D11B275BFE00BF2942 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D3E4D4D21B275C0D00BF2942 /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subscribe;
+			sourceTree = "<group>";
+		};
+		D3E4D4D31B275C1900BF2942 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				D3E4D4D41B275C4F00BF2942 /* ViewPageController.h */,
+				D3E4D4D51B275C4F00BF2942 /* ViewPageController.m */,
+				D3E4D4D71B275D3A00BF2942 /* NewsListViewController.h */,
+				D3E4D4D81B275D3A00BF2942 /* NewsListViewController.m */,
+				D3E4D4DA1B275D5C00BF2942 /* DynamicListViewController.h */,
+				D3E4D4DB1B275D5C00BF2942 /* DynamicListViewController.m */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 		F671CEA21B259A230031C51D = {
@@ -681,8 +720,10 @@
 				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
 				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
 				D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */,
+				D3E4D4D61B275C4F00BF2942 /* ViewPageController.m in Sources */,
 				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
+				D3E4D4D91B275D3A00BF2942 /* NewsListViewController.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
 				D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */,
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
@@ -704,6 +745,7 @@
 				F671CF6C1B259C3C0031C51D /* UIAlertView+AFNetworking.m in Sources */,
 				D3E45B9D1B267CBE00676882 /* RegPwdViewController.m in Sources */,
 				D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */,
+				D3E4D4DC1B275D5C00BF2942 /* DynamicListViewController.m in Sources */,
 				D3E45B841B25E93000676882 /* EventRootViewController.m in Sources */,
 				F671CF611B259C3C0031C51D /* AFHTTPSessionManager.m in Sources */,
 				D3E45B811B25E92100676882 /* SubscribeRootViewController.m in Sources */,

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewPageController.h"
+#import "NewsListViewController.h"
+#import "DynamicListViewController.h"
 
 @interface IndexRootViewController : UIViewController
+
+@property (strong, nonatomic) ViewPageController *viewPage;
 
 @end

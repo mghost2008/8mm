@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self buildLayout];
+}
+
+- (void) buildLayout{
+    [self.view addSubview:self.viewPage.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (ViewPageController *) viewPage{
+    if (!_viewPage) {
+        _viewPage = [[ViewPageController alloc] init];
+        NewsListViewController *hotnews = [[NewsListViewController alloc] init];
+        hotnews.title = @"热文推荐";
+        DynamicListViewController *dynamicnews = [[DynamicListViewController alloc] init];
+        dynamicnews.title = @"行业动态";
+        [_viewPage addChildViewController:hotnews];
+        [_viewPage addChildViewController:dynamicnews];
+    }
+    return _viewPage;
 }
-*/
 
 @end
