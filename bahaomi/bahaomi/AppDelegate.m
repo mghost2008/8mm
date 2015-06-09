@@ -18,6 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initNetwork];
     [self initUserInfo];
+    [self initWeibo];
+    [self initWeixin];
     [self buildLayout];
     return YES;
 }
@@ -53,6 +55,17 @@
 - (void)initUserInfo{
     self.userInfo = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"USER_INFO"]];
     self.isLogin = [self.userInfo objectForKey:@"id"]?YES:NO;
+}
+
+//初始化微博
+- (void) initWeibo{
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:WEIBO_APP_KEY];
+}
+
+//初始化微信
+- (void) initWeixin{
+    [WXApi registerApp:WEIXIN_APP_ID];
 }
 
 - (MainTabBarControllerViewController *)rootTabController{
