@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewPageController">
+            <connections>
+                <outlet property="hotNewsBtn" destination="2ZB-ty-tbw" id="E8P-0m-J9G"/>
+                <outlet property="topView" destination="Wte-En-Aij" id="51A-ll-gPg"/>
+                <outlet property="tradeNewsBtn" destination="edv-L8-Hmv" id="DMy-Sz-48m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-En-Aij">
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-KC-fpe">
+                            <rect key="frame" x="159" y="10" width="2" height="20"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="Xwa-jc-f3M"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZB-ty-tbw">
+                            <rect key="frame" x="5" y="0.0" width="149" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="Qc5-8Z-JoY"/>
+                            </constraints>
+                            <state key="normal" title="热文推荐">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="hotNewsBtnClick:" destination="-1" eventType="touchUpInside" id="u72-4V-qFu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edv-L8-Hmv">
+                            <rect key="frame" x="166" y="0.0" width="149" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="4XE-1d-WX0"/>
+                            </constraints>
+                            <state key="normal" title="行业动态">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tradeNewsBtnClick:" destination="-1" eventType="touchUpInside" id="Ycn-Tp-q17"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="edv-L8-Hmv" firstAttribute="leading" secondItem="dlg-KC-fpe" secondAttribute="trailing" constant="5" id="1AX-t7-ont"/>
+                        <constraint firstItem="edv-L8-Hmv" firstAttribute="top" secondItem="Wte-En-Aij" secondAttribute="top" id="3UD-FH-tM9"/>
+                        <constraint firstItem="2ZB-ty-tbw" firstAttribute="leading" secondItem="Wte-En-Aij" secondAttribute="leading" constant="5" id="8Jx-QT-eh5"/>
+                        <constraint firstAttribute="height" constant="44" id="A5t-ha-eD7"/>
+                        <constraint firstItem="dlg-KC-fpe" firstAttribute="leading" secondItem="2ZB-ty-tbw" secondAttribute="trailing" constant="5" id="PWf-Fw-0hI"/>
+                        <constraint firstItem="2ZB-ty-tbw" firstAttribute="top" secondItem="Wte-En-Aij" secondAttribute="top" id="UgH-zr-g8K"/>
+                        <constraint firstAttribute="centerX" secondItem="dlg-KC-fpe" secondAttribute="centerX" id="dI5-uY-0BG"/>
+                        <constraint firstItem="dlg-KC-fpe" firstAttribute="top" secondItem="Wte-En-Aij" secondAttribute="top" constant="10" id="h5S-bx-x5T"/>
+                        <constraint firstAttribute="bottom" secondItem="dlg-KC-fpe" secondAttribute="bottom" constant="14" id="ieX-eq-Nl4"/>
+                        <constraint firstAttribute="trailing" secondItem="edv-L8-Hmv" secondAttribute="trailing" constant="5" id="wFF-LQ-tNp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Wte-En-Aij" secondAttribute="trailing" id="1no-RG-Jyc"/>
+                <constraint firstItem="Wte-En-Aij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="R61-pX-gGg"/>
+                <constraint firstItem="Wte-En-Aij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gHD-km-ABI"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="259"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

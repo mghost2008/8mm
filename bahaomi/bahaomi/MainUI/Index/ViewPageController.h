@@ -10,6 +10,11 @@
 
 @interface ViewPageController : UIViewController
 
-@property (nonatomic, strong) UINavigationController *navController;
+@property (strong, nonatomic) UIImageView *buttomImg;
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIButton *hotNewsBtn;
+@property (weak, nonatomic) IBOutlet UIButton *tradeNewsBtn;
+- (IBAction)hotNewsBtnClick:(UIButton *)sender;
+- (IBAction)tradeNewsBtnClick:(UIButton *)sender;
 
 @end
