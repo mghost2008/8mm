@@ -54,7 +54,7 @@
 
 - (void)initUserInfo{
     self.userInfo = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"USER_INFO"]];
-    self.isLogin = [self.userInfo objectForKey:@"id"]?YES:NO;
+    _isLogin = [self.userInfo objectForKey:@"id"]?YES:NO;
 }
 
 //初始化微博
@@ -91,11 +91,28 @@
 }
 
 - (void)closeLoginView{
-    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear  animations:^{
+    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
         [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
     } completion:^(BOOL finish){
         [self.loginController.view removeFromSuperview];
+        if (self.isLogin) {
+            [self.rootTabController setSelectedIndex:3];
+        }
     }];
+}
+
+- (void)setIsLogin:(BOOL)isLogin{
+    _isLogin = isLogin;
+    if (_isLogin) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:USER_LOGINED object:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }else{
+        [[NSNotificationCenter defaultCenter] postNotificationName:USER_LOGOUT object:nil];
+        self.userInfo = [NSMutableDictionary dictionary];
+        [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

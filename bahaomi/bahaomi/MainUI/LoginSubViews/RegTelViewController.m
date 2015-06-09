@@ -43,7 +43,15 @@
 }
 
 - (void)rightBtnClick:(UIBarButtonItem *)item{
-    [self.navigationController pushViewController:self.pwdController animated:YES];
+    NSString *telnumber = self.telNum.text;
+    if ([telnumber length] > 0) {
+        [self.pwdController setTelNum:telnumber];
+        [self.navigationController pushViewController:self.pwdController animated:YES];
+    }else{
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入电话号码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertview show];
+    }
+    
 }
 
 - (UIBarButtonItem *)closeItem{

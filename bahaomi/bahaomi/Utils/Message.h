@@ -10,6 +10,8 @@
 #define bahaomi_Message_h
 
 #define NEED_LOGIN @"Need_Login"
+#define USER_LOGINED @"User_Logined"
+#define USER_LOGOUT @"User_Logout"
 #define CLOSE_LOGINVIEW @"Close_Login_View"
 
 #endif

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BHM_TextField.h"
+#import "NetworkUtil.h"
 
 @interface RegPwdViewController : UIViewController
 
+@property (strong, nonatomic) UIBarButtonItem *complateBtn;
 @property (weak, nonatomic) IBOutlet BHM_TextField *pwdField;
+@property (strong, nonatomic) NSString *telNum;
 
 @end

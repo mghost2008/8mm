@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSMutableDictionary *userInfo;
 //网络状态
 @property NSInteger networkStatusCode;
-@property BOOL isLogin;
+@property (nonatomic) BOOL isLogin;
 @property (strong, nonatomic) LoginRootViewController *loginController;
 
 @end
