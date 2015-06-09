@@ -35,13 +35,13 @@
 }
 
 - (void)setTelNum:(NSString *)telNum{
-//    _telNum = telNum;
-//    NSString *vcodeUrl = [NSString stringWithFormat:REG_TEL_REQUEST_VCODE,_telNum];
-//    [NetworkUtil JSONDataWithUrl:vcodeUrl success:^(id json){
-//        NSLog(@"---------------短信已经下发");
-//    }fail:^(void){
-//        NSLog(@"---------------短信下发失败");
-//    }];
+    _telNum = telNum;
+    NSString *vcodeUrl = [NSString stringWithFormat:REG_TEL_REQUEST_VCODE,_telNum];
+    [NetworkUtil JSONDataWithUrl:vcodeUrl success:^(id json){
+        NSLog(@"---------------短信已经下发");
+    }fail:^(void){
+        NSLog(@"---------------短信下发失败");
+    }];
 }
 
 - (void)complateBtnClick{

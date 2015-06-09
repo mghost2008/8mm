@@ -26,6 +26,7 @@
 #define EVENT_FIND_ENDED_OLD @""BASEURL@"/event/findOlderEnded?date=%@&size=%d"
 #define REG_TEL_REQUEST_VCODE @""BASEURL@"/user/requestSmsCode/%@"
 #define REG_TEL_REQUEST_REG @""BASEURL@"/user/usersByMobilePhone/%@"
+#define TEL_PWD_LOGIN @""BASEURL@"/user/check"
 
 @interface NetworkUtil : NSObject
 

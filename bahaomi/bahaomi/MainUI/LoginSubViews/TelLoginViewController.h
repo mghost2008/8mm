@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BHM_TextField.h"
+#import "NetworkUtil.h"
 
 @interface TelLoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet BHM_TextField *telNumField;
 @property (weak, nonatomic) IBOutlet BHM_TextField *pwdField;
+- (IBAction)loginBtnClick:(UIButton *)sender;
 @property (strong, nonatomic) UIBarButtonItem *closeItem;
 
 @end
