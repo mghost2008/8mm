@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.mainController.view];
+}
+
+- (MyMainViewController *)mainController{
+        if (!_mainController) {
+            _mainController = [[MyMainViewController alloc] init];
+            [_mainController setNavController:self.navigationController];
+            [_mainController.tableView setFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 108)];
+        }
+        return _mainController;
 }
 
 - (void)didReceiveMemoryWarning {

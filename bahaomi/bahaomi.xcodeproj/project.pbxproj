@@ -44,6 +44,8 @@
 		D3E45B991B26789C00676882 /* RegTelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B971B26789C00676882 /* RegTelViewController.xib */; };
 		D3E45B9D1B267CBE00676882 /* RegPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B9B1B267CBE00676882 /* RegPwdViewController.m */; };
 		D3E45B9E1B267CBE00676882 /* RegPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B9C1B267CBE00676882 /* RegPwdViewController.xib */; };
+		D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */; };
+		D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -147,6 +149,10 @@
 		D3E45B9A1B267CBE00676882 /* RegPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegPwdViewController.h; sourceTree = "<group>"; };
 		D3E45B9B1B267CBE00676882 /* RegPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegPwdViewController.m; sourceTree = "<group>"; };
 		D3E45B9C1B267CBE00676882 /* RegPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegPwdViewController.xib; sourceTree = "<group>"; };
+		D3E4D4CB1B27543C00BF2942 /* MyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMainViewController.h; sourceTree = "<group>"; };
+		D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMainViewController.m; sourceTree = "<group>"; };
+		D3E4D4CE1B27585500BF2942 /* MySettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingsViewController.h; sourceTree = "<group>"; };
+		D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySettingsViewController.m; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -314,6 +320,7 @@
 		D3E45B741B25E77E00676882 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3E4D4CA1B27541300BF2942 /* My */,
 				D3E45B8C1B2664EF00676882 /* Component */,
 				D3E45B861B25EEE800676882 /* LoginSubViews */,
 				D3E45B781B25E83500676882 /* MainTabSubViews */,
@@ -364,6 +371,17 @@
 				D3E45B8E1B26652300676882 /* BHM_TextField.m */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		D3E4D4CA1B27541300BF2942 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				D3E4D4CE1B27585500BF2942 /* MySettingsViewController.h */,
+				D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */,
+				D3E4D4CB1B27543C00BF2942 /* MyMainViewController.h */,
+				D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 		F671CEA21B259A230031C51D = {
@@ -651,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
+				D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */,
 				D3E45B8F1B26652300676882 /* BHM_TextField.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
@@ -665,6 +684,7 @@
 				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
+				D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */,
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
 				D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */,
 				F671CF981B25A22D0031C51D /* SGActionView.m in Sources */,

@@ -27,6 +27,7 @@
 #define REG_TEL_REQUEST_VCODE @""BASEURL@"/user/requestSmsCode/%@"
 #define REG_TEL_REQUEST_REG @""BASEURL@"/user/usersByMobilePhone/%@"
 #define TEL_PWD_LOGIN @""BASEURL@"/user/check"
+#define REG_OAUTH_USER @""BASEURL@"/user/create"
 
 @interface NetworkUtil : NSObject
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyMainViewController.h"
 
 @interface MyRootViewController : UIViewController
+
+@property (strong, nonatomic) MyMainViewController *mainController;
 
 @end

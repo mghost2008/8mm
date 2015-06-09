@@ -19,6 +19,8 @@
 @property NSInteger networkStatusCode;
 @property (nonatomic) BOOL isLogin;
 @property (strong, nonatomic) LoginRootViewController *loginController;
+@property (strong, nonatomic) NSMutableDictionary *weiboInfo;
+@property (strong, nonatomic) NSMutableDictionary *weixinInfo;
 
 @end
 
