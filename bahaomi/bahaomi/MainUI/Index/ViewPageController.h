@@ -17,4 +17,6 @@
 - (IBAction)hotNewsBtnClick:(UIButton *)sender;
 - (IBAction)tradeNewsBtnClick:(UIButton *)sender;
 
+@property (nonatomic) NSInteger selectIndex;
+
 @end

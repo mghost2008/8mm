@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface SmallCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+@property (weak, nonatomic) IBOutlet UILabel *mainTitle;
+@property (weak, nonatomic) IBOutlet UILabel *subTitle;
+@property (strong, nonatomic) NSDictionary *infoDic;
 
 @end

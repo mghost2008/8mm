@@ -13,6 +13,7 @@
 #import "WXApi.h"
 #import "Util.h"
 //#import <AVOSCloud/AVOSCloud.h>
+#import "NetworkUtil.h"
 #import "AFNetworking.h"
 #import "FMDatabase.h"
 
