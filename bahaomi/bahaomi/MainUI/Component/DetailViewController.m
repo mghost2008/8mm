@@ -73,6 +73,13 @@
     return _backItem;
 }
 
+- (ReportViewController *) reportController{
+    if (!_reportController) {
+        _reportController = [[ReportViewController alloc] init];
+    }
+    return _reportController;
+}
+
 - (void) backItemClick:(UIBarButtonItem *)item{
     [self.navigationController setToolbarHidden:YES];
     [self.navigationController popViewControllerAnimated:YES];
@@ -119,10 +126,8 @@
 }
 
 - (void)reportItemClick:(UIBarButtonItem *)item{
-    if (![self isLogined]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
-        return;
-    }
+    [self.navigationController setToolbarHidden:YES];
+    [self.navigationController pushViewController:self.reportController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

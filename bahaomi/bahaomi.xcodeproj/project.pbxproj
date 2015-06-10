@@ -63,6 +63,8 @@
 		F666FD391B28229D00D03E04 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD301B28229D00D03E04 /* UIScrollView+MJRefresh.m */; };
 		F666FD3A1B28229D00D03E04 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD321B28229D00D03E04 /* UIView+MJExtension.m */; };
 		F666FD3D1B282A1500D03E04 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD3C1B282A1500D03E04 /* DetailViewController.m */; };
+		F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD3F1B284DC200D03E04 /* ReportViewController.m */; };
+		F666FD421B284DC200D03E04 /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F666FD401B284DC200D03E04 /* ReportViewController.xib */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -201,6 +203,9 @@
 		F666FD321B28229D00D03E04 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		F666FD3B1B282A1500D03E04 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F666FD3C1B282A1500D03E04 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F666FD3E1B284DC200D03E04 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		F666FD3F1B284DC200D03E04 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
+		F666FD401B284DC200D03E04 /* ReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -428,6 +433,9 @@
 				D3E4D4EE1B276BDF00BF2942 /* SmallCell.h */,
 				D3E4D4EF1B276BDF00BF2942 /* SmallCell.m */,
 				D3E4D4F01B276BDF00BF2942 /* SmallCell.xib */,
+				F666FD3E1B284DC200D03E04 /* ReportViewController.h */,
+				F666FD3F1B284DC200D03E04 /* ReportViewController.m */,
+				F666FD401B284DC200D03E04 /* ReportViewController.xib */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -766,6 +774,7 @@
 				D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
+				F666FD421B284DC200D03E04 /* ReportViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +796,7 @@
 				F666FD361B28229D00D03E04 /* MJRefreshFooterView.m in Sources */,
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
 				D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */,
+				F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */,
 				F666FD391B28229D00D03E04 /* UIScrollView+MJRefresh.m in Sources */,
 				D3E45B8F1B26652300676882 /* BHM_TextField.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,

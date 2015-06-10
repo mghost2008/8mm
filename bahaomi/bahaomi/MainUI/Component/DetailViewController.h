@@ -10,6 +10,7 @@
 #import "UIWebView+AFNetworking.h"
 #import "Util.h"
 #import "Message.h"
+#import "ReportViewController.h"
 
 @interface DetailViewController : UIViewController <UIWebViewDelegate>
 
@@ -18,5 +19,6 @@
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIBarButtonItem *subscribeItem;
 @property (nonatomic, strong) UIBarButtonItem *backItem;
+@property (nonatomic, strong) ReportViewController *reportController;
 
 @end
