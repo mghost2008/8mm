@@ -13,5 +13,6 @@
 #define USER_LOGINED @"User_Logined"
 #define USER_LOGOUT @"User_Logout"
 #define CLOSE_LOGINVIEW @"Close_Login_View"
+#define SHOW_BANNER @"show_banner"
 
 #endif

@@ -43,11 +43,17 @@
 - (UIBarButtonItem *)comitItem{
     if (!_comitItem) {
         _comitItem = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(comitItemClick:)];
+        [_comitItem setTag:10001];
     }
     return _comitItem;
 }
 
 - (void) comitItemClick:(UIBarButtonItem *)item{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+    [dic setObject:@"提示" forKey:@"title"];
+    [dic setObject:@"举报成功！" forKey:@"subtitle"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_BANNER object:dic];
     [self.navigationController setToolbarHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }

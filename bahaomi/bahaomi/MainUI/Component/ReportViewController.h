@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Message.h"
+#import "ALAlertBanner.h"
 
 @interface ReportViewController : UIViewController
 

@@ -44,6 +44,16 @@
 		D3E45B991B26789C00676882 /* RegTelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B971B26789C00676882 /* RegTelViewController.xib */; };
 		D3E45B9D1B267CBE00676882 /* RegPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B9B1B267CBE00676882 /* RegPwdViewController.m */; };
 		D3E45B9E1B267CBE00676882 /* RegPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E45B9C1B267CBE00676882 /* RegPwdViewController.xib */; };
+		D3E4BC0F1B28B55800113323 /* ALAlertBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4BC031B28B55800113323 /* ALAlertBanner.m */; };
+		D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4BC051B28B55800113323 /* ALAlertBannerManager.m */; };
+		D3E4BC111B28B55800113323 /* bannerAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC071B28B55800113323 /* bannerAlert.png */; };
+		D3E4BC121B28B55800113323 /* bannerAlert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC081B28B55800113323 /* bannerAlert@2x.png */; };
+		D3E4BC131B28B55800113323 /* bannerFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC091B28B55800113323 /* bannerFailure.png */; };
+		D3E4BC141B28B55800113323 /* bannerFailure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC0A1B28B55800113323 /* bannerFailure@2x.png */; };
+		D3E4BC151B28B55800113323 /* bannerNotify.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC0B1B28B55800113323 /* bannerNotify.png */; };
+		D3E4BC161B28B55800113323 /* bannerNotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC0C1B28B55800113323 /* bannerNotify@2x.png */; };
+		D3E4BC171B28B55800113323 /* bannerSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC0D1B28B55800113323 /* bannerSuccess.png */; };
+		D3E4BC181B28B55800113323 /* bannerSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E4BC0E1B28B55800113323 /* bannerSuccess@2x.png */; };
 		D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */; };
 		D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */; };
 		D3E4D4D91B275D3A00BF2942 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4D81B275D3A00BF2942 /* NewsListViewController.m */; };
@@ -168,6 +178,19 @@
 		D3E45B9A1B267CBE00676882 /* RegPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegPwdViewController.h; sourceTree = "<group>"; };
 		D3E45B9B1B267CBE00676882 /* RegPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegPwdViewController.m; sourceTree = "<group>"; };
 		D3E45B9C1B267CBE00676882 /* RegPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegPwdViewController.xib; sourceTree = "<group>"; };
+		D3E4BC011B28B55800113323 /* ALAlertBanner+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAlertBanner+Private.h"; sourceTree = "<group>"; };
+		D3E4BC021B28B55800113323 /* ALAlertBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAlertBanner.h; sourceTree = "<group>"; };
+		D3E4BC031B28B55800113323 /* ALAlertBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAlertBanner.m; sourceTree = "<group>"; };
+		D3E4BC041B28B55800113323 /* ALAlertBannerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAlertBannerManager.h; sourceTree = "<group>"; };
+		D3E4BC051B28B55800113323 /* ALAlertBannerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAlertBannerManager.m; sourceTree = "<group>"; };
+		D3E4BC071B28B55800113323 /* bannerAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerAlert.png; sourceTree = "<group>"; };
+		D3E4BC081B28B55800113323 /* bannerAlert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bannerAlert@2x.png"; sourceTree = "<group>"; };
+		D3E4BC091B28B55800113323 /* bannerFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerFailure.png; sourceTree = "<group>"; };
+		D3E4BC0A1B28B55800113323 /* bannerFailure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bannerFailure@2x.png"; sourceTree = "<group>"; };
+		D3E4BC0B1B28B55800113323 /* bannerNotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerNotify.png; sourceTree = "<group>"; };
+		D3E4BC0C1B28B55800113323 /* bannerNotify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bannerNotify@2x.png"; sourceTree = "<group>"; };
+		D3E4BC0D1B28B55800113323 /* bannerSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerSuccess.png; sourceTree = "<group>"; };
+		D3E4BC0E1B28B55800113323 /* bannerSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bannerSuccess@2x.png"; sourceTree = "<group>"; };
 		D3E4D4CB1B27543C00BF2942 /* MyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMainViewController.h; sourceTree = "<group>"; };
 		D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMainViewController.m; sourceTree = "<group>"; };
 		D3E4D4CE1B27585500BF2942 /* MySettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingsViewController.h; sourceTree = "<group>"; };
@@ -440,6 +463,34 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		D3E4BC001B28B55800113323 /* ALAlertBanner */ = {
+			isa = PBXGroup;
+			children = (
+				D3E4BC011B28B55800113323 /* ALAlertBanner+Private.h */,
+				D3E4BC021B28B55800113323 /* ALAlertBanner.h */,
+				D3E4BC031B28B55800113323 /* ALAlertBanner.m */,
+				D3E4BC041B28B55800113323 /* ALAlertBannerManager.h */,
+				D3E4BC051B28B55800113323 /* ALAlertBannerManager.m */,
+				D3E4BC061B28B55800113323 /* Images */,
+			);
+			path = ALAlertBanner;
+			sourceTree = "<group>";
+		};
+		D3E4BC061B28B55800113323 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D3E4BC071B28B55800113323 /* bannerAlert.png */,
+				D3E4BC081B28B55800113323 /* bannerAlert@2x.png */,
+				D3E4BC091B28B55800113323 /* bannerFailure.png */,
+				D3E4BC0A1B28B55800113323 /* bannerFailure@2x.png */,
+				D3E4BC0B1B28B55800113323 /* bannerNotify.png */,
+				D3E4BC0C1B28B55800113323 /* bannerNotify@2x.png */,
+				D3E4BC0D1B28B55800113323 /* bannerSuccess.png */,
+				D3E4BC0E1B28B55800113323 /* bannerSuccess@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		D3E4D4CA1B27541300BF2942 /* My */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +616,7 @@
 		F671CF241B259C3C0031C51D /* third */ = {
 			isa = PBXGroup;
 			children = (
+				D3E4BC001B28B55800113323 /* ALAlertBanner */,
 				F666FD221B28229D00D03E04 /* MJRefresh */,
 				D3E45B601B25DCC400676882 /* fmdb */,
 				F671CF8D1B25A22D0031C51D /* SGActionView */,
@@ -763,18 +815,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E45B991B26789C00676882 /* RegTelViewController.xib in Resources */,
+				D3E4BC141B28B55800113323 /* bannerFailure@2x.png in Resources */,
+				D3E4BC181B28B55800113323 /* bannerSuccess@2x.png in Resources */,
 				D3E45B9E1B267CBE00676882 /* RegPwdViewController.xib in Resources */,
+				D3E4BC131B28B55800113323 /* bannerFailure.png in Resources */,
 				F666FD331B28229D00D03E04 /* MJRefresh.bundle in Resources */,
 				D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */,
+				D3E4BC161B28B55800113323 /* bannerNotify@2x.png in Resources */,
+				D3E4BC171B28B55800113323 /* bannerSuccess.png in Resources */,
+				D3E4BC111B28B55800113323 /* bannerAlert.png in Resources */,
 				D3E4D4ED1B276BC900BF2942 /* LargeCell.xib in Resources */,
 				F671CF681B259C3C0031C51D /* LICENSE in Resources */,
 				D3E45B941B26665400676882 /* TelLoginViewController.xib in Resources */,
+				D3E4BC151B28B55800113323 /* bannerNotify.png in Resources */,
 				D3E4D4E81B2764DA00BF2942 /* ViewPageController.xib in Resources */,
 				F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */,
 				D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
 				F666FD421B284DC200D03E04 /* ReportViewController.xib in Resources */,
+				D3E4BC121B28B55800113323 /* bannerAlert@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +865,7 @@
 				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
 				D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */,
 				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
+				D3E4BC0F1B28B55800113323 /* ALAlertBanner.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
 				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
@@ -828,6 +889,7 @@
 				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
+				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
 				F666FD3A1B28229D00D03E04 /* UIView+MJExtension.m in Sources */,
 				F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3E45B981B26789C00676882 /* RegTelViewController.m in Sources */,

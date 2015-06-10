@@ -40,6 +40,7 @@
     [self.window makeKeyAndVisible];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(needLogin) name:NEED_LOGIN object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeLoginView) name:CLOSE_LOGINVIEW object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showALAlertBanner:) name:SHOW_BANNER object:nil];
 }
 
 //网络初始化
@@ -234,6 +235,19 @@
     }fail:^(void){
         
     }];
+}
+
+- (void) showALAlertBanner:(NSNotification*)aNotification{
+    NSMutableDictionary *param = [aNotification object];
+    ALAlertBannerStyle randomStyle = (ALAlertBannerStyle)[[param objectForKey:@"style"] integerValue];
+    ALAlertBannerPosition position = ALAlertBannerPositionUnderNavBar;
+    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.window style:randomStyle position:position title:[param objectForKey:@"title"] subtitle:[param objectForKey:@"subtitle"] tappedBlock:^(ALAlertBanner *alertBanner) {
+        [alertBanner hide];
+    }];
+    banner.secondsToShow = 3.5;
+    banner.showAnimationDuration = 0.25;
+    banner.hideAnimationDuration = 0.2;
+    [banner show];
 }
 
 @end

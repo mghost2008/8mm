@@ -8,6 +8,7 @@
 #import "Info.h"
 #import "MainTabBarControllerViewController.h"
 #import "LoginRootViewController.h"
+#import "ALAlertBanner.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate,WXApiDelegate>
 
