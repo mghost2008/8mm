@@ -57,6 +57,9 @@
             [appDelegate setIsLogin:YES];
     [self dismissViewControllerAnimated:NO completion:^(void){
                 [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
+            if ([appDelegate isLogin]) {
+                [appDelegate.rootTabController setSelectedIndex:3];
+            }
     }];
         }fail:^(void){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败，请联系管理员" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];

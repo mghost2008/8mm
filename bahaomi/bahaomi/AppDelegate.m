@@ -95,9 +95,6 @@
         [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
     } completion:^(BOOL finish){
         [self.loginController.view removeFromSuperview];
-        if (self.isLogin) {
-            [self.rootTabController setSelectedIndex:3];
-        }
     }];
 }
 
@@ -202,6 +199,7 @@
         NSLog(@"%@", self.userInfo);
         self.isLogin = YES;
         [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
+        [self.rootTabController setSelectedIndex:3];
     }fail:^(void){
         
     }];

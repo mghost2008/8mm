@@ -46,6 +46,9 @@
                 [appDelegate setIsLogin:YES];
                 [self dismissViewControllerAnimated:NO completion:^(void){
                     [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
+                    if ([appDelegate isLogin]) {
+                        [appDelegate.rootTabController setSelectedIndex:3];
+                    }
                 }];
             }
         } fail:^(void){

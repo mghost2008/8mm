@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
 
@@ -21,13 +22,13 @@
 }
 
 - (void)buildLayout{
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
     [self.webview setDelegate:self];
     [self.view addSubview:self.webview];
     [self setToolbarItems:self.items];
+    [self.navigationItem setRightBarButtonItem:self.subscribeItem];
+    [self.navigationItem setLeftBarButtonItem:self.backItem];
     [self.navigationController setToolbarHidden:NO];
-    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, -24.0, 320, 44)];
-    [self.view addSubview:navigationBar];
 }
 
 - (void)buildData{
@@ -37,13 +38,13 @@
 
 - (NSArray *) items{
     if (!_items) {
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backlistimg"] style:UIBarButtonItemStylePlain target:self action:@selector(backItemClick:)];
         UIBarButtonItem *recommendItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"recommendimg"] style:UIBarButtonItemStylePlain target:self action:@selector(recommendItemClick:)];
         UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shareimg"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick:)];
-        UIBarButtonItem *editItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"editimg"] style:UIBarButtonItemStylePlain target:self action:@selector(editItemClick:)];
+        UIBarButtonItem *agreeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"agreeimg"] style:UIBarButtonItemStylePlain target:self action:@selector(agreeItemClick:)];
         UIBarButtonItem *collectItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"collectimg"] style:UIBarButtonItemStylePlain target:self action:@selector(collectItemClick:)];
+        UIBarButtonItem *reportItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reportimg"] style:UIBarButtonItemStylePlain target:self action:@selector(reportItemClick:)];
         UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-        _items = [NSArray arrayWithObjects:spaceItem, backItem, spaceItem, recommendItem, spaceItem, shareItem, spaceItem, editItem, spaceItem, collectItem, spaceItem, nil];
+        _items = [NSArray arrayWithObjects:spaceItem, recommendItem, spaceItem, shareItem, spaceItem, agreeItem, spaceItem, collectItem, spaceItem, reportItem, spaceItem, nil];
     }
     return _items;
 }
@@ -58,26 +59,70 @@
     return _webview;
 }
 
-- (void)backItemClick:(UIBarButtonItem *)item{
-    [self.navigationController setNavigationBarHidden:NO];
+- (UIBarButtonItem *)subscribeItem{
+    if (!_subscribeItem) {
+        _subscribeItem = [[UIBarButtonItem alloc] initWithTitle:@"订阅" style:UIBarButtonItemStylePlain target:self action:@selector(subscribeItemClick:)];
+    }
+    return _subscribeItem;
+}
+
+- (UIBarButtonItem *)backItem{
+    if (!_backItem) {
+        _backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backimg"] style:UIBarButtonItemStylePlain target:self action:@selector(backItemClick:)];
+    }
+    return _backItem;
+}
+
+- (void) backItemClick:(UIBarButtonItem *)item{
     [self.navigationController setToolbarHidden:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (BOOL) isLogined{
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    return [appdelegate isLogin];
+}
+
+- (void)subscribeItemClick:(UIBarButtonItem *)item{
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
+}
+
+- (void)agreeItemClick:(UIBarButtonItem *)item{
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
+}
+
 - (void)recommendItemClick:(UIBarButtonItem *)item{
-    
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
 }
 
 - (void)shareItemClick:(UIBarButtonItem *)item{
-    
-}
-
-- (void)editItemClick:(UIBarButtonItem *)item{
-    
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
 }
 
 - (void)collectItemClick:(UIBarButtonItem *)item{
-    
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
+}
+
+- (void)reportItemClick:(UIBarButtonItem *)item{
+    if (![self isLogined]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

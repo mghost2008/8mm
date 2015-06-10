@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "UIWebView+AFNetworking.h"
 #import "Util.h"
+#import "Message.h"
 
 @interface DetailViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *inofDic;
 @property (nonatomic, strong) UIWebView *webview;
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) UIBarButtonItem *subscribeItem;
+@property (nonatomic, strong) UIBarButtonItem *backItem;
 
 @end
