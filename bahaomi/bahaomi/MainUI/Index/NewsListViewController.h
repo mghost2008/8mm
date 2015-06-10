@@ -11,6 +11,7 @@
 #import "LargeCell.h"
 #import "SmallCell.h"
 #import "MJRefresh.h"
+#import "DetailViewController.h"
 
 @interface NewsListViewController : UITableViewController
 

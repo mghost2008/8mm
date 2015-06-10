@@ -33,8 +33,10 @@
         _viewPage = [[ViewPageController alloc] init];
         NewsListViewController *hotnews = [[NewsListViewController alloc] init];
         hotnews.title = @"热文推荐";
+        [hotnews setNavController:self.navigationController];
         DynamicListViewController *dynamicnews = [[DynamicListViewController alloc] init];
         dynamicnews.title = @"行业动态";
+        [dynamicnews setNavController:self.navigationController];
         [_viewPage addChildViewController:hotnews];
         [_viewPage addChildViewController:dynamicnews];
     }

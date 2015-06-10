@@ -62,6 +62,7 @@
 		F666FD381B28229D00D03E04 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD2E1B28229D00D03E04 /* UIScrollView+MJExtension.m */; };
 		F666FD391B28229D00D03E04 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD301B28229D00D03E04 /* UIScrollView+MJRefresh.m */; };
 		F666FD3A1B28229D00D03E04 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD321B28229D00D03E04 /* UIView+MJExtension.m */; };
+		F666FD3D1B282A1500D03E04 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD3C1B282A1500D03E04 /* DetailViewController.m */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -198,6 +199,8 @@
 		F666FD301B28229D00D03E04 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		F666FD311B28229D00D03E04 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		F666FD321B28229D00D03E04 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		F666FD3B1B282A1500D03E04 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F666FD3C1B282A1500D03E04 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 		D3E45B8C1B2664EF00676882 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F666FD3B1B282A1500D03E04 /* DetailViewController.h */,
+				F666FD3C1B282A1500D03E04 /* DetailViewController.m */,
 				D3E45B8D1B26652300676882 /* BHM_TextField.h */,
 				D3E45B8E1B26652300676882 /* BHM_TextField.m */,
 				D3E4D4E91B276BC900BF2942 /* LargeCell.h */,
@@ -801,6 +806,7 @@
 				F666FD381B28229D00D03E04 /* UIScrollView+MJExtension.m in Sources */,
 				D3E4D4D91B275D3A00BF2942 /* NewsListViewController.m in Sources */,
 				F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */,
+				F666FD3D1B282A1500D03E04 /* DetailViewController.m in Sources */,
 				D3E4D4CD1B27543C00BF2942 /* MyMainViewController.m in Sources */,
 				F671CF671B259C3C0031C51D /* AFURLSessionManager.m in Sources */,
 				D3E4D4EC1B276BC900BF2942 /* LargeCell.m in Sources */,

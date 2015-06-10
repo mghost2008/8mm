@@ -177,6 +177,20 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    DetailViewController *detailCtl = [[DetailViewController alloc] init];
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NSMutableDictionary *dic;
+    if ([cell isKindOfClass:[LargeCell class]])
+        dic = [NSMutableDictionary dictionaryWithDictionary:[((LargeCell *)cell) infoDic]];
+    else
+        dic = [NSMutableDictionary dictionaryWithDictionary:[((SmallCell *)cell) infoDic]];
+    [detailCtl setInofDic:dic];
+    [detailCtl setHidesBottomBarWhenPushed:YES];
+    [self.navController pushViewController:detailCtl animated:YES];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
