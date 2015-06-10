@@ -18,6 +18,7 @@
 #define SUBSCRIBE_ACCOUNT_NEWS_NEW @""BASEURL@"/article/findNewerByAccountIdPaged/%@?date=%@&size=%d"
 #define SUBSCRIBE_ACCOUNT_NEWS_OLD @""BASEURL@"/article/findOlderByAccountIdPaged/%@?date=%@&size=%d"
 #define SUBSCRIBE_FIND_ALL @""BASEURL@"/account/findAll"
+#define SUBSCRIBE_BY_USER @""BASEURL@"/book/getByUser/%@"
 #define EVENT_FIND_STARTED_NEW @""BASEURL@"/event/findNewerStarted?date=%@&size=%d"
 #define EVENT_FIND_STARTED_INIT @""BASEURL@"/event/findInitStarted?date=%@&size=%d"
 #define EVENT_FIND_STARTED_OLD @""BASEURL@"/event/findOlderStarted?date=%@&size=%d"

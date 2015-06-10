@@ -15,7 +15,8 @@
 //#import <AVOSCloud/AVOSCloud.h>
 #import "NetworkUtil.h"
 #import "AFNetworking.h"
-#import "FMDatabase.h"
+#import "FMDB.h"
+#import "DBUtil.h"
 
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 

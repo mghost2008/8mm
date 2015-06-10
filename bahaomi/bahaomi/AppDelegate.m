@@ -20,6 +20,8 @@
     [self initUserInfo];
     [self initWeibo];
     [self initWeixin];
+    [self initCommend];
+    [self initUserBookInfo];
     [self buildLayout];
     return YES;
 }
@@ -66,6 +68,35 @@
 //初始化微信
 - (void) initWeixin{
     [WXApi registerApp:WEIXIN_APP_ID];
+}
+
+//初始化公众号列表
+- (void) initCommend{
+    [NetworkUtil JSONDataWithUrl:SUBSCRIBE_FIND_ALL success:^(id json){
+        self.commendArr = json;
+        //清空数据库
+        [[DBUtil sharedManager] deleteAllCommend];
+        [[DBUtil sharedManager] insertAllCommend:self.commendArr];
+        self.commendArr = [[DBUtil sharedManager] getAllCommend];
+    }fail:^(void){
+        NSLog(@"初始化公众列表失败");
+    }];
+}
+
+//初始化用户订阅的公众号,需要用户登录
+- (void) initUserBookInfo{
+    if (self.isLogin) {
+        NSString *url = [NSString stringWithFormat:SUBSCRIBE_BY_USER, [self.userInfo objectForKey:@"id"]];
+        [NetworkUtil JSONDataWithUrl:url success:^(id json){
+            self.bookArr = json;
+            //清空用户订阅列表
+            [[DBUtil sharedManager] deleteAllBook];
+            [[DBUtil sharedManager] insertAllBook:self.bookArr];
+            self.bookArr = [[DBUtil sharedManager] getAllBook];
+        }fail:^(void){
+            NSLog(@"初始化用户订阅列表失败");
+        }];
+    }
 }
 
 - (MainTabBarControllerViewController *)rootTabController{

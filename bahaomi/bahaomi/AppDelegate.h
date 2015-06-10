@@ -15,6 +15,10 @@
 @property (strong, nonatomic) MainTabBarControllerViewController *rootTabController;
 //用户信息，包含用户基本信息，和设置信息
 @property (strong, nonatomic) NSMutableDictionary *userInfo;
+//系统推荐公众号列表
+@property (strong, nonatomic) NSMutableArray *commendArr;
+//用户订阅关系
+@property (strong, nonatomic) NSMutableArray *bookArr;
 //网络状态
 @property NSInteger networkStatusCode;
 @property (nonatomic) BOOL isLogin;

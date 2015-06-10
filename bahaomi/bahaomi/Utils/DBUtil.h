@@ -13,4 +13,12 @@
     FMDatabase *_db;
 }
 
++ (DBUtil *)sharedManager;
+- (NSMutableArray *)getAllCommend;
+- (void)deleteAllCommend;
+- (void)insertAllCommend:(NSMutableArray *)commendList;
+- (NSMutableArray *)getAllBook;
+- (void)deleteAllBook;
+- (void)insertAllBook:(NSMutableArray *)bookList;
+
 @end
