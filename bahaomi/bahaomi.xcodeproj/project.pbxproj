@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3D24B1C1B29FE640061F641 /* EventEndedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B191B29FE640061F641 /* EventEndedListController.m */; };
+		D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1B1B29FE640061F641 /* EventStartedListController.m */; };
+		D3D24B201B2A01900061F641 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */; };
 		D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3C1B25D7C700676882 /* NetworkUtil.m */; };
 		D3E45B401B25D7C700676882 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3E1B25D7C700676882 /* Util.m */; };
 		D3E45B421B25D8EB00676882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B411B25D8EB00676882 /* Foundation.framework */; };
@@ -127,6 +130,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3D24B181B29FE640061F641 /* EventEndedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventEndedListController.h; sourceTree = "<group>"; };
+		D3D24B191B29FE640061F641 /* EventEndedListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventEndedListController.m; sourceTree = "<group>"; };
+		D3D24B1A1B29FE640061F641 /* EventStartedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStartedListController.h; sourceTree = "<group>"; };
+		D3D24B1B1B29FE640061F641 /* EventStartedListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventStartedListController.m; sourceTree = "<group>"; };
+		D3D24B1E1B2A01900061F641 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		D3E45B3A1B25D7C700676882 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		D3E45B3B1B25D7C700676882 /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
 		D3E45B3C1B25D7C700676882 /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtil.m; sourceTree = "<group>"; };
@@ -484,6 +493,8 @@
 				F666FD3E1B284DC200D03E04 /* ReportViewController.h */,
 				F666FD3F1B284DC200D03E04 /* ReportViewController.m */,
 				F666FD401B284DC200D03E04 /* ReportViewController.xib */,
+				D3D24B1E1B2A01900061F641 /* EventDetailViewController.h */,
+				D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -530,6 +541,10 @@
 		D3E4D4D11B275BFE00BF2942 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				D3D24B181B29FE640061F641 /* EventEndedListController.h */,
+				D3D24B191B29FE640061F641 /* EventEndedListController.m */,
+				D3D24B1A1B29FE640061F641 /* EventStartedListController.h */,
+				D3D24B1B1B29FE640061F641 /* EventStartedListController.m */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -891,6 +906,7 @@
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
 				D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */,
 				F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */,
+				D3D24B201B2A01900061F641 /* EventDetailViewController.m in Sources */,
 				F666FD391B28229D00D03E04 /* UIScrollView+MJRefresh.m in Sources */,
 				D3E45B8F1B26652300676882 /* BHM_TextField.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
@@ -899,6 +915,7 @@
 				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
 				D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */,
 				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
+				D3D24B1C1B29FE640061F641 /* EventEndedListController.m in Sources */,
 				D3E4BC0F1B28B55800113323 /* ALAlertBanner.m in Sources */,
 				F655B7EE1B2941DE0025D3BC /* SubscribeCollectionController.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
@@ -924,6 +941,7 @@
 				F655B7F91B296B8A0025D3BC /* AddSubscribeList.m in Sources */,
 				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
 				F655B7F21B2962E50025D3BC /* CollectionCell.m in Sources */,

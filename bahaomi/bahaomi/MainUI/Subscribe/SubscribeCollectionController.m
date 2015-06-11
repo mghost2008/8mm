@@ -18,7 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:ColCellIdentifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:SUBSCRIBE_CHANGED object:nil];
     [self buildData];
+}
+
+- (void)refreshData{
+    self.userBookArr = [NSMutableArray array];
+    [self buildData];
+    [self.collectionView reloadData];
 }
 
 - (void)buildData{
@@ -34,7 +41,8 @@
         }
         for (NSInteger j = 0 ; j < [self.infoArr count]; j ++) {
             NSDictionary *tmpBook = [self.infoArr objectAtIndex:j];
-            if ([tmpBook objectForKey:@"accountId"] == [tmp objectForKey:@"id"]) {//已经订阅
+            if ([[tmpBook objectForKey:@"accountId"] integerValue] == [[tmp objectForKey:@"id"] integerValue]) {//已经订阅
+                NSLog(@"订阅关系accountId%@----系统订阅列表%@", [tmpBook objectForKey:@"accountId"] ,[tmp objectForKey:@"id"]);
                 [self.userBookArr addObject:tmp];
             }
         }

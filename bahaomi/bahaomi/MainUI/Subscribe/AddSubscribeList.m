@@ -16,16 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self buildData];
-}
-
-- (void)buildData{
-
+    [self.navigationItem setLeftBarButtonItem:self.backItem];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIBarButtonItem *)backItem{
+    if (!_backItem) {
+        _backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backimg"] style:UIBarButtonItemStylePlain target:self action:@selector(backItemClick:)];
+        [_backItem setTitle:@"订阅"];
+    }
+    return _backItem;
+}
+
+- (void) backItemClick:(UIBarButtonItem *)item{
+    [self.userDelegate userBookChanged];
+//    [self.navigationController setToolbarHidden:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view data source
@@ -62,6 +72,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     AddSubscribeCell *cell = (AddSubscribeCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if  (cell.addBtn.selected)//当前选中
+        [self.userBookArr removeObject:[cell infoDic]];
+    else
+        [self.userBookArr addObject:[cell infoDic]];
     [cell addBtnClick:cell.addBtn];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
@@ -74,7 +88,7 @@
 - (BOOL)isSubscribed:(NSDictionary *)info{
     for (NSInteger i = 0; i < [self.userBookArr count]; i++) {
         NSDictionary *tmp = [self.userBookArr objectAtIndex:i];
-        if ([tmp objectForKey:@"id"] == [info objectForKey:@"id"]) {
+        if ([[tmp objectForKey:@"id"] integerValue] == [[info objectForKey:@"id"] integerValue]) {
             return YES;
         }
     }

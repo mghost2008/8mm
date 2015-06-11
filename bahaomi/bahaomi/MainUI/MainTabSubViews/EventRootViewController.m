@@ -16,22 +16,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.listViewCtl.view];
+}
+
+- (EventStartedListController *) listViewCtl{
+    if (!_listViewCtl) {
+        _listViewCtl = [[EventStartedListController alloc] init];
+        [_listViewCtl setNavController:self.navigationController];
+        [_listViewCtl.tableView setFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 108)];
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"结束活动" style:UIBarButtonItemStylePlain target:self action:@selector(endedClick:)];
+        [self.navigationItem setRightBarButtonItem: rightItem];
+    }
+    return _listViewCtl;
+}
+
+- (EventEndedListController *) endListViewCtl{
+    if (!_endListViewCtl) {
+        _endListViewCtl = [[EventEndedListController alloc] init];
+        [_endListViewCtl setNavController:self.navigationController];
+        [_endListViewCtl.tableView setFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 108)];
+        [_endListViewCtl setNavController:self.navigationController];
+    }
+    return _endListViewCtl;
+}
+
+- (void) endedClick:(UIBarButtonItem *) item{
+    [self.endListViewCtl setTitle:@"结束活动"];
+    [self.navigationController pushViewController:self.endListViewCtl animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

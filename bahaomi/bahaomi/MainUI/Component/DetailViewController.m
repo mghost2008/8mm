@@ -22,7 +22,6 @@
 }
 
 - (void)buildLayout{
-//    [self.navigationController setNavigationBarHidden:YES];
     [self.webview setDelegate:self];
     [self.view addSubview:self.webview];
     [self setToolbarItems:self.items];
@@ -32,8 +31,20 @@
 }
 
 - (void)buildData{
+    NSLog(@"%@", self.inofDic);
     NSURL *url = [NSURL URLWithString:[self.inofDic objectForKey:@"url"]];
     [self.webview loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (BOOL) isSubscribe{
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    for (NSInteger i = 0 ; i < [appdelegate.bookArr count]; i++) {
+        NSDictionary *tmp = [appdelegate.bookArr objectAtIndex:i];
+        if ([[tmp objectForKey:@"accountId"] integerValue] == [[self.inofDic objectForKey:@"accountId"] integerValue]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (NSArray *) items{
@@ -61,7 +72,8 @@
 
 - (UIBarButtonItem *)subscribeItem{
     if (!_subscribeItem) {
-        _subscribeItem = [[UIBarButtonItem alloc] initWithTitle:@"订阅" style:UIBarButtonItemStylePlain target:self action:@selector(subscribeItemClick:)];
+        NSString *subscribeStr = [self isSubscribe]?@"已订阅":@"订阅";
+        _subscribeItem = [[UIBarButtonItem alloc] initWithTitle:subscribeStr style:UIBarButtonItemStylePlain target:self action:@selector(subscribeItemClick:)];
     }
     return _subscribeItem;
 }
@@ -90,11 +102,47 @@
     return [appdelegate isLogin];
 }
 
+//订阅按钮
 - (void)subscribeItemClick:(UIBarButtonItem *)item{
     if (![self isLogined]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
     }
+    if ([item.title isEqualToString:@"订阅"]) {//订阅流程
+        NSMutableArray *params = [self makeParams];
+        [NetworkUtil postJSONWithUrl:BOOK_CREATE parameters:params success:^(id responseObject){
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            NSString *url = [NSString stringWithFormat:SUBSCRIBE_BY_USER, [appDelegate.userInfo objectForKey:@"id"]];
+            [NetworkUtil JSONDataWithUrl:url success:^(id json){
+                appDelegate.bookArr = json;
+                //清空用户订阅列表
+                [[DBUtil sharedManager] deleteAllBook];
+                [[DBUtil sharedManager] insertAllBook:appDelegate.bookArr];
+                appDelegate.bookArr = [[DBUtil sharedManager] getAllBook];
+                [item setTitle:@"已订阅"];
+                NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+                [dic setObject:@"订阅成功" forKey:@"title"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_BANNER object:dic];
+                [[NSNotificationCenter defaultCenter] postNotificationName:SUBSCRIBE_CHANGED object:nil];
+            }fail:^(void){
+                NSLog(@"初始化用户订阅列表失败");
+            }];
+        }fail:^(void){
+            NSLog(@"保存失败");
+        }];
+    }
+}
+
+- (NSMutableArray *) makeParams{
+    NSMutableArray *params = [NSMutableArray array];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSNumber *userId = [[appDelegate userInfo] objectForKey:@"id"];
+    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
+    [tmp setValue:userId forKey:@"userId"];
+    [tmp setValue:[self.inofDic objectForKey:@"accountId"] forKey:@"accountId"];
+    [params addObject:tmp];
+    return params;
 }
 
 - (void)agreeItemClick:(UIBarButtonItem *)item{

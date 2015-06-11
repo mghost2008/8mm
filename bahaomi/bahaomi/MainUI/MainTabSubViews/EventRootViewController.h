@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventStartedListController.h"
+#import "EventEndedListController.h"
 
 @interface EventRootViewController : UIViewController
+
+@property (strong, nonatomic) EventStartedListController *listViewCtl;
+@property (strong, nonatomic) EventEndedListController *endListViewCtl;
 
 @end

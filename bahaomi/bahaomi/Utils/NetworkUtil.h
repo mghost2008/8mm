@@ -29,6 +29,7 @@
 #define REG_TEL_REQUEST_REG @""BASEURL@"/user/usersByMobilePhone/%@"
 #define TEL_PWD_LOGIN @""BASEURL@"/user/check"
 #define REG_OAUTH_USER @""BASEURL@"/user/create"
+#define BOOK_CREATE @""BASEURL@"/book/create"
 
 @interface NetworkUtil : NSObject
 

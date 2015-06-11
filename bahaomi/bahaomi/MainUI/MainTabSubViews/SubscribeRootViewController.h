@@ -11,7 +11,7 @@
 #import "SubscribeCollectionController.h"
 #import "AddSubscribeList.h"
 
-@interface SubscribeRootViewController : UIViewController
+@interface SubscribeRootViewController : UIViewController<UserBookDelegate>
 
 @property (strong, nonatomic)SubscribeCollectionController *collectionController;
 
