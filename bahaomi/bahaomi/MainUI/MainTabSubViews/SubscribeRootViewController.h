@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Info.h"
+#import "SubscribeCollectionController.h"
+#import "AddSubscribeList.h"
 
 @interface SubscribeRootViewController : UIViewController
+
+@property (strong, nonatomic)SubscribeCollectionController *collectionController;
 
 @end

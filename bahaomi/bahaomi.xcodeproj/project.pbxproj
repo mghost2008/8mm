@@ -64,6 +64,13 @@
 		D3E4D4ED1B276BC900BF2942 /* LargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E4D4EB1B276BC900BF2942 /* LargeCell.xib */; };
 		D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D4EF1B276BDF00BF2942 /* SmallCell.m */; };
 		D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E4D4F01B276BDF00BF2942 /* SmallCell.xib */; };
+		F655B7EE1B2941DE0025D3BC /* SubscribeCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F655B7ED1B2941DE0025D3BC /* SubscribeCollectionController.m */; };
+		F655B7F21B2962E50025D3BC /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F655B7F01B2962E50025D3BC /* CollectionCell.m */; };
+		F655B7F31B2962E50025D3BC /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F655B7F11B2962E50025D3BC /* CollectionCell.xib */; };
+		F655B7F61B296A400025D3BC /* SubscribeNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F655B7F51B296A400025D3BC /* SubscribeNewsListViewController.m */; };
+		F655B7F91B296B8A0025D3BC /* AddSubscribeList.m in Sources */ = {isa = PBXBuildFile; fileRef = F655B7F81B296B8A0025D3BC /* AddSubscribeList.m */; };
+		F655B7FD1B296BFE0025D3BC /* AddSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F655B7FB1B296BFE0025D3BC /* AddSubscribeCell.m */; };
+		F655B7FE1B296BFE0025D3BC /* AddSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F655B7FC1B296BFE0025D3BC /* AddSubscribeCell.xib */; };
 		F666FD331B28229D00D03E04 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F666FD231B28229D00D03E04 /* MJRefresh.bundle */; };
 		F666FD341B28229D00D03E04 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD261B28229D00D03E04 /* MJRefreshBaseView.m */; };
 		F666FD351B28229D00D03E04 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD281B28229D00D03E04 /* MJRefreshConst.m */; };
@@ -208,6 +215,18 @@
 		D3E4D4EE1B276BDF00BF2942 /* SmallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallCell.h; sourceTree = "<group>"; };
 		D3E4D4EF1B276BDF00BF2942 /* SmallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallCell.m; sourceTree = "<group>"; };
 		D3E4D4F01B276BDF00BF2942 /* SmallCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallCell.xib; sourceTree = "<group>"; };
+		F655B7EC1B2941DE0025D3BC /* SubscribeCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeCollectionController.h; sourceTree = "<group>"; };
+		F655B7ED1B2941DE0025D3BC /* SubscribeCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeCollectionController.m; sourceTree = "<group>"; };
+		F655B7EF1B2962E50025D3BC /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		F655B7F01B2962E50025D3BC /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		F655B7F11B2962E50025D3BC /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		F655B7F41B296A400025D3BC /* SubscribeNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeNewsListViewController.h; sourceTree = "<group>"; };
+		F655B7F51B296A400025D3BC /* SubscribeNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeNewsListViewController.m; sourceTree = "<group>"; };
+		F655B7F71B296B8A0025D3BC /* AddSubscribeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubscribeList.h; sourceTree = "<group>"; };
+		F655B7F81B296B8A0025D3BC /* AddSubscribeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubscribeList.m; sourceTree = "<group>"; };
+		F655B7FA1B296BFE0025D3BC /* AddSubscribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubscribeCell.h; sourceTree = "<group>"; };
+		F655B7FB1B296BFE0025D3BC /* AddSubscribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubscribeCell.m; sourceTree = "<group>"; };
+		F655B7FC1B296BFE0025D3BC /* AddSubscribeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSubscribeCell.xib; sourceTree = "<group>"; };
 		F666FD231B28229D00D03E04 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		F666FD241B28229D00D03E04 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		F666FD251B28229D00D03E04 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -396,8 +415,8 @@
 		D3E45B741B25E77E00676882 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				F655B7E61B2931270025D3BC /* Subscribe */,
 				D3E4D4D31B275C1900BF2942 /* Index */,
-				D3E4D4D21B275C0D00BF2942 /* Subscribe */,
 				D3E4D4D11B275BFE00BF2942 /* Event */,
 				D3E4D4CA1B27541300BF2942 /* My */,
 				D3E45B8C1B2664EF00676882 /* Component */,
@@ -446,6 +465,12 @@
 		D3E45B8C1B2664EF00676882 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F655B7FA1B296BFE0025D3BC /* AddSubscribeCell.h */,
+				F655B7FB1B296BFE0025D3BC /* AddSubscribeCell.m */,
+				F655B7FC1B296BFE0025D3BC /* AddSubscribeCell.xib */,
+				F655B7EF1B2962E50025D3BC /* CollectionCell.h */,
+				F655B7F01B2962E50025D3BC /* CollectionCell.m */,
+				F655B7F11B2962E50025D3BC /* CollectionCell.xib */,
 				F666FD3B1B282A1500D03E04 /* DetailViewController.h */,
 				F666FD3C1B282A1500D03E04 /* DetailViewController.m */,
 				D3E45B8D1B26652300676882 /* BHM_TextField.h */,
@@ -509,13 +534,6 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
-		D3E4D4D21B275C0D00BF2942 /* Subscribe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subscribe;
-			sourceTree = "<group>";
-		};
 		D3E4D4D31B275C1900BF2942 /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +546,19 @@
 				D3E4D4E61B2764DA00BF2942 /* ViewPageController.xib */,
 			);
 			path = Index;
+			sourceTree = "<group>";
+		};
+		F655B7E61B2931270025D3BC /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+				F655B7F71B296B8A0025D3BC /* AddSubscribeList.h */,
+				F655B7F81B296B8A0025D3BC /* AddSubscribeList.m */,
+				F655B7F41B296A400025D3BC /* SubscribeNewsListViewController.h */,
+				F655B7F51B296A400025D3BC /* SubscribeNewsListViewController.m */,
+				F655B7EC1B2941DE0025D3BC /* SubscribeCollectionController.h */,
+				F655B7ED1B2941DE0025D3BC /* SubscribeCollectionController.m */,
+			);
+			path = Subscribe;
 			sourceTree = "<group>";
 		};
 		F666FD221B28229D00D03E04 /* MJRefresh */ = {
@@ -833,6 +864,8 @@
 				D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
+				F655B7FE1B296BFE0025D3BC /* AddSubscribeCell.xib in Resources */,
+				F655B7F31B2962E50025D3BC /* CollectionCell.xib in Resources */,
 				F666FD421B284DC200D03E04 /* ReportViewController.xib in Resources */,
 				D3E4BC121B28B55800113323 /* bannerAlert@2x.png in Resources */,
 			);
@@ -854,6 +887,7 @@
 			files = (
 				F666FD351B28229D00D03E04 /* MJRefreshConst.m in Sources */,
 				F666FD361B28229D00D03E04 /* MJRefreshFooterView.m in Sources */,
+				F655B7F61B296A400025D3BC /* SubscribeNewsListViewController.m in Sources */,
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
 				D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */,
 				F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */,
@@ -866,6 +900,7 @@
 				D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */,
 				D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */,
 				D3E4BC0F1B28B55800113323 /* ALAlertBanner.m in Sources */,
+				F655B7EE1B2941DE0025D3BC /* SubscribeCollectionController.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
 				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
@@ -886,10 +921,13 @@
 				F671CF661B259C3C0031C51D /* AFURLResponseSerialization.m in Sources */,
 				F671CF6D1B259C3C0031C51D /* UIButton+AFNetworking.m in Sources */,
 				D3E45B401B25D7C700676882 /* Util.m in Sources */,
+				F655B7F91B296B8A0025D3BC /* AddSubscribeList.m in Sources */,
 				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
+				F655B7F21B2962E50025D3BC /* CollectionCell.m in Sources */,
+				F655B7FD1B296BFE0025D3BC /* AddSubscribeCell.m in Sources */,
 				F666FD3A1B28229D00D03E04 /* UIView+MJExtension.m in Sources */,
 				F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3E45B981B26789C00676882 /* RegTelViewController.m in Sources */,
