@@ -41,6 +41,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(needLogin) name:NEED_LOGIN object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeLoginView) name:CLOSE_LOGINVIEW object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showALAlertBanner:) name:SHOW_BANNER object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertView:) name:SHOW_HUD object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoChanged) name:USER_INFO_CHANGED object:nil];
 }
 
 //网络初始化
@@ -130,6 +132,17 @@
     }];
 }
 
+//用户信息改变
+- (void)userInfoChanged{
+    [NetworkUtil postJSONWithUrl:UPDATE_USER_INFO parameters:self.userInfo success:^(id responseObject){
+        self.userInfo = responseObject;
+        self.isLogin = YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:USER_SETTING_REBIND object:nil];
+    } fail:^(void){
+        NSLog(@"NETWORK ERROR");
+    }];
+}
+
 - (void)setIsLogin:(BOOL)isLogin{
     _isLogin = isLogin;
     if (_isLogin) {
@@ -185,7 +198,9 @@
         NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
         NSString *strMsg = [NSString stringWithFormat:@"code:%@,state:%@,errcode:%d", temp.code, temp.state, temp.errCode];
         NSLog(@"%@%@", strTitle, strMsg);
-        [self getAccess_token:temp.code];
+        if (temp.errCode == 0) {
+            [self getAccess_token:temp.code];
+        }
     }
 }
 
@@ -248,6 +263,11 @@
     banner.showAnimationDuration = 0.25;
     banner.hideAnimationDuration = 0.2;
     [banner show];
+}
+
+- (void) showAlertView:(NSNotification*)aNotification{
+    NSMutableDictionary *param = [aNotification object];
+    [HUD showUIBlockingIndicatorWithText:[param objectForKey:@"subtitle"] withTimeout:2.0];
 }
 
 @end

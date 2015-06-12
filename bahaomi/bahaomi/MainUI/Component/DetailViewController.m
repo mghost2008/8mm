@@ -141,6 +141,7 @@
     NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
     [tmp setValue:userId forKey:@"userId"];
     [tmp setValue:[self.inofDic objectForKey:@"accountId"] forKey:@"accountId"];
+    [params addObjectsFromArray:[appDelegate bookArr]];
     [params addObject:tmp];
     return params;
 }

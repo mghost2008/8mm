@@ -85,6 +85,12 @@
 		F666FD3D1B282A1500D03E04 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD3C1B282A1500D03E04 /* DetailViewController.m */; };
 		F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F666FD3F1B284DC200D03E04 /* ReportViewController.m */; };
 		F666FD421B284DC200D03E04 /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F666FD401B284DC200D03E04 /* ReportViewController.xib */; };
+		F66BFF821B2A96FE00ECCFD9 /* btnCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = F66BFF7C1B2A96FE00ECCFD9 /* btnCheck.png */; };
+		F66BFF831B2A96FE00ECCFD9 /* btnCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66BFF7D1B2A96FE00ECCFD9 /* btnCheck@2x.png */; };
+		F66BFF841B2A96FE00ECCFD9 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F66BFF7F1B2A96FE00ECCFD9 /* HUD.m */; };
+		F66BFF851B2A96FE00ECCFD9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F66BFF811B2A96FE00ECCFD9 /* MBProgressHUD.m */; };
+		F66BFF8E1B2AD58100ECCFD9 /* BindTelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66BFF8C1B2AD58100ECCFD9 /* BindTelController.m */; };
+		F66BFF8F1B2AD58100ECCFD9 /* BindTelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66BFF8D1B2AD58100ECCFD9 /* BindTelController.xib */; };
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
@@ -257,6 +263,15 @@
 		F666FD3E1B284DC200D03E04 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
 		F666FD3F1B284DC200D03E04 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		F666FD401B284DC200D03E04 /* ReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
+		F66BFF7C1B2A96FE00ECCFD9 /* btnCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnCheck.png; sourceTree = "<group>"; };
+		F66BFF7D1B2A96FE00ECCFD9 /* btnCheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCheck@2x.png"; sourceTree = "<group>"; };
+		F66BFF7E1B2A96FE00ECCFD9 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		F66BFF7F1B2A96FE00ECCFD9 /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
+		F66BFF801B2A96FE00ECCFD9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F66BFF811B2A96FE00ECCFD9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F66BFF8B1B2AD58100ECCFD9 /* BindTelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindTelController.h; sourceTree = "<group>"; };
+		F66BFF8C1B2AD58100ECCFD9 /* BindTelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindTelController.m; sourceTree = "<group>"; };
+		F66BFF8D1B2AD58100ECCFD9 /* BindTelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BindTelController.xib; sourceTree = "<group>"; };
 		F671CEAB1B259A230031C51D /* bahaomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahaomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEAF1B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEB01B259A230031C51D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -534,6 +549,9 @@
 				D3E4D4CF1B27585500BF2942 /* MySettingsViewController.m */,
 				D3E4D4CB1B27543C00BF2942 /* MyMainViewController.h */,
 				D3E4D4CC1B27543C00BF2942 /* MyMainViewController.m */,
+				F66BFF8B1B2AD58100ECCFD9 /* BindTelController.h */,
+				F66BFF8C1B2AD58100ECCFD9 /* BindTelController.m */,
+				F66BFF8D1B2AD58100ECCFD9 /* BindTelController.xib */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -599,6 +617,19 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		F66BFF7B1B2A96FE00ECCFD9 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				F66BFF7C1B2A96FE00ECCFD9 /* btnCheck.png */,
+				F66BFF7D1B2A96FE00ECCFD9 /* btnCheck@2x.png */,
+				F66BFF7E1B2A96FE00ECCFD9 /* HUD.h */,
+				F66BFF7F1B2A96FE00ECCFD9 /* HUD.m */,
+				F66BFF801B2A96FE00ECCFD9 /* MBProgressHUD.h */,
+				F66BFF811B2A96FE00ECCFD9 /* MBProgressHUD.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		F671CEA21B259A230031C51D = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +693,7 @@
 		F671CF241B259C3C0031C51D /* third */ = {
 			isa = PBXGroup;
 			children = (
+				F66BFF7B1B2A96FE00ECCFD9 /* HUD */,
 				D3E4BC001B28B55800113323 /* ALAlertBanner */,
 				F666FD221B28229D00D03E04 /* MJRefresh */,
 				D3E45B601B25DCC400676882 /* fmdb */,
@@ -865,6 +897,8 @@
 				D3E4BC181B28B55800113323 /* bannerSuccess@2x.png in Resources */,
 				D3E45B9E1B267CBE00676882 /* RegPwdViewController.xib in Resources */,
 				D3E4BC131B28B55800113323 /* bannerFailure.png in Resources */,
+				F66BFF831B2A96FE00ECCFD9 /* btnCheck@2x.png in Resources */,
+				F66BFF8F1B2AD58100ECCFD9 /* BindTelController.xib in Resources */,
 				F666FD331B28229D00D03E04 /* MJRefresh.bundle in Resources */,
 				D3E45B8B1B25EF1B00676882 /* LoginRootViewController.xib in Resources */,
 				D3E4BC161B28B55800113323 /* bannerNotify@2x.png in Resources */,
@@ -877,6 +911,7 @@
 				D3E4D4E81B2764DA00BF2942 /* ViewPageController.xib in Resources */,
 				F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */,
 				D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */,
+				F66BFF821B2A96FE00ECCFD9 /* btnCheck.png in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
 				F671CEB61B259A230031C51D /* Images.xcassets in Resources */,
 				F655B7FE1B296BFE0025D3BC /* AddSubscribeCell.xib in Resources */,
@@ -945,7 +980,9 @@
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
 				F655B7F21B2962E50025D3BC /* CollectionCell.m in Sources */,
+				F66BFF8E1B2AD58100ECCFD9 /* BindTelController.m in Sources */,
 				F655B7FD1B296BFE0025D3BC /* AddSubscribeCell.m in Sources */,
+				F66BFF851B2A96FE00ECCFD9 /* MBProgressHUD.m in Sources */,
 				F666FD3A1B28229D00D03E04 /* UIView+MJExtension.m in Sources */,
 				F671CF701B259C3C0031C51D /* UIRefreshControl+AFNetworking.m in Sources */,
 				D3E45B981B26789C00676882 /* RegTelViewController.m in Sources */,
@@ -955,6 +992,7 @@
 				F671CEB41B259A230031C51D /* AppDelegate.m in Sources */,
 				D3E45B7E1B25E8FC00676882 /* IndexRootViewController.m in Sources */,
 				F671CF6C1B259C3C0031C51D /* UIAlertView+AFNetworking.m in Sources */,
+				F66BFF841B2A96FE00ECCFD9 /* HUD.m in Sources */,
 				D3E45B9D1B267CBE00676882 /* RegPwdViewController.m in Sources */,
 				D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */,
 				F666FD371B28229D00D03E04 /* MJRefreshHeaderView.m in Sources */,

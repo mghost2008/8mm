@@ -53,7 +53,7 @@
     [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
     [dic setObject:@"提示" forKey:@"title"];
     [dic setObject:@"举报成功！" forKey:@"subtitle"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_BANNER object:dic];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
     [self.navigationController setToolbarHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }

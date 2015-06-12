@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Util.h"
+#import "BindTelController.h"
 
 @interface MySettingsViewController : UITableViewController
+
+@property (nonatomic, strong) BindTelController *bindTelController;
 
 @end

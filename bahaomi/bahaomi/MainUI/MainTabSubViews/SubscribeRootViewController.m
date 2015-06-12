@@ -41,6 +41,11 @@
 }
 
 - (void) addClick:(UIBarButtonItem *)item{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (![appDelegate isLogin]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
+        return;
+    }
     AddSubscribeList *addListView = [[AddSubscribeList alloc] init];
     [addListView setTitle:@"添加"];
     [addListView setUserDelegate:self];

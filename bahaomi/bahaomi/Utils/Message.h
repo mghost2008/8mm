@@ -14,6 +14,9 @@
 #define USER_LOGOUT @"User_Logout"
 #define CLOSE_LOGINVIEW @"Close_Login_View"
 #define SHOW_BANNER @"show_banner"
+#define SHOW_HUD @"show_hud"
 #define SUBSCRIBE_CHANGED @"subscribe_changed"
+#define USER_INFO_CHANGED @"user_info_changed"
+#define USER_SETTING_REBIND @"user_setting_rebind"
 
 #endif

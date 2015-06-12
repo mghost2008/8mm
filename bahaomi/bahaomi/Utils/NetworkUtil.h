@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #define BASEURL @"http://123.56.149.56:8080"
+//#define BASEURL @"http://10.0.2.241:8080"
 //#define HOTNEWS @""BASEURL@"/article/findByCategoryId/%@"
 #define HOTNEWS_INIT @""BASEURL@"/article/findInitByCategoryIdPaged/%@?date=%@&size=%d"
 #define HOTNEWS_NEW @""BASEURL@"/article/findNewerByCategoryIdPaged/%@?date=%@&size=%d"
@@ -29,7 +30,25 @@
 #define REG_TEL_REQUEST_REG @""BASEURL@"/user/usersByMobilePhone/%@"
 #define TEL_PWD_LOGIN @""BASEURL@"/user/check"
 #define REG_OAUTH_USER @""BASEURL@"/user/create"
+#define UPDATE_USER_INFO @""BASEURL@"/user/update"
 #define BOOK_CREATE @""BASEURL@"/book/create"
+//用户订阅文章列表
+#define USER_COLLECT_LIST @""BASEURL@""
+//用户订阅文章
+#define USER_COLLECT_ARTICLE @""BASEURL@""
+//用户取消订阅文章
+#define USER_CANCEL_COLLECT_ARTICLE @""BASEURL@""
+//用户对文章点赞
+#define USER_LIKE_ARTICLE @""BASEURL@""
+//用户取消对文章点赞
+#define USER_CANCEL_LIKE_ARTICLE @""BASEURL@""
+//获取文章的评论列表
+#define COMMIT_COMMENT @""BASEURL"/comment/create"
+//提交评论
+#define FIND_COMMENTS_BY_ARTICLE @""BASEURL"/comment/findById/%@"
+//报名活动接口
+#define SIGN_UP_EVENT @""BASEURL""
+
 
 @interface NetworkUtil : NSObject
 

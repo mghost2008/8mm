@@ -19,7 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoChanged) name:USER_SETTING_REBIND object:nil];
     [self buildLayout];
+}
+
+- (void) userInfoChanged{
+    [self.tableView reloadData];
 }
 
 - (void) buildLayout{
@@ -52,7 +57,25 @@
     return 60;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0 ) {
+        switch (indexPath.row) {
+            case 0:
+                {
+                    [self.bindTelController setTitle:@"绑定手机号码"];
+                    [self.bindTelController.telNum setText:[appDelegate.userInfo objectForKey:@"phoneNum"]];
+                    [self.navigationController pushViewController:self.bindTelController animated:YES];
+                }
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        } 
+    }
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *settingBindCellIdentifier = @"SettingBindCell";
     static NSString *settingCellIdentifier = @"SettingCell";
@@ -70,7 +93,7 @@
         NSString *labeltitle = (indexPath.row == 0)?bindtelstr:(indexPath.row == 1)?bindwxstr:bingwbstr;
         [cell.imageView setImage:[UIImage imageNamed:imgnamed]];
         [cell.textLabel setText:celltitle];
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
+        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 40)];
         [lbl setTextAlignment:NSTextAlignmentRight];
         [lbl setText:labeltitle];
         cell.accessoryView = lbl;
@@ -99,4 +122,12 @@
         return 0;
     }
 }
+
+- (BindTelController *)bindTelController{
+    if (!_bindTelController) {
+        _bindTelController = [[BindTelController alloc] init];
+    }
+    return _bindTelController;
+}
+
 @end
