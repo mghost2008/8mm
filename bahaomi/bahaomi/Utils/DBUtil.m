@@ -47,6 +47,11 @@
         [_db executeUpdate:bookCreate];
         NSLog(@"book表不存在,创建完成");
     }
+    if (![_db tableExists:@"collect"]) {
+        NSString *collectCreate = @"CREATE TABLE collect(id INTEGER, userId INTEGER, articleId INTEGER)";
+        [_db executeUpdate:collectCreate];
+        NSLog(@"collect表不存在，创建完成");
+    }
 }
 
 - (NSMutableArray *)getAllCommend{
@@ -157,6 +162,89 @@
         [_db executeUpdate:insertCommend, commendId, openId, accountName, account, info, img, sn, isCommended, originImg, qrimg];
     }
     [_db close];
+}
+
+- (void)deleteAllCollect{
+    if (![_db open]) {
+        NSLog(@"-------------------数据库打开失败");
+        return;
+    }
+    if (![_db tableExists:@"collect"]) {
+        [self createTable];
+    }
+    [_db setShouldCacheStatements:YES];
+    NSString *deleteBook = @"DELETE FROM collect ";
+    [_db executeUpdate:deleteBook];
+    [_db close];
+}
+
+//删除一条collect记录
+- (void)deleteCollect:(NSMutableDictionary *)collect{
+    if (![_db open]) {
+        NSLog(@"-------------------数据库打开失败");
+        return;
+    }
+    if (![_db tableExists:@"collect"]) {
+        [self createTable];
+    }
+    [_db setShouldCacheStatements:YES];
+    NSString *deleteCollect = @"DELETE FROM collect WHERE id = ? AND userId = ? AND articleId = ?";
+    NSNumber *collectId = [NSNumber numberWithInteger:[[collect objectForKey:@"id"] integerValue]];
+    NSNumber *userId = [NSNumber numberWithInteger:[[collect objectForKey:@"userId"] integerValue]];
+    NSNumber *articleId = [NSNumber numberWithInteger:[[collect objectForKey:@"articleId"] integerValue]];
+    [_db executeUpdate:deleteCollect, collectId, userId, articleId];
+    [_db close];
+}
+
+- (void)insertAllCollect:(NSMutableArray *)collectList{
+    for (NSInteger i = 0; i < [collectList count]; i++) {
+        NSDictionary *tmp = [collectList objectAtIndex:i];
+        [self insertCollect:tmp];
+    };
+}
+
+//插入一条收藏记录
+- (void)insertCollect:(NSDictionary *)collect{
+    if (![_db open]) {
+        NSLog(@"-------------------数据库打开失败");
+        return;
+    }
+    if (![_db tableExists:@"collect"]) {
+        [self createTable];
+    }
+    [_db setShouldCacheStatements:YES];
+    NSString *insertCollect = @"INSERT INTO collect (id, userId, articleId) VALUES (?,?,?)";
+    NSNumber *collectId = [NSNumber numberWithInteger:[[collect objectForKey:@"id"] integerValue]];
+    NSNumber *userId = [NSNumber numberWithInteger:[[collect objectForKey:@"userId"] integerValue]];
+    NSNumber *articleId = [NSNumber numberWithInteger:[[collect objectForKey:@"articleId"] integerValue]];
+    [_db executeUpdate:insertCollect, collectId, userId, articleId];
+    [_db close];
+}
+
+- (NSMutableArray *)getAllCollect{
+    NSMutableArray *rslist = [NSMutableArray array];
+    if (![_db open]) {
+        NSLog(@"-------------------数据库打开失败");
+        return rslist;
+    }
+    if (![_db tableExists:@"collect"]) {
+        [self createTable];
+    }
+    [_db setShouldCacheStatements:YES];
+    NSString *selectBook = @"SELECT * FROM collect ";
+    FMResultSet *rs = [_db executeQuery:selectBook];
+    while ([rs next]) {
+        NSMutableDictionary *temp = [NSMutableDictionary dictionary];
+        NSNumber *bookId = [NSNumber numberWithInteger:[[rs objectForColumnName:@"id"] integerValue]];
+        NSNumber *userId = [NSNumber numberWithInteger:[[rs objectForColumnName:@"userId"] integerValue]];
+        NSNumber *accountId = [NSNumber numberWithInteger:[[rs objectForColumnName:@"articleId"] integerValue]];
+        [temp setValue:bookId forKey:@"id"];
+        [temp setValue:userId  forKey:@"userId"];
+        [temp setValue:accountId forKey:@"articleId"];
+        [rslist addObject:temp];
+    }
+    [_db close];
+    return rslist;
 }
 
 - (void)deleteAllBook{

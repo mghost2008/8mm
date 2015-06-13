@@ -22,6 +22,7 @@
     [self initWeixin];
     [self initCommend];
     [self initUserBookInfo];
+    [self initCollectInfo];
     [self buildLayout];
     return YES;
 }
@@ -43,6 +44,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showALAlertBanner:) name:SHOW_BANNER object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertView:) name:SHOW_HUD object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoChanged) name:USER_INFO_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userCollectChanged) name:USER_COLLECT_CHANGE object:nil];
 }
 
 //网络初始化
@@ -102,6 +104,22 @@
     }
 }
 
+//初始化用户收藏列表
+- (void) initCollectInfo{
+    if (self.isLogin) {
+        NSString *url = [NSString stringWithFormat:USER_COLLECT_LIST, [self.userInfo objectForKey:@"id"]];
+        [NetworkUtil JSONDataWithUrl:url success:^(id json){
+            self.collectArr = json;//暂时不存数据库，每次启动读取
+            //清空用户订阅列表
+//            [[DBUtil sharedManager] deleteAllCollect];
+//            [[DBUtil sharedManager] insertAllCollect:self.collectArr];
+//            self.collectArr = [[DBUtil sharedManager] getAllCollect];
+        }fail:^(void){
+            NSLog(@"初始化用户订阅列表失败");
+        }];
+    }
+}
+
 - (MainTabBarControllerViewController *)rootTabController{
     if (!_rootTabController) {
         _rootTabController = [[MainTabBarControllerViewController alloc] init];
@@ -135,12 +153,24 @@
 //用户信息改变
 - (void)userInfoChanged{
     [NetworkUtil postJSONWithUrl:UPDATE_USER_INFO parameters:self.userInfo success:^(id responseObject){
-        self.userInfo = responseObject;
         self.isLogin = YES;
         [[NSNotificationCenter defaultCenter] postNotificationName:USER_SETTING_REBIND object:nil];
     } fail:^(void){
         NSLog(@"NETWORK ERROR");
     }];
+}
+
+//用户收藏改变
+- (void)userCollectChanged{
+    if (self.isLogin) {
+        NSString *url = [NSString stringWithFormat:USER_COLLECT_LIST, [self.userInfo objectForKey:@"id"]];
+        [NetworkUtil JSONDataWithUrl:url success:^(id json){
+            self.collectArr = json;//暂时不存数据库，每次启动读取
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_COLLECT_CHANGED object:nil];
+        }fail:^(void){
+            NSLog(@"初始化用户订阅列表失败");
+        }];
+    }
 }
 
 - (void)setIsLogin:(BOOL)isLogin{
@@ -215,10 +245,17 @@
         self.weixinInfo = [NSMutableDictionary dictionaryWithDictionary:dic];
         [[NSUserDefaults standardUserDefaults] setObject:self.weixinInfo forKey:@"WX_INFO"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        NSMutableDictionary *newUser = [NSMutableDictionary dictionary];
-        [newUser setObject:[self.weixinInfo objectForKey:@"openid"] forKey:@"weixin"];
-        self.userInfo = newUser;
-        [self registerUser];
+        if (self.isLogin) {//已经登录为绑定
+            [self.userInfo setObject:[self.weixinInfo objectForKey:@"openid"] forKey:@"weixin"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+            [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }else{
+            NSMutableDictionary *newUser = [NSMutableDictionary dictionary];
+            [newUser setObject:[self.weixinInfo objectForKey:@"openid"] forKey:@"weixin"];
+            self.userInfo = newUser;
+            [self registerUser];
+        }
     }
 }
 
@@ -231,10 +268,17 @@
         self.weiboInfo  = [NSMutableDictionary dictionaryWithDictionary:responseObj.userInfo];
         [[NSUserDefaults standardUserDefaults] setObject:self.weiboInfo forKey:@"WB_INFO"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        NSMutableDictionary *newUser = [NSMutableDictionary dictionary];
-        [newUser setObject:[self.weiboInfo objectForKey:@"uid"] forKey:@"weibo"];
-        self.userInfo = newUser;
-        [self registerUser];
+        if (self.isLogin) {//已经登录为绑定
+            [self.userInfo setObject:[self.weiboInfo objectForKey:@"uid"] forKey:@"weibo"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+            [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }else{
+            NSMutableDictionary *newUser = [NSMutableDictionary dictionary];
+            [newUser setObject:[self.weiboInfo objectForKey:@"uid"] forKey:@"weibo"];
+            self.userInfo = newUser;
+            [self registerUser];
+        }
     }
 }
 

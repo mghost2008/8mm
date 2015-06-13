@@ -20,5 +20,9 @@
 - (NSMutableArray *)getAllBook;
 - (void)deleteAllBook;
 - (void)insertAllBook:(NSMutableArray *)bookList;
+- (NSMutableArray *)getAllCollect;
+- (void)deleteAllCollect;
+- (void)insertCollect:(NSDictionary *)collect;
+- (void)insertAllCollect:(NSMutableArray *)collectList;
 
 @end

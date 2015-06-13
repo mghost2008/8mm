@@ -33,11 +33,11 @@
 #define UPDATE_USER_INFO @""BASEURL@"/user/update"
 #define BOOK_CREATE @""BASEURL@"/book/create"
 //用户订阅文章列表
-#define USER_COLLECT_LIST @""BASEURL@""
+#define USER_COLLECT_LIST @""BASEURL@"/collect/getByUser/%@"
 //用户订阅文章
-#define USER_COLLECT_ARTICLE @""BASEURL@""
+#define USER_COLLECT_ARTICLE @""BASEURL@"/collect/create"
 //用户取消订阅文章
-#define USER_CANCEL_COLLECT_ARTICLE @""BASEURL@""
+#define USER_CANCEL_COLLECT_ARTICLE @""BASEURL@"/collect/delete/%@"
 //用户对文章点赞
 #define USER_LIKE_ARTICLE @""BASEURL@""
 //用户取消对文章点赞

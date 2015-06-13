@@ -9,7 +9,9 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 
-@interface DetailViewController ()
+@interface DetailViewController (){
+    AppDelegate *appDelegate;
+}
 
 @end
 
@@ -22,6 +24,7 @@
 }
 
 - (void)buildLayout{
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [self.webview setDelegate:self];
     [self.view addSubview:self.webview];
     [self setToolbarItems:self.items];
@@ -37,10 +40,26 @@
 }
 
 - (BOOL) isSubscribe{
-    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    for (NSInteger i = 0 ; i < [appdelegate.bookArr count]; i++) {
-        NSDictionary *tmp = [appdelegate.bookArr objectAtIndex:i];
+    if (![self isLogined]) {
+        return NO;
+    }
+    for (NSInteger i = 0 ; i < [appDelegate.bookArr count]; i++) {
+        NSDictionary *tmp = [appDelegate.bookArr objectAtIndex:i];
         if ([[tmp objectForKey:@"accountId"] integerValue] == [[self.inofDic objectForKey:@"accountId"] integerValue]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (BOOL)isCollected{
+    if (![self isLogined]) {
+        return NO;
+    }
+    for (NSInteger i = 0; i < [appDelegate.collectArr count]; i ++) {
+        NSDictionary *tmp = [[appDelegate.collectArr objectAtIndex:i] objectForKey:@"article"];
+        if ([[tmp objectForKey:@"id"] integerValue] == [[self.inofDic objectForKey:@"id"] integerValue]) {
+            self.collectDic = [appDelegate.collectArr objectAtIndex:i];
             return YES;
         }
     }
@@ -52,7 +71,8 @@
         UIBarButtonItem *recommendItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"recommendimg"] style:UIBarButtonItemStylePlain target:self action:@selector(recommendItemClick:)];
         UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shareimg"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick:)];
         UIBarButtonItem *agreeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"agreeimg"] style:UIBarButtonItemStylePlain target:self action:@selector(agreeItemClick:)];
-        UIBarButtonItem *collectItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"collectimg"] style:UIBarButtonItemStylePlain target:self action:@selector(collectItemClick:)];
+        NSString *collectImgStr = [self isCollected]?@"collectedimg":@"collectimg";
+        UIBarButtonItem *collectItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:collectImgStr] style:UIBarButtonItemStylePlain target:self action:@selector(collectItemClick:)];
         UIBarButtonItem *reportItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reportimg"] style:UIBarButtonItemStylePlain target:self action:@selector(reportItemClick:)];
         UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
         _items = [NSArray arrayWithObjects:spaceItem, recommendItem, spaceItem, shareItem, spaceItem, agreeItem, spaceItem, collectItem, spaceItem, reportItem, spaceItem, nil];
@@ -98,8 +118,7 @@
 }
 
 - (BOOL) isLogined{
-    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    return [appdelegate isLogin];
+    return [appDelegate isLogin];
 }
 
 //订阅按钮
@@ -111,7 +130,6 @@
     if ([item.title isEqualToString:@"订阅"]) {//订阅流程
         NSMutableArray *params = [self makeParams];
         [NetworkUtil postJSONWithUrl:BOOK_CREATE parameters:params success:^(id responseObject){
-            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             NSString *url = [NSString stringWithFormat:SUBSCRIBE_BY_USER, [appDelegate.userInfo objectForKey:@"id"]];
             [NetworkUtil JSONDataWithUrl:url success:^(id json){
                 appDelegate.bookArr = json;
@@ -136,7 +154,6 @@
 
 - (NSMutableArray *) makeParams{
     NSMutableArray *params = [NSMutableArray array];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSNumber *userId = [[appDelegate userInfo] objectForKey:@"id"];
     NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
     [tmp setValue:userId forKey:@"userId"];
@@ -167,10 +184,40 @@
     }
 }
 
+//收藏
 - (void)collectItemClick:(UIBarButtonItem *)item{
     if (![self isLogined]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
+    }
+    if ([self isCollected]) {
+        NSString *url = [NSString stringWithFormat:USER_CANCEL_COLLECT_ARTICLE, [self.collectDic objectForKey:@"id"]];
+        [NetworkUtil JSONDataWithUrl:url success:^(id json){
+            //取消成功
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_COLLECT_CHANGE object:nil];
+            [item setImage:[UIImage imageNamed:@"collectimg"]];
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setObject:@"取消收藏成功！" forKey:@"subtitle"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+        }fail:^(void){
+            NSLog(@"CANCEL_COLLECT_FAILED");
+        }];
+    }else{
+        NSString *url = [NSString stringWithFormat:USER_COLLECT_ARTICLE];
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:[appDelegate.userInfo objectForKey:@"id"] forKey:@"userId"];
+        NSMutableDictionary *article = [NSMutableDictionary dictionaryWithObject:[self.inofDic objectForKey:@"id" ] forKey:@"id"];
+        [params setValue:article forKey:@"article"];
+        [NetworkUtil postJSONWithUrl:url parameters:params success:^(id json){
+            //收藏成功
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_COLLECT_CHANGE object:nil];
+            [item setImage:[UIImage imageNamed:@"collectedimg"]];
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setObject:@"收藏成功！" forKey:@"subtitle"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+        }fail:^(void){
+            NSLog(@"CANCEL_COLLECT_FAILED");
+        }];
     }
 }
 

@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UIWebView *webview;
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIBarButtonItem *subscribeItem;
+@property (nonatomic, strong) NSMutableDictionary *collectDic;
 @property (nonatomic, strong) UIBarButtonItem *backItem;
 @property (nonatomic, strong) ReportViewController *reportController;
 

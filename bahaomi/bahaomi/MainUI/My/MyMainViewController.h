@@ -10,10 +10,12 @@
 #import "Info.h"
 #import "Message.h"
 #import "MySettingsViewController.h"
+#import "CollectViewController.h"
 
 @interface MyMainViewController : UITableViewController
 
 @property (strong, nonatomic) UINavigationController *navController;
 @property (strong, nonatomic) MySettingsViewController *settingController;
+@property (strong, nonatomic) CollectViewController *collectController;
 
 @end

@@ -58,7 +58,8 @@
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:{
-                
+                [self.collectController setTitle:@"收藏"];
+                [self.navController pushViewController:self.collectController animated:YES];
             }
                 break;
             case 1:{
@@ -157,6 +158,13 @@
         _settingController = [[MySettingsViewController alloc] init];
     }
     return _settingController;
+}
+
+- (CollectViewController *)collectController{
+    if (!_collectController) {
+        _collectController = [[CollectViewController alloc] init];
+    }
+    return _collectController;
 }
 
 @end

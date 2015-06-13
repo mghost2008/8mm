@@ -23,11 +23,12 @@
 }
 
 - (void)buildLayout{
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [self.telNum setLeftViewMode:UITextFieldViewModeAlways];
     [self.telNum setKeyboardType:UIKeyboardTypeNumberPad];
     [self.telNum setLeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"telnum"]]];
+    [self.telNum setText:[appDelegate.userInfo objectForKey:@"phoneNum"]?[appDelegate.userInfo objectForKey:@"phoneNum"]:@""];
     [self.navigationItem setLeftBarButtonItem:self.backItem];
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +48,6 @@
     NSString *oldnumstr = [appDelegate.userInfo valueForKey:@"phoneNum"];
     if ([numstr length] == 11) {//电话号码
         if (![numstr isEqualToString:oldnumstr]) {
-            [appDelegate.userInfo removeObjectForKey:@"phoneNum"];
             [appDelegate.userInfo setValue:numstr forKey:@"phoneNum"];
             [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
         }

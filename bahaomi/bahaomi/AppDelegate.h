@@ -21,6 +21,8 @@
 @property (strong, nonatomic) NSMutableArray *commendArr;
 //用户订阅关系
 @property (strong, nonatomic) NSMutableArray *bookArr;
+//用户收藏列表
+@property (strong, nonatomic) NSMutableArray *collectArr;
 //网络状态
 @property NSInteger networkStatusCode;
 @property (nonatomic) BOOL isLogin;
