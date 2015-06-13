@@ -21,7 +21,6 @@
     [super viewDidLoad];
     [self buildLayout];
     [self buildData];
-    NSLog(@"--------------------------------");
 }
 
 - (void) buildLayout{

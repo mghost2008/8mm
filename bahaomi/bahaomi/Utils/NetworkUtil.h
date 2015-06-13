@@ -42,9 +42,9 @@
 #define USER_LIKE_ARTICLE @""BASEURL@""
 //用户取消对文章点赞
 #define USER_CANCEL_LIKE_ARTICLE @""BASEURL@""
-//获取文章的评论列表
-#define COMMIT_COMMENT @""BASEURL"/comment/create"
 //提交评论
+#define COMMIT_COMMENT @""BASEURL"/comment/create"
+//获取文章的评论列表
 #define FIND_COMMENTS_BY_ARTICLE @""BASEURL"/comment/findById/%@"
 //报名活动接口
 #define SIGN_UP_EVENT @""BASEURL""

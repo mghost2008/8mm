@@ -175,6 +175,9 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
     }
+    self.commentController = [[CommentViewController alloc] init];
+    [self.commentController setArticleId:[self.inofDic objectForKey:@"id"]];
+    [self.navigationController pushViewController:self.commentController animated:YES];
 }
 
 - (void)shareItemClick:(UIBarButtonItem *)item{

@@ -11,6 +11,7 @@
 		D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1B1B29FE640061F641 /* EventStartedListController.m */; };
 		D3D24B201B2A01900061F641 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */; };
 		D3D453FC1B2BD9B600B280BA /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D453FB1B2BD9B600B280BA /* CollectViewController.m */; };
+		D3D453FF1B2BFCCF00B280BA /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */; };
 		D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3C1B25D7C700676882 /* NetworkUtil.m */; };
 		D3E45B401B25D7C700676882 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3E1B25D7C700676882 /* Util.m */; };
 		D3E45B421B25D8EB00676882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B411B25D8EB00676882 /* Foundation.framework */; };
@@ -145,6 +146,8 @@
 		D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		D3D453FA1B2BD9B600B280BA /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		D3D453FB1B2BD9B600B280BA /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
+		D3D453FD1B2BFCCF00B280BA /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		D3E45B3A1B25D7C700676882 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		D3E45B3B1B25D7C700676882 /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
 		D3E45B3C1B25D7C700676882 /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtil.m; sourceTree = "<group>"; };
@@ -513,6 +516,8 @@
 				F666FD401B284DC200D03E04 /* ReportViewController.xib */,
 				D3D24B1E1B2A01900061F641 /* EventDetailViewController.h */,
 				D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */,
+				D3D453FD1B2BFCCF00B280BA /* CommentViewController.h */,
+				D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				D3D453FC1B2BD9B600B280BA /* CollectViewController.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
+				D3D453FF1B2BFCCF00B280BA /* CommentViewController.m in Sources */,
 				D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */,
 				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
 				D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */,

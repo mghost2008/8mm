@@ -11,6 +11,7 @@
 #import "Util.h"
 #import "Message.h"
 #import "ReportViewController.h"
+#import "CommentViewController.h"
 
 @interface DetailViewController : UIViewController <UIWebViewDelegate>
 
@@ -21,5 +22,6 @@
 @property (nonatomic, strong) NSMutableDictionary *collectDic;
 @property (nonatomic, strong) UIBarButtonItem *backItem;
 @property (nonatomic, strong) ReportViewController *reportController;
+@property (nonatomic, strong) CommentViewController *commentController;
 
 @end
