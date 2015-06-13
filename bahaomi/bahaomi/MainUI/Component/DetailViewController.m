@@ -11,6 +11,7 @@
 
 @interface DetailViewController (){
     AppDelegate *appDelegate;
+    NSArray *activity;
 }
 
 @end
@@ -37,6 +38,7 @@
     NSLog(@"%@", self.inofDic);
     NSURL *url = [NSURL URLWithString:[self.inofDic objectForKey:@"url"]];
     [self.webview loadRequest:[NSURLRequest requestWithURL:url]];
+    activity = @[[[WeixinSessionActivity alloc] init], [[WeixinTimelineActivity alloc] init],[[WeiboActivity alloc] init]];
 }
 
 - (BOOL) isSubscribe{
@@ -187,6 +189,13 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
     }
+    NSString *imgpath = [self.inofDic objectForKey:@"smallImg"];
+    NSURL *imgurl = [NSURL URLWithString:imgpath];
+    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgurl]];
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:@[[self.inofDic objectForKey:@"title"], img, [NSURL URLWithString:[self.inofDic objectForKey:@"url"]]] applicationActivities:activity];
+    activityView.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeMessage , UIActivityTypeMail ,UIActivityTypePrint,UIActivityTypeAssignToContact ,UIActivityTypeSaveToCameraRoll ,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr,UIActivityTypePostToVimeo,UIActivityTypePostToTencentWeibo,UIActivityTypeAirDrop];
+    
+    [self presentViewController:activityView animated:YES completion:nil];
 }
 
 //收藏

@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "UIWebView+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import "Util.h"
 #import "Message.h"
 #import "ReportViewController.h"
 #import "CommentViewController.h"
+#import "WeixinSessionActivity.h"
+#import "WeixinTimelineActivity.h"
+#import "WeiboActivity.h"
 
 @interface DetailViewController : UIViewController <UIWebViewDelegate>
 

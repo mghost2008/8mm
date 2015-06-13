@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D37305191B2C8E2B00CEC8A9 /* WeixinActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D37305141B2C8E2B00CEC8A9 /* WeixinActivity.m */; };
+		D373051A1B2C8E2B00CEC8A9 /* WeixinSessionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D37305161B2C8E2B00CEC8A9 /* WeixinSessionActivity.m */; };
+		D373051B1B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D37305181B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m */; };
+		D373051F1B2C9B6400CEC8A9 /* WeiboActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D373051E1B2C9B6400CEC8A9 /* WeiboActivity.m */; };
 		D3D24B1C1B29FE640061F641 /* EventEndedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B191B29FE640061F641 /* EventEndedListController.m */; };
 		D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1B1B29FE640061F641 /* EventStartedListController.m */; };
 		D3D24B201B2A01900061F641 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */; };
@@ -147,6 +151,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D37305131B2C8E2B00CEC8A9 /* WeixinActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinActivity.h; sourceTree = "<group>"; };
+		D37305141B2C8E2B00CEC8A9 /* WeixinActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivity.m; sourceTree = "<group>"; };
+		D37305151B2C8E2B00CEC8A9 /* WeixinSessionActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinSessionActivity.h; sourceTree = "<group>"; };
+		D37305161B2C8E2B00CEC8A9 /* WeixinSessionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinSessionActivity.m; sourceTree = "<group>"; };
+		D37305171B2C8E2B00CEC8A9 /* WeixinTimelineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinTimelineActivity.h; sourceTree = "<group>"; };
+		D37305181B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinTimelineActivity.m; sourceTree = "<group>"; };
+		D373051C1B2C93C100CEC8A9 /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D373051D1B2C9B6400CEC8A9 /* WeiboActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboActivity.h; sourceTree = "<group>"; };
+		D373051E1B2C9B6400CEC8A9 /* WeiboActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboActivity.m; sourceTree = "<group>"; };
 		D3D24B181B29FE640061F641 /* EventEndedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventEndedListController.h; sourceTree = "<group>"; };
 		D3D24B191B29FE640061F641 /* EventEndedListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventEndedListController.m; sourceTree = "<group>"; };
 		D3D24B1A1B29FE640061F641 /* EventStartedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStartedListController.h; sourceTree = "<group>"; };
@@ -415,6 +428,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D37305121B2C8E2B00CEC8A9 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				D37305131B2C8E2B00CEC8A9 /* WeixinActivity.h */,
+				D37305141B2C8E2B00CEC8A9 /* WeixinActivity.m */,
+				D37305151B2C8E2B00CEC8A9 /* WeixinSessionActivity.h */,
+				D37305161B2C8E2B00CEC8A9 /* WeixinSessionActivity.m */,
+				D37305171B2C8E2B00CEC8A9 /* WeixinTimelineActivity.h */,
+				D37305181B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m */,
+				D373051D1B2C9B6400CEC8A9 /* WeiboActivity.h */,
+				D373051E1B2C9B6400CEC8A9 /* WeiboActivity.m */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		D3D454001B2C2C9500B280BA /* SLKTextViewControler */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +548,7 @@
 		D3E45B741B25E77E00676882 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				D37305121B2C8E2B00CEC8A9 /* Activity */,
 				F655B7E61B2931270025D3BC /* Subscribe */,
 				D3E4D4D31B275C1900BF2942 /* Index */,
 				D3E4D4D11B275BFE00BF2942 /* Event */,
@@ -1051,6 +1080,7 @@
 				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
 				D3E4D4E71B2764DA00BF2942 /* ViewPageController.m in Sources */,
 				D3D454121B2C2C9500B280BA /* UIScrollView+SLKAdditions.m in Sources */,
+				D373051B1B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m in Sources */,
 				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
 				D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */,
 				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,
@@ -1065,13 +1095,16 @@
 				D3E4D4EC1B276BC900BF2942 /* LargeCell.m in Sources */,
 				D3E45B731B25DFAF00676882 /* DBUtil.m in Sources */,
 				F671CF981B25A22D0031C51D /* SGActionView.m in Sources */,
+				D373051A1B2C8E2B00CEC8A9 /* WeixinSessionActivity.m in Sources */,
 				F671CF661B259C3C0031C51D /* AFURLResponseSerialization.m in Sources */,
 				F671CF6D1B259C3C0031C51D /* UIButton+AFNetworking.m in Sources */,
 				D3E45B401B25D7C700676882 /* Util.m in Sources */,
+				D373051F1B2C9B6400CEC8A9 /* WeiboActivity.m in Sources */,
 				F655B7F91B296B8A0025D3BC /* AddSubscribeList.m in Sources */,
 				F671CF9C1B25A22D0031C51D /* SGSheetMenu.m in Sources */,
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */,
+				D37305191B2C8E2B00CEC8A9 /* WeixinActivity.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
 				D3D454171B2C2C9500B280BA /* SLKTextViewController.m in Sources */,
 				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
@@ -1133,6 +1166,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F671CEB81B259A230031C51D /* Base */,
+				D373051C1B2C93C100CEC8A9 /* zh-Hans-CN */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
