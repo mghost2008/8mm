@@ -44,6 +44,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showALAlertBanner:) name:SHOW_BANNER object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertView:) name:SHOW_HUD object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoChanged) name:USER_INFO_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userUnbound) name:USER_UNBOUND object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userCollectChanged) name:USER_COLLECT_CHANGE object:nil];
 }
 
@@ -153,6 +154,16 @@
 //用户信息改变
 - (void)userInfoChanged{
     [NetworkUtil postJSONWithUrl:UPDATE_USER_INFO parameters:self.userInfo success:^(id responseObject){
+        self.isLogin = YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:USER_SETTING_REBIND object:nil];
+    } fail:^(void){
+        NSLog(@"NETWORK ERROR");
+    }];
+}
+
+//用户解绑社会化分享
+- (void)userUnbound{
+    [NetworkUtil postJSONWithUrl:UNBOUND_USER parameters:self.userInfo success:^(id responseObject){
         self.isLogin = YES;
         [[NSNotificationCenter defaultCenter] postNotificationName:USER_SETTING_REBIND object:nil];
     } fail:^(void){

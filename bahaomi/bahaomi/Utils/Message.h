@@ -20,5 +20,6 @@
 #define USER_SETTING_REBIND @"user_setting_rebind"
 #define USER_COLLECT_CHANGE @"user_collect_change"
 #define USER_COLLECT_CHANGED @"user_collect_changed"
+#define USER_UNBOUND @"user_unbound"
 
 #endif

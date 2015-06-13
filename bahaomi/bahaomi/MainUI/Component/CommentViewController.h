@@ -6,11 +6,14 @@
 //  Copyright (c) 2015年 yuedongxinji. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SLKTextViewController.h"
+#import "NetworkUtil.h"
+#import "LoremIpsum.h"
+#import "MessageTableViewCell.h"
 
-@interface CommentViewController : UITableViewController
+@interface CommentViewController : SLKTextViewController
 
-@property (nonatomic) NSNumber *articleId;
-@property (strong, nonatomic) NSMutableArray *commentList;
+@property (strong, nonatomic) NSMutableDictionary *articleInfo;
+@property (strong, nonatomic) UIBarButtonItem *backItem;
 
 @end

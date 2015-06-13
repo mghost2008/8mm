@@ -175,8 +175,10 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
     }
-    self.commentController = [[CommentViewController alloc] init];
-    [self.commentController setArticleId:[self.inofDic objectForKey:@"id"]];
+    self.commentController = [[CommentViewController alloc] initWithTableViewStyle:UITableViewStylePlain];
+    [self.commentController setArticleInfo:self.inofDic];
+    [self.commentController setTitle:@"评论"];
+    [self.navigationController setToolbarHidden:YES];
     [self.navigationController pushViewController:self.commentController animated:YES];
 }
 

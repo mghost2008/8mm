@@ -11,7 +11,16 @@
 		D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1B1B29FE640061F641 /* EventStartedListController.m */; };
 		D3D24B201B2A01900061F641 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */; };
 		D3D453FC1B2BD9B600B280BA /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D453FB1B2BD9B600B280BA /* CollectViewController.m */; };
-		D3D453FF1B2BFCCF00B280BA /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */; };
+		D3D454121B2C2C9500B280BA /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D454041B2C2C9500B280BA /* UIScrollView+SLKAdditions.m */; };
+		D3D454131B2C2C9500B280BA /* UITextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D454061B2C2C9500B280BA /* UITextView+SLKAdditions.m */; };
+		D3D454141B2C2C9500B280BA /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D454081B2C2C9500B280BA /* UIView+SLKAdditions.m */; };
+		D3D454151B2C2C9500B280BA /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4540B1B2C2C9500B280BA /* SLKTextInputbar.m */; };
+		D3D454161B2C2C9500B280BA /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4540D1B2C2C9500B280BA /* SLKTextView.m */; };
+		D3D454171B2C2C9500B280BA /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4540F1B2C2C9500B280BA /* SLKTextViewController.m */; };
+		D3D454181B2C2C9500B280BA /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D454111B2C2C9500B280BA /* SLKTypingIndicatorView.m */; };
+		D3D4541B1B2C331100B280BA /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4541A1B2C331100B280BA /* CommentViewController.m */; };
+		D3D454281B2C378900B280BA /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D454271B2C378900B280BA /* LoremIpsum.m */; };
+		D3D4542B1B2C3EE500B280BA /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4542A1B2C3EE500B280BA /* MessageTableViewCell.m */; };
 		D3E45B3F1B25D7C700676882 /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3C1B25D7C700676882 /* NetworkUtil.m */; };
 		D3E45B401B25D7C700676882 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E45B3E1B25D7C700676882 /* Util.m */; };
 		D3E45B421B25D8EB00676882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E45B411B25D8EB00676882 /* Foundation.framework */; };
@@ -146,8 +155,27 @@
 		D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		D3D453FA1B2BD9B600B280BA /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
 		D3D453FB1B2BD9B600B280BA /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
-		D3D453FD1B2BFCCF00B280BA /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
-		D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		D3D454021B2C2C9500B280BA /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
+		D3D454031B2C2C9500B280BA /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		D3D454041B2C2C9500B280BA /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		D3D454051B2C2C9500B280BA /* UITextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		D3D454061B2C2C9500B280BA /* UITextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		D3D454071B2C2C9500B280BA /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		D3D454081B2C2C9500B280BA /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		D3D4540A1B2C2C9500B280BA /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
+		D3D4540B1B2C2C9500B280BA /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
+		D3D4540C1B2C2C9500B280BA /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
+		D3D4540D1B2C2C9500B280BA /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
+		D3D4540E1B2C2C9500B280BA /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
+		D3D4540F1B2C2C9500B280BA /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
+		D3D454101B2C2C9500B280BA /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		D3D454111B2C2C9500B280BA /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		D3D454191B2C331100B280BA /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		D3D4541A1B2C331100B280BA /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		D3D454261B2C378900B280BA /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
+		D3D454271B2C378900B280BA /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
+		D3D454291B2C3EE500B280BA /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		D3D4542A1B2C3EE500B280BA /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		D3E45B3A1B25D7C700676882 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		D3E45B3B1B25D7C700676882 /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
 		D3E45B3C1B25D7C700676882 /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtil.m; sourceTree = "<group>"; };
@@ -387,6 +415,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3D454001B2C2C9500B280BA /* SLKTextViewControler */ = {
+			isa = PBXGroup;
+			children = (
+				D3D454011B2C2C9500B280BA /* Additions */,
+				D3D454091B2C2C9500B280BA /* Classes */,
+			);
+			path = SLKTextViewControler;
+			sourceTree = "<group>";
+		};
+		D3D454011B2C2C9500B280BA /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D3D454021B2C2C9500B280BA /* SLKUIConstants.h */,
+				D3D454031B2C2C9500B280BA /* UIScrollView+SLKAdditions.h */,
+				D3D454041B2C2C9500B280BA /* UIScrollView+SLKAdditions.m */,
+				D3D454051B2C2C9500B280BA /* UITextView+SLKAdditions.h */,
+				D3D454061B2C2C9500B280BA /* UITextView+SLKAdditions.m */,
+				D3D454071B2C2C9500B280BA /* UIView+SLKAdditions.h */,
+				D3D454081B2C2C9500B280BA /* UIView+SLKAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		D3D454091B2C2C9500B280BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D3D4540A1B2C2C9500B280BA /* SLKTextInputbar.h */,
+				D3D4540B1B2C2C9500B280BA /* SLKTextInputbar.m */,
+				D3D4540C1B2C2C9500B280BA /* SLKTextView.h */,
+				D3D4540D1B2C2C9500B280BA /* SLKTextView.m */,
+				D3D4540E1B2C2C9500B280BA /* SLKTextViewController.h */,
+				D3D4540F1B2C2C9500B280BA /* SLKTextViewController.m */,
+				D3D454101B2C2C9500B280BA /* SLKTypingIndicatorView.h */,
+				D3D454111B2C2C9500B280BA /* SLKTypingIndicatorView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D3D454251B2C378900B280BA /* LoremIpsum */ = {
+			isa = PBXGroup;
+			children = (
+				D3D454261B2C378900B280BA /* LoremIpsum.h */,
+				D3D454271B2C378900B280BA /* LoremIpsum.m */,
+			);
+			path = LoremIpsum;
+			sourceTree = "<group>";
+		};
 		D3E45B391B25D7C700676882 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +570,8 @@
 		D3E45B8C1B2664EF00676882 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				D3D454291B2C3EE500B280BA /* MessageTableViewCell.h */,
+				D3D4542A1B2C3EE500B280BA /* MessageTableViewCell.m */,
 				F655B7FA1B296BFE0025D3BC /* AddSubscribeCell.h */,
 				F655B7FB1B296BFE0025D3BC /* AddSubscribeCell.m */,
 				F655B7FC1B296BFE0025D3BC /* AddSubscribeCell.xib */,
@@ -516,8 +593,8 @@
 				F666FD401B284DC200D03E04 /* ReportViewController.xib */,
 				D3D24B1E1B2A01900061F641 /* EventDetailViewController.h */,
 				D3D24B1F1B2A01900061F641 /* EventDetailViewController.m */,
-				D3D453FD1B2BFCCF00B280BA /* CommentViewController.h */,
-				D3D453FE1B2BFCCF00B280BA /* CommentViewController.m */,
+				D3D454191B2C331100B280BA /* CommentViewController.h */,
+				D3D4541A1B2C331100B280BA /* CommentViewController.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -703,6 +780,8 @@
 		F671CF241B259C3C0031C51D /* third */ = {
 			isa = PBXGroup;
 			children = (
+				D3D454251B2C378900B280BA /* LoremIpsum */,
+				D3D454001B2C2C9500B280BA /* SLKTextViewControler */,
 				F66BFF7B1B2A96FE00ECCFD9 /* HUD */,
 				D3E4BC001B28B55800113323 /* ALAlertBanner */,
 				F666FD221B28229D00D03E04 /* MJRefresh */,
@@ -948,6 +1027,7 @@
 				F666FD351B28229D00D03E04 /* MJRefreshConst.m in Sources */,
 				F666FD361B28229D00D03E04 /* MJRefreshFooterView.m in Sources */,
 				F655B7F61B296A400025D3BC /* SubscribeNewsListViewController.m in Sources */,
+				D3D454161B2C2C9500B280BA /* SLKTextView.m in Sources */,
 				F671CF651B259C3C0031C51D /* AFURLRequestSerialization.m in Sources */,
 				D3E4D4D01B27585500BF2942 /* MySettingsViewController.m in Sources */,
 				F666FD411B284DC200D03E04 /* ReportViewController.m in Sources */,
@@ -957,7 +1037,6 @@
 				D3D453FC1B2BD9B600B280BA /* CollectViewController.m in Sources */,
 				F671CF6E1B259C3C0031C51D /* UIImageView+AFNetworking.m in Sources */,
 				F671CF641B259C3C0031C51D /* AFURLConnectionOperation.m in Sources */,
-				D3D453FF1B2BFCCF00B280BA /* CommentViewController.m in Sources */,
 				D3E45B6C1B25DCC400676882 /* FMDatabase.m in Sources */,
 				D3E45B701B25DCC400676882 /* FMResultSet.m in Sources */,
 				D3E4D4F11B276BDF00BF2942 /* SmallCell.m in Sources */,
@@ -967,11 +1046,15 @@
 				F655B7EE1B2941DE0025D3BC /* SubscribeCollectionController.m in Sources */,
 				F671CF9A1B25A22D0031C51D /* SGBaseMenu.m in Sources */,
 				F671CF631B259C3C0031C51D /* AFSecurityPolicy.m in Sources */,
+				D3D454181B2C2C9500B280BA /* SLKTypingIndicatorView.m in Sources */,
+				D3D454131B2C2C9500B280BA /* UITextView+SLKAdditions.m in Sources */,
 				D3E45B931B26665400676882 /* TelLoginViewController.m in Sources */,
 				D3E4D4E71B2764DA00BF2942 /* ViewPageController.m in Sources */,
+				D3D454121B2C2C9500B280BA /* UIScrollView+SLKAdditions.m in Sources */,
 				D3E45B6F1B25DCC400676882 /* FMDatabaseQueue.m in Sources */,
 				D3E45B7B1B25E8E400676882 /* MyRootViewController.m in Sources */,
 				D3E45B771B25E7AD00676882 /* MainTabBarControllerViewController.m in Sources */,
+				D3D454281B2C378900B280BA /* LoremIpsum.m in Sources */,
 				F671CF6F1B259C3C0031C51D /* UIProgressView+AFNetworking.m in Sources */,
 				F666FD381B28229D00D03E04 /* UIScrollView+MJExtension.m in Sources */,
 				D3E4D4D91B275D3A00BF2942 /* NewsListViewController.m in Sources */,
@@ -990,6 +1073,7 @@
 				F671CF6B1B259C3C0031C51D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D3D24B1D1B29FE640061F641 /* EventStartedListController.m in Sources */,
 				F671CF691B259C3C0031C51D /* README.md in Sources */,
+				D3D454171B2C2C9500B280BA /* SLKTextViewController.m in Sources */,
 				D3E4BC101B28B55800113323 /* ALAlertBannerManager.m in Sources */,
 				F655B7F21B2962E50025D3BC /* CollectionCell.m in Sources */,
 				F66BFF8E1B2AD58100ECCFD9 /* BindTelController.m in Sources */,
@@ -1000,6 +1084,7 @@
 				D3E45B981B26789C00676882 /* RegTelViewController.m in Sources */,
 				D3E45B6D1B25DCC400676882 /* FMDatabaseAdditions.m in Sources */,
 				F671CF711B259C3C0031C51D /* UIWebView+AFNetworking.m in Sources */,
+				D3D4542B1B2C3EE500B280BA /* MessageTableViewCell.m in Sources */,
 				F671CF991B25A22D0031C51D /* SGAlertMenu.m in Sources */,
 				F671CEB41B259A230031C51D /* AppDelegate.m in Sources */,
 				D3E45B7E1B25E8FC00676882 /* IndexRootViewController.m in Sources */,
@@ -1007,7 +1092,10 @@
 				F66BFF841B2A96FE00ECCFD9 /* HUD.m in Sources */,
 				D3E45B9D1B267CBE00676882 /* RegPwdViewController.m in Sources */,
 				D3E45B8A1B25EF1B00676882 /* LoginRootViewController.m in Sources */,
+				D3D454151B2C2C9500B280BA /* SLKTextInputbar.m in Sources */,
 				F666FD371B28229D00D03E04 /* MJRefreshHeaderView.m in Sources */,
+				D3D454141B2C2C9500B280BA /* UIView+SLKAdditions.m in Sources */,
+				D3D4541B1B2C331100B280BA /* CommentViewController.m in Sources */,
 				D3E4D4DC1B275D5C00BF2942 /* DynamicListViewController.m in Sources */,
 				D3E45B841B25E93000676882 /* EventRootViewController.m in Sources */,
 				F671CF611B259C3C0031C51D /* AFHTTPSessionManager.m in Sources */,

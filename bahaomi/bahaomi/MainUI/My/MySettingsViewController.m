@@ -83,7 +83,7 @@
                     }
                 }else{
                     [appDelegate.userInfo setObject:@"" forKey:@"weixin"];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
                 }
             }
                 break;
@@ -96,7 +96,7 @@
                     [WeiboSDK sendRequest:request];
                 }else{
                     [appDelegate.userInfo setObject:@"" forKey:@"weibo"];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
                 }
             }
                 break;
@@ -117,8 +117,8 @@
         NSString *celltitle = (indexPath.row == 0)?@"手机号":(indexPath.row == 1)?@"微信":@"微博";
 
         NSString *bindtelstr = [appDelegate.userInfo objectForKey:@"phoneNum"]?[appDelegate.userInfo objectForKey:@"phoneNum"]:@"绑定手机";
-        NSString *bindwxstr = [appDelegate.userInfo objectForKey:@"weixin"]?@"解绑微信":@"绑定微信";
-        NSString *bingwbstr = [appDelegate.userInfo objectForKey:@"weibo"]?@"解绑微博":@"绑定微博";
+        NSString *bindwxstr = [appDelegate.userInfo objectForKey:@"weixin"] && [[appDelegate.userInfo objectForKey:@"weixin"] length]>0?@"解绑微信":@"绑定微信";
+        NSString *bingwbstr = [appDelegate.userInfo objectForKey:@"weibo"] && [[appDelegate.userInfo objectForKey:@"weibo"] length]>0?@"解绑微博":@"绑定微博";
         NSString *labeltitle = (indexPath.row == 0)?bindtelstr:(indexPath.row == 1)?bindwxstr:bingwbstr;
         [cell.imageView setImage:[UIImage imageNamed:imgnamed]];
         [cell.textLabel setText:celltitle];

@@ -11,6 +11,7 @@
 #import "Message.h"
 #import "MySettingsViewController.h"
 #import "CollectViewController.h"
+#import "CommentViewController.h"
 
 @interface MyMainViewController : UITableViewController
 
