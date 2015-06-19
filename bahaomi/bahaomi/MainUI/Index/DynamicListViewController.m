@@ -21,8 +21,8 @@
 }
 
 - (void)buildData{
-    [self setupRefresh];
     [self requestInitData:self.curDate];
+    [self setupRefresh];
 }
 
 #pragma refresh

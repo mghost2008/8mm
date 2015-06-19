@@ -109,7 +109,6 @@
 		F671CEB11B259A230031C51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB01B259A230031C51D /* main.m */; };
 		F671CEB41B259A230031C51D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEB31B259A230031C51D /* AppDelegate.m */; };
 		F671CEB61B259A230031C51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB51B259A230031C51D /* Images.xcassets */; };
-		F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F671CEB71B259A230031C51D /* LaunchScreen.xib */; };
 		F671CEC51B259A230031C51D /* bahaomiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CEC41B259A230031C51D /* bahaomiTests.m */; };
 		F671CF5F1B259C3C0031C51D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF281B259C3C0031C51D /* AFHTTPRequestOperation.m */; };
 		F671CF601B259C3C0031C51D /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F671CF2A1B259C3C0031C51D /* AFHTTPRequestOperationManager.m */; };
@@ -157,7 +156,6 @@
 		D37305161B2C8E2B00CEC8A9 /* WeixinSessionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinSessionActivity.m; sourceTree = "<group>"; };
 		D37305171B2C8E2B00CEC8A9 /* WeixinTimelineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinTimelineActivity.h; sourceTree = "<group>"; };
 		D37305181B2C8E2B00CEC8A9 /* WeixinTimelineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinTimelineActivity.m; sourceTree = "<group>"; };
-		D373051C1B2C93C100CEC8A9 /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D373051D1B2C9B6400CEC8A9 /* WeiboActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboActivity.h; sourceTree = "<group>"; };
 		D373051E1B2C9B6400CEC8A9 /* WeiboActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboActivity.m; sourceTree = "<group>"; };
 		D3D24B181B29FE640061F641 /* EventEndedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventEndedListController.h; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 		F671CEB21B259A230031C51D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F671CEB31B259A230031C51D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F671CEB51B259A230031C51D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F671CEB81B259A230031C51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F671CEBE1B259A230031C51D /* bahaomiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bahaomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671CEC31B259A230031C51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671CEC41B259A230031C51D /* bahaomiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bahaomiTests.m; sourceTree = "<group>"; };
@@ -774,7 +771,6 @@
 				F671CEB21B259A230031C51D /* AppDelegate.h */,
 				F671CEB31B259A230031C51D /* AppDelegate.m */,
 				F671CEB51B259A230031C51D /* Images.xcassets */,
-				F671CEB71B259A230031C51D /* LaunchScreen.xib */,
 				F671CEAE1B259A230031C51D /* Supporting Files */,
 			);
 			path = bahaomi;
@@ -1027,7 +1023,6 @@
 				D3E45B941B26665400676882 /* TelLoginViewController.xib in Resources */,
 				D3E4BC151B28B55800113323 /* bannerNotify.png in Resources */,
 				D3E4D4E81B2764DA00BF2942 /* ViewPageController.xib in Resources */,
-				F671CEB91B259A230031C51D /* LaunchScreen.xib in Resources */,
 				D3E4D4F21B276BDF00BF2942 /* SmallCell.xib in Resources */,
 				F66BFF821B2A96FE00ECCFD9 /* btnCheck.png in Resources */,
 				F671CF8C1B259F550031C51D /* WeiboSDK.bundle in Resources */,
@@ -1161,18 +1156,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		F671CEB71B259A230031C51D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F671CEB81B259A230031C51D /* Base */,
-				D373051C1B2C93C100CEC8A9 /* zh-Hans-CN */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		F671CEC61B259A230031C51D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1258,6 +1241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhiqiang yan (H54D52NNDC)";
 				INFOPLIST_FILE = bahaomi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1278,6 +1262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhiqiang yan (H54D52NNDC)";
 				INFOPLIST_FILE = bahaomi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

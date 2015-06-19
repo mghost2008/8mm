@@ -21,15 +21,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-En-Aij">
                     <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-KC-fpe">
-                            <rect key="frame" x="159" y="10" width="2" height="20"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-KC-fpe">
+                            <rect key="frame" x="160" y="10" width="2" height="20"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="2" id="Xwa-jc-f3M"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZB-ty-tbw">
-                            <rect key="frame" x="5" y="0.0" width="149" height="42"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZB-ty-tbw">
+                            <rect key="frame" x="5" y="0.0" width="150" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="Qc5-8Z-JoY"/>
                             </constraints>
@@ -40,8 +40,8 @@
                                 <action selector="hotNewsBtnClick:" destination="-1" eventType="touchUpInside" id="u72-4V-qFu"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edv-L8-Hmv">
-                            <rect key="frame" x="166" y="0.0" width="149" height="42"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edv-L8-Hmv">
+                            <rect key="frame" x="167" y="0.0" width="148" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="4XE-1d-WX0"/>
                             </constraints>

@@ -136,6 +136,7 @@
 }
 
 - (void)needLogin{
+    NSLog(@"%f    %f    %f    %f", self.loginController.view.frame.origin.x, self.loginController.view.frame.origin.y, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height);
     [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
     [self.window.rootViewController.view addSubview:self.loginController.view];
     [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear  animations:^{
