@@ -71,7 +71,9 @@
             }
                 break;
             case 3:{
-                
+                [self.feedbackController setTitle:@"反馈"];
+                [self.feedbackController.feedbackTextView setText:@""];
+                [self.navController pushViewController:self.feedbackController animated:YES];
             }
                 break;
             case 4:{
@@ -167,4 +169,11 @@
     return _collectController;
 }
 
+- (FeedbackViewController *)feedbackController{
+    if (!_feedbackController) {
+        _feedbackController = [[FeedbackViewController alloc] init];
+    }
+    return _feedbackController;
+}
+                 
 @end

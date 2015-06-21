@@ -12,11 +12,13 @@
 #import "MySettingsViewController.h"
 #import "CollectViewController.h"
 #import "CommentViewController.h"
+#import "FeedbackViewController.h"
 
 @interface MyMainViewController : UITableViewController
 
 @property (strong, nonatomic) UINavigationController *navController;
 @property (strong, nonatomic) MySettingsViewController *settingController;
 @property (strong, nonatomic) CollectViewController *collectController;
+@property (strong, nonatomic) FeedbackViewController *feedbackController;
 
 @end
