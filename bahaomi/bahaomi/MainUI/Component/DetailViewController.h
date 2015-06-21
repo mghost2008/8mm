@@ -20,6 +20,7 @@
 @interface DetailViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *inofDic;
+@property (nonatomic, strong) NSMutableDictionary *agreeDic;
 @property (nonatomic, strong) UIWebView *webview;
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIBarButtonItem *subscribeItem;

@@ -43,6 +43,8 @@
 #define USER_LIKE_ARTICLE @""BASEURL@"/like/create"
 //用户取消对文章点赞
 #define USER_CANCEL_LIKE_ARTICLE @""BASEURL@"/like/delete"
+//用户对文章的赞信息
+#define USER_LIKE_INFO @""BASEURL"/like/get/%@/%@"
 //提交评论
 #define COMMIT_COMMENT @""BASEURL"/comment/create"
 //获取文章的评论列表

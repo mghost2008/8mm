@@ -68,6 +68,20 @@
     return NO;
 }
 
+- (BOOL)isLike{
+    NSString *agreeUrl = [NSString stringWithFormat:USER_LIKE_INFO,[appDelegate.userInfo objectForKey:@"id"],[self.inofDic objectForKey:@"id"]];
+    [NetworkUtil JSONDataWithUrl:agreeUrl success:^(id json){
+        self.agreeDic = json;
+    }fail:^(void){
+        NSLog(@"NETWORK ERROR");
+    }];
+    
+    if (self.agreeDic && [self.agreeDic objectForKey:@"id"] > 0 ) {
+        return YES;
+    }
+    return NO;
+}
+
 - (NSArray *) items{
     if (!_items) {
         UIBarButtonItem *recommendItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"recommendimg"] style:UIBarButtonItemStylePlain target:self action:@selector(recommendItemClick:)];
@@ -90,6 +104,13 @@
         _webview.scalesPageToFit = YES;
     }
     return _webview;
+}
+
+- (NSMutableDictionary *)agreeDic{
+    if (!_agreeDic) {
+        _agreeDic = [NSMutableDictionary dictionary];
+    }
+    return _agreeDic;
 }
 
 - (UIBarButtonItem *)subscribeItem{
@@ -143,7 +164,8 @@
                 NSMutableDictionary *dic = [NSMutableDictionary dictionary];
                 [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
                 [dic setObject:@"订阅成功" forKey:@"title"];
-                [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_BANNER object:dic];
+                [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+                //[[NSNotificationCenter defaultCenter] postNotificationName:SHOW_BANNER object:dic];
                 [[NSNotificationCenter defaultCenter] postNotificationName:SUBSCRIBE_CHANGED object:nil];
             }fail:^(void){
                 NSLog(@"初始化用户订阅列表失败");
@@ -169,6 +191,27 @@
     if (![self isLogined]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return;
+    }
+    if (![self isLike]) {
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:[appDelegate.userInfo objectForKey:@"id"] forKey:@"userId"];
+        [params setValue:[self.inofDic objectForKey:@"id"] forKey:@"articleId"];
+        [NetworkUtil postJSONWithUrl:USER_LIKE_ARTICLE parameters:params success:^(id responseObject){
+            self.agreeDic = responseObject;
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+            NSString *aggreeStr = [NSString stringWithFormat:@"点赞成功，当前已赞%@", [self.inofDic objectForKey:@"likeCount"]];
+            [dic setObject:aggreeStr forKey:@"subtitle"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+        }fail:^(void){
+            NSLog(@"NETWORK ERROR!");
+        }];
+    }else{
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+        NSString *aggreeStr = [NSString stringWithFormat:@"已赞过，当前已赞%@", [self.inofDic objectForKey:@"likeCount"]];
+        [dic setObject:aggreeStr forKey:@"subtitle"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
     }
 }
 
