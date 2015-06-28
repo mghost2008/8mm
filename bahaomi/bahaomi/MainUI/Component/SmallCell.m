@@ -20,7 +20,8 @@
         _infoDic = infoDic;
     }
     self.mainTitle.text = [_infoDic objectForKey:@"title"];
-    self.subTitle.text = [NSString stringWithFormat:@"%@/%@",[_infoDic objectForKey:@"accountName"],[_infoDic objectForKey:@"pubDate"]];
+    NSString *datestr = [_infoDic objectForKey:@"pubDate"];
+    self.subTitle.text = [NSString stringWithFormat:@"%@/%@",[_infoDic objectForKey:@"accountName"],[datestr substringToIndex:10]];
     [self.mainImage setImageWithURL:[NSURL URLWithString:[_infoDic objectForKey:@"smallImg"]]];
 }
 
