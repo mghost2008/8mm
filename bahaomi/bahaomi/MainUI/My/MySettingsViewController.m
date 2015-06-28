@@ -47,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return 1;
     }else{
         return 2;
     }
@@ -58,7 +58,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.section == 0 ) {
         switch (indexPath.row) {
             case 0:
@@ -67,39 +67,39 @@
                     [self.navigationController pushViewController:self.bindTelController animated:YES];
                 }
                 break;
-            case 1:
-            {
-                if ([((UILabel *)cell.accessoryView).text isEqualToString:@"绑定微信"] ) {
-                    //构造SendAuthReq结构体
-                    SendAuthReq* req =[[SendAuthReq alloc ] init ];
-                    req.scope = @"snsapi_userinfo" ;
-                    req.state = @"123" ;
-                    //第三方向微信终端发送一个SendAuthReq消息结构
-                    //检测是否安装微信
-                    if ([WXApi isWXAppInstalled]) {
-                        [WXApi sendReq:req];
-                    }else{
-                        [WXApi sendAuthReq:req viewController:self delegate:(AppDelegate *)[[UIApplication sharedApplication] delegate] ];
-                    }
-                }else{
-                    [appDelegate.userInfo setObject:@"" forKey:@"weixin"];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
-                }
-            }
-                break;
-            case 2:
-            {
-                if ([((UILabel *)cell.accessoryView).text isEqualToString:@"绑定微博"] ) {
-                    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-                    request.redirectURI = WEIBO_APP_REDIRECT_URI;
-                    request.scope = @"all";
-                    [WeiboSDK sendRequest:request];
-                }else{
-                    [appDelegate.userInfo setObject:@"" forKey:@"weibo"];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
-                }
-            }
-                break;
+//            case 1:
+//            {
+//                if ([((UILabel *)cell.accessoryView).text isEqualToString:@"绑定微信"] ) {
+//                    //构造SendAuthReq结构体
+//                    SendAuthReq* req =[[SendAuthReq alloc ] init ];
+//                    req.scope = @"snsapi_userinfo" ;
+//                    req.state = @"123" ;
+//                    //第三方向微信终端发送一个SendAuthReq消息结构
+//                    //检测是否安装微信
+//                    if ([WXApi isWXAppInstalled]) {
+//                        [WXApi sendReq:req];
+//                    }else{
+//                        [WXApi sendAuthReq:req viewController:self delegate:(AppDelegate *)[[UIApplication sharedApplication] delegate] ];
+//                    }
+//                }else{
+//                    [appDelegate.userInfo setObject:@"" forKey:@"weixin"];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
+//                }
+//            }
+//                break;
+//            case 2:
+//            {
+//                if ([((UILabel *)cell.accessoryView).text isEqualToString:@"绑定微博"] ) {
+//                    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+//                    request.redirectURI = WEIBO_APP_REDIRECT_URI;
+//                    request.scope = @"all";
+//                    [WeiboSDK sendRequest:request];
+//                }else{
+//                    [appDelegate.userInfo setObject:@"" forKey:@"weibo"];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:USER_UNBOUND object:nil];
+//                }
+//            }
+//                break;
             default:
                 break;
         } 
