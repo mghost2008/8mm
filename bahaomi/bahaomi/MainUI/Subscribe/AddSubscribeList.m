@@ -72,8 +72,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     AddSubscribeCell *cell = (AddSubscribeCell *)[tableView cellForRowAtIndexPath:indexPath];
-    if  (cell.addBtn.selected)//当前选中
-        [self.userBookArr removeObject:[cell infoDic]];
+    if  (cell.addBtn.selected){//当前选中
+        //移除之前要判断是否是最后一条
+        if ([self.userBookArr count]>1) {
+            [self.userBookArr removeObject:[cell infoDic]];
+        }else{
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setValue:@"订阅列表不能为空！" forKey:@"subtitle"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+            return;
+        }
+    }
     else
         [self.userBookArr addObject:[cell infoDic]];
     [cell addBtnClick:cell.addBtn];
