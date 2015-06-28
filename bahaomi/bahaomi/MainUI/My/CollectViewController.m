@@ -28,15 +28,21 @@
     [self.tableView setFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 108)];
     [self.tableView setTableFooterView:[[UIView alloc] init]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectListChanged) name:USER_COLLECT_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectListLocalChanged) name:USER_COLLECT_LIST_CHANGE object:nil];
 }
 
 - (void) collectListChanged{
-    self.collectList = [appDelegate collectArr];
+    self.collectList = [appDelegate.collectArr mutableCopy];
     [self.tableView reloadData];
 }
 
+- (void) collectListLocalChanged{
+    self.collectList = [appDelegate.collectArr mutableCopy];
+}
+
 - (void) buildData{
-    self.collectList = [appDelegate collectArr];
+    self.collectList = [appDelegate.collectArr mutableCopy];//[appDelegate collectArr];
+    printf("is NSMutableArray %d\n", [self.collectList isKindOfClass:[NSMutableArray class]]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +51,25 @@
 }
 
 #pragma mark - Table view data source
+
+//滑动删除的实现
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSMutableDictionary *dic = [self.collectList objectAtIndex:indexPath.row];
+        NSString *url = [NSString stringWithFormat:USER_CANCEL_COLLECT_ARTICLE, [dic objectForKey:@"id"]];
+        [NetworkUtil JSONDataWithUrl:url success:^(id json){
+            //取消成功
+            [self.collectList removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }fail:^(void){
+            NSLog(@"CANCEL_COLLECT_FAILED");
+        }];        
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

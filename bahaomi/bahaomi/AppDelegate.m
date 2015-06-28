@@ -257,9 +257,9 @@
         self.weixinInfo = [NSMutableDictionary dictionaryWithDictionary:dic];
         [[NSUserDefaults standardUserDefaults] setObject:self.weixinInfo forKey:@"WX_INFO"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        if (self.isLogin) {//已经登录为绑定
+        if (self.isLogin) {//已经登录为绑定，新版本修改为已登录则保存信息
             [self.userInfo setObject:[self.weixinInfo objectForKey:@"openid"] forKey:@"weixin"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+            //[[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
             [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }else{
@@ -280,12 +280,12 @@
         self.weiboInfo  = [NSMutableDictionary dictionaryWithDictionary:responseObj.userInfo];
         [[NSUserDefaults standardUserDefaults] setObject:self.weiboInfo forKey:@"WB_INFO"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        if (self.isLogin) {//已经登录为绑定
+        if (self.isLogin) {//已经登录为绑定，新版本修改为已登录则保存信息
             [self.userInfo setObject:[self.weiboInfo objectForKey:@"uid"] forKey:@"weibo"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
+            //[[NSNotificationCenter defaultCenter] postNotificationName:USER_INFO_CHANGED object:nil];
             [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-        }else{
+        }else{//未登录则需要，注册用户
             NSMutableDictionary *newUser = [NSMutableDictionary dictionary];
             [newUser setObject:[self.weiboInfo objectForKey:@"uid"] forKey:@"weibo"];
             self.userInfo = newUser;
