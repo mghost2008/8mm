@@ -17,6 +17,8 @@
 @property (strong, nonatomic) MainTabBarControllerViewController *rootTabController;
 //用户信息，包含用户基本信息，和设置信息
 @property (strong, nonatomic) NSMutableDictionary *userInfo;
+//用户头像信息
+@property (strong, nonatomic) UIImage *avata;
 //系统推荐公众号列表
 @property (strong, nonatomic) NSMutableArray *commendArr;
 //用户订阅关系

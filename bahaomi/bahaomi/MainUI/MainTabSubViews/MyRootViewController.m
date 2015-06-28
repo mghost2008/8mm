@@ -7,6 +7,7 @@
 //
 
 #import "MyRootViewController.h"
+#import "AppDelegate.h"
 
 @interface MyRootViewController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem setLeftBarButtonItem:self.avataItem];
     [self.view addSubview:self.mainController.view];
 }
 
@@ -31,6 +33,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIBarButtonItem *)avataItem{
+    if (!_avataItem) {
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        _avataItem = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:delegate.avata]];
+    }
+    return _avataItem;
 }
 
 /*

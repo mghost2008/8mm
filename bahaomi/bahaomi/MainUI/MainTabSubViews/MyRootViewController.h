@@ -12,5 +12,6 @@
 @interface MyRootViewController : UIViewController
 
 @property (strong, nonatomic) MyMainViewController *mainController;
+@property (strong, nonatomic) UIBarButtonItem *avataItem;
 
 @end

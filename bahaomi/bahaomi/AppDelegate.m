@@ -189,10 +189,16 @@
 - (void)setIsLogin:(BOOL)isLogin{
     _isLogin = isLogin;
     if (_isLogin) {
+        //用户登陆，加载默认头像
+        NSURL *avataUrl = [NSURL URLWithString:[self.userInfo objectForKey:@"avata"]];
+        NSData *imageData = [NSData dataWithContentsOfURL:avataUrl];
+        self.avata = [Util imageWithImageSimple:[UIImage imageWithData: imageData] scaledToSize:CGSizeMake(28, 28)];
         [[NSNotificationCenter defaultCenter] postNotificationName:USER_LOGINED object:nil];
         [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }else{
+        //用户退出，删除头像
+        self.avata = nil;
         [[NSNotificationCenter defaultCenter] postNotificationName:USER_LOGOUT object:nil];
         self.userInfo = [NSMutableDictionary dictionary];
         [[NSUserDefaults standardUserDefaults] setObject:self.userInfo forKey:@"USER_INFO"];
@@ -326,6 +332,13 @@
 - (void) showAlertView:(NSNotification*)aNotification{
     NSMutableDictionary *param = [aNotification object];
     [HUD showUIBlockingIndicatorWithText:[param objectForKey:@"subtitle"] withTimeout:2.0];
+}
+
+- (UIImage *)avata{
+    if (!_avata) {
+        _avata = [UIImage imageNamed:@"avata"];
+    }
+    return _avata;
 }
 
 @end

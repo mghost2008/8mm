@@ -11,6 +11,17 @@
 
 @implementation Util
 
+//压缩图片
++ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContext(newSize);
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return newImage;
+}
+
 #pragma mark - 颜色转换 IOS中十六进制的颜色转换为UIColor
 + (UIColor *) colorWithHexString: (NSString *)color
 {

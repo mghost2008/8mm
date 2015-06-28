@@ -22,5 +22,6 @@
 + (UIColor *) colorWithHexString: (NSString *)color;
 + (NSString *) NSDateToString:(NSDate *)date;
 + (NSDate *) NSDateFromString:(NSString *)dateString;
++ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 @end
