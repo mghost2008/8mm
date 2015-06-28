@@ -24,6 +24,7 @@
     }
     [self.addBtn setImage:[UIImage imageNamed:@"addsubimg"] forState:UIControlStateNormal];
     [self.addBtn setImage:[UIImage imageNamed:@"addedimg"] forState:UIControlStateSelected];
+    [self.addBtn setUserInteractionEnabled:NO];
 }
 
 - (void)setSubscribed:(BOOL)status{

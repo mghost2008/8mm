@@ -89,7 +89,7 @@
 }
 
 - (BOOL)isLike{
-    if (self.agreeDic && [self.agreeDic objectForKey:@"id"] > 0 ) {
+    if (self.agreeDic && [[self.agreeDic objectForKey:@"id"] intValue]> 0 ) {
         return YES;
     }
     return NO;
