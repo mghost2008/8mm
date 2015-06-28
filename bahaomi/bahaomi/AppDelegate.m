@@ -39,6 +39,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.rootTabController;
     [self.window makeKeyAndVisible];
+    self.mastToSetting = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(needLogin) name:NEED_LOGIN object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeLoginView) name:CLOSE_LOGINVIEW object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showALAlertBanner:) name:SHOW_BANNER object:nil];
@@ -302,6 +303,7 @@
         NSLog(@"%@", self.userInfo);
         self.isLogin = YES;
         [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
+        //注册用户必须到设置页面
         [self.rootTabController setSelectedIndex:3];
     }fail:^(void){
         

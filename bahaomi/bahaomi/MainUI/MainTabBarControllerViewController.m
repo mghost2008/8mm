@@ -97,6 +97,7 @@
 -  (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (viewController.tabBarItem.tag == 1004 && !delegate.isLogin) {
+        [delegate setMastToSetting:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:NEED_LOGIN object:nil];
         return NO;
     }

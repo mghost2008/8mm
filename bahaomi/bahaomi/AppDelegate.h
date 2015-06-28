@@ -29,6 +29,7 @@
 @property (strong, nonatomic) LoginRootViewController *loginController;
 @property (strong, nonatomic) NSMutableDictionary *weiboInfo;
 @property (strong, nonatomic) NSMutableDictionary *weixinInfo;
+@property BOOL mastToSetting;
 
 @end
 

@@ -46,7 +46,8 @@
                 [appDelegate setIsLogin:YES];
                 [self dismissViewControllerAnimated:NO completion:^(void){
                     [[NSNotificationCenter defaultCenter] postNotificationName:CLOSE_LOGINVIEW object:nil];
-                    if ([appDelegate isLogin]) {
+                    //如果已经登录并且必须回到设置页面
+                    if ([appDelegate isLogin] && [appDelegate mastToSetting]) {
                         [appDelegate.rootTabController setSelectedIndex:3];
                     }
                 }];
