@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BHM_TextField.h"
+#import "NetworkUtil.h"
 #import "Message.h"
 
 @interface FeedbackViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet BHM_TextField *contactTextView;
 @property (weak, nonatomic) IBOutlet UITextView *feedbackTextView;
-- (IBAction)submitBtnClick:(id)sender;
+@property (strong, nonatomic) UIBarButtonItem *submitBtn;
 
 @end
