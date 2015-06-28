@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegTelViewController">
             <connections>
+                <outlet property="password" destination="pD5-BI-ict" id="xjZ-lX-FgZ"/>
                 <outlet property="telNum" destination="4Ym-W2-oeg" id="7m5-98-h3K"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,12 +25,24 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pD5-BI-ict" customClass="BHM_TextField">
+                    <rect key="frame" x="20" y="158" width="290" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dEQ-yr-Auz"/>
+                    </constraints>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4Ym-W2-oeg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1tJ-Mc-RAG"/>
+                <constraint firstItem="pD5-BI-ict" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="79d-Rg-2R0"/>
                 <constraint firstItem="4Ym-W2-oeg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="88w-fd-ihB"/>
                 <constraint firstAttribute="trailing" secondItem="4Ym-W2-oeg" secondAttribute="trailing" constant="10" id="8vT-ll-rb3"/>
+                <constraint firstItem="pD5-BI-ict" firstAttribute="top" secondItem="4Ym-W2-oeg" secondAttribute="bottom" constant="8" id="WOm-GJ-DsQ"/>
+                <constraint firstAttribute="trailing" secondItem="pD5-BI-ict" secondAttribute="trailing" constant="10" id="hM8-i4-x6u"/>
             </constraints>
             <point key="canvasLocation" x="322" y="375"/>
         </view>

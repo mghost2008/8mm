@@ -13,6 +13,7 @@
 @interface RegTelViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet BHM_TextField *telNum;
+@property (weak, nonatomic) IBOutlet BHM_TextField *password;
 @property (strong, nonatomic) RegPwdViewController *pwdController;
 @property (strong, nonatomic) UIBarButtonItem *closeItem;
 @property (strong, nonatomic) UIBarButtonItem *rightBtn;

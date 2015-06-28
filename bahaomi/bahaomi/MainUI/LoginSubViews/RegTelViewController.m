@@ -22,6 +22,8 @@
 - (void)buildLayout{
     [self.telNum setLeftViewMode:UITextFieldViewModeAlways];
     [self.telNum setLeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"telnum"]]];
+    [self.password setLeftViewMode:UITextFieldViewModeAlways];
+    [self.password setLeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"password"]]];
     [self.navigationItem setLeftBarButtonItem:self.closeItem];
     [self.navigationItem setRightBarButtonItem:self.rightBtn];
 }
@@ -29,7 +31,7 @@
 - (RegPwdViewController *)pwdController{
     if (!_pwdController) {
         _pwdController = [[RegPwdViewController alloc] init];
-        [_pwdController setTitle:@"密码"];
+        [_pwdController setTitle:@"验证码"];
     }
     return _pwdController;
 }
@@ -44,11 +46,12 @@
 
 - (void)rightBtnClick:(UIBarButtonItem *)item{
     NSString *telnumber = self.telNum.text;
-    if ([telnumber length] > 0) {
-        [self.pwdController setTelNum:telnumber];
+    NSString *pwd = self.password.text;
+    if ([telnumber length] > 0 && [pwd length] > 0 ) {
+        [self.pwdController setTelNum:telnumber andPwd:pwd];
         [self.navigationController pushViewController:self.pwdController animated:YES];
     }else{
-        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入电话号码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入电话号码和密码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alertview show];
     }
     

@@ -34,8 +34,9 @@
     return _complateBtn;
 }
 
-- (void)setTelNum:(NSString *)telNum{
+- (void)setTelNum:(NSString *)telNum andPwd:(NSString *)pwd{
     _telNum = telNum;
+    _pwd = pwd;
     NSString *vcodeUrl = [NSString stringWithFormat:REG_TEL_REQUEST_VCODE,_telNum];
     [NetworkUtil JSONDataWithUrl:vcodeUrl success:^(id json){
         NSLog(@"---------------短信已经下发");
@@ -45,12 +46,12 @@
 }
 
 - (void)complateBtnClick{
-    NSString *pwd = [self.pwdField text];
-    if (pwd != nil && [pwd length] > 0) {
-        NSString *url = [NSString stringWithFormat:REG_TEL_REQUEST_REG, pwd];
+    NSString *vcode = [self.pwdField text];
+    if (vcode != nil && [vcode length] > 0) {
+        NSString *url = [NSString stringWithFormat:REG_TEL_REQUEST_REG, vcode];
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         [params setObject:self.telNum forKey:@"phoneNum"];
-        [params setObject:pwd forKey:@"password"];
+        [params setObject:self.pwd forKey:@"password"];
         [NetworkUtil postJSONWithUrl:url parameters:params success:^(id responseObject){
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             [appDelegate setUserInfo:responseObject];
@@ -66,7 +67,7 @@
             [alert show];
         }];
     }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入密码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入验证码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }
 }

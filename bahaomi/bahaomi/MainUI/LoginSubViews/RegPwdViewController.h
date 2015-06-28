@@ -15,5 +15,8 @@
 @property (strong, nonatomic) UIBarButtonItem *complateBtn;
 @property (weak, nonatomic) IBOutlet BHM_TextField *pwdField;
 @property (strong, nonatomic) NSString *telNum;
+@property (strong, nonatomic) NSString *pwd;
+
+- (void)setTelNum:(NSString *)telNum andPwd:(NSString *)pwd;
 
 @end
