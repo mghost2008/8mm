@@ -36,6 +36,7 @@
 
 - (void)buildData{
     NSLog(@"%@", self.inofDic);
+    [self getLikeInfo];
     NSURL *url = [NSURL URLWithString:[self.inofDic objectForKey:@"url"]];
     [self.webview loadRequest:[NSURLRequest requestWithURL:url]];
     activity = @[[[WeixinSessionActivity alloc] init], [[WeixinTimelineActivity alloc] init],[[WeiboActivity alloc] init]];
@@ -68,14 +69,26 @@
     return NO;
 }
 
-- (BOOL)isLike{
+- (void) getLikeInfo{
     NSString *agreeUrl = [NSString stringWithFormat:USER_LIKE_INFO,[appDelegate.userInfo objectForKey:@"id"],[self.inofDic objectForKey:@"id"]];
     [NetworkUtil JSONDataWithUrl:agreeUrl success:^(id json){
         self.agreeDic = json;
+        if ([self isLike]) {
+            //设置图片
+            UIBarButtonItem *agreeItem = [self.items objectAtIndex:5];
+            [agreeItem setImage:[UIImage imageNamed:@"agreeedimg"]];
+        }else{
+            //设置图片
+            UIBarButtonItem *agreeItem = [self.items objectAtIndex:5];
+            [agreeItem setImage:[UIImage imageNamed:@"agreeimg"]];
+        }
+        
     }fail:^(void){
         NSLog(@"NETWORK ERROR");
     }];
-    
+}
+
+- (BOOL)isLike{
     if (self.agreeDic && [self.agreeDic objectForKey:@"id"] > 0 ) {
         return YES;
     }
@@ -86,7 +99,8 @@
     if (!_items) {
         UIBarButtonItem *recommendItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"recommendimg"] style:UIBarButtonItemStylePlain target:self action:@selector(recommendItemClick:)];
         UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shareimg"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick:)];
-        UIBarButtonItem *agreeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"agreeimg"] style:UIBarButtonItemStylePlain target:self action:@selector(agreeItemClick:)];
+        NSString *agreeImgStr = [self isLike]?@"agreeedimg":@"agreeimg";
+        UIBarButtonItem *agreeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:agreeImgStr] style:UIBarButtonItemStylePlain target:self action:@selector(agreeItemClick:)];
         NSString *collectImgStr = [self isCollected]?@"collectedimg":@"collectimg";
         UIBarButtonItem *collectItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:collectImgStr] style:UIBarButtonItemStylePlain target:self action:@selector(collectItemClick:)];
         UIBarButtonItem *reportItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reportimg"] style:UIBarButtonItemStylePlain target:self action:@selector(reportItemClick:)];
@@ -200,18 +214,36 @@
             self.agreeDic = responseObject;
             NSMutableDictionary *dic = [NSMutableDictionary dictionary];
             [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+            NSNumber *tempCount =  [self.inofDic objectForKey:@"likeCount"];
+            tempCount = [NSNumber numberWithInt:(tempCount.intValue + 1)];
+            [self.inofDic setObject:tempCount forKey:@"likeCount"];
             NSString *aggreeStr = [NSString stringWithFormat:@"点赞成功，当前已赞%@", [self.inofDic objectForKey:@"likeCount"]];
+            [item setImage:[UIImage imageNamed:@"agreeedimg"]];
             [dic setObject:aggreeStr forKey:@"subtitle"];
             [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
         }fail:^(void){
             NSLog(@"NETWORK ERROR!");
         }];
     }else{
-        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-        [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
-        NSString *aggreeStr = [NSString stringWithFormat:@"已赞过，当前已赞%@", [self.inofDic objectForKey:@"likeCount"]];
-        [dic setObject:aggreeStr forKey:@"subtitle"];
-        [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params setValue:[appDelegate.userInfo objectForKey:@"id"] forKey:@"userId"];
+        [params setValue:[self.inofDic objectForKey:@"id"] forKey:@"articleId"];
+        [params setValue:[self.agreeDic objectForKey:@"id"] forKey:@"id"];
+        [NetworkUtil postJSONWithUrl:USER_CANCEL_LIKE_ARTICLE parameters:params success:^(id responseObject){
+            self.agreeDic = responseObject;
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setObject:[NSNumber numberWithInteger:ALAlertBannerStyleNotify] forKey:@"style"];
+            NSNumber *tempCount =  [self.inofDic objectForKey:@"likeCount"];
+            tempCount = [NSNumber numberWithInt:(tempCount.intValue - 1)];
+            [self.inofDic setObject:tempCount forKey:@"likeCount"];
+            NSString *aggreeStr = [NSString stringWithFormat:@"已取消点赞，当前已赞%@", [self.inofDic objectForKey:@"likeCount"]];
+            [item setImage:[UIImage imageNamed:@"agreeimg"]];
+            self.agreeDic = nil;
+            [dic setObject:aggreeStr forKey:@"subtitle"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SHOW_HUD object:dic];
+        }fail:^(void){
+            NSLog(@"NETWORK ERROR!");
+        }];
     }
 }
 

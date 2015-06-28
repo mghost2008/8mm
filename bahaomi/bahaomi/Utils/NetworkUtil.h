@@ -51,6 +51,8 @@
 #define FIND_COMMENTS_BY_ARTICLE @""BASEURL"/comment/findById/%@"
 //报名活动接口
 #define SIGN_UP_EVENT @""BASEURL""
+//用户提交反馈
+#define FEED_BACK_CREATE @""BASEURL"/feedback/create"
 
 
 @interface NetworkUtil : NSObject
