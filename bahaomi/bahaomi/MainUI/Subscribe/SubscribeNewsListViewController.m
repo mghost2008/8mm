@@ -22,6 +22,7 @@
 
 - (void)buildLayout{
     [self.view setFrame:CGRectMake(0, 108, self.view.frame.size.width, self.view.frame.size.height-140)];
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
 }
 
 /**
@@ -163,7 +164,9 @@
         [temparr addObjectsFromArray:[responseJson objectForKey:@"content"]];
         [temparr addObjectsFromArray:self.infoArr];
         self.infoArr = temparr;
-        self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        if (self.infoArr && [self.infoArr count] > 0) {
+            self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        }
         if (self.infoArr.count == 0 ) {
             self.lastDate = self.curDate;
         }else{
@@ -187,7 +190,9 @@
         [temparr addObjectsFromArray:[responseJson objectForKey:@"content"]];
         [temparr addObjectsFromArray:self.infoArr];
         self.infoArr = temparr;
-        self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        if (self.infoArr && [self.infoArr count] > 0) {
+            self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        }
         if (self.infoArr.count == 0 ) {
             self.lastDate = self.curDate;
         }else{
@@ -208,7 +213,9 @@
     [NetworkUtil JSONDataWithUrl:url success:^(id json){
         NSDictionary *responseJson = json;
         [self.infoArr addObjectsFromArray:[responseJson objectForKey:@"content"]];
-        self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        if (self.infoArr && [self.infoArr count] > 0) {
+            self.curDate = [Util NSDateFromString:[[self.infoArr objectAtIndex:0] objectForKey:@"pubDate"]];
+        }
         if (self.infoArr.count == 0 ) {
             self.lastDate = self.curDate;
         }else{
