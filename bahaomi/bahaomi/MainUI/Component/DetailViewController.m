@@ -70,6 +70,9 @@
 }
 
 - (void) getLikeInfo{
+    if (![self isLogined]) {
+        return;
+    }
     NSString *agreeUrl = [NSString stringWithFormat:USER_LIKE_INFO,[appDelegate.userInfo objectForKey:@"id"],[self.inofDic objectForKey:@"id"]];
     [NetworkUtil JSONDataWithUrl:agreeUrl success:^(id json){
         self.agreeDic = json;
@@ -105,7 +108,12 @@
         UIBarButtonItem *collectItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:collectImgStr] style:UIBarButtonItemStylePlain target:self action:@selector(collectItemClick:)];
         UIBarButtonItem *reportItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reportimg"] style:UIBarButtonItemStylePlain target:self action:@selector(reportItemClick:)];
         UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-        _items = [NSArray arrayWithObjects:spaceItem, recommendItem, spaceItem, shareItem, spaceItem, agreeItem, spaceItem, collectItem, spaceItem, reportItem, spaceItem, nil];
+        if (self.isDynamic) {
+            _items = [NSArray arrayWithObjects:spaceItem, recommendItem, spaceItem, shareItem, spaceItem, agreeItem, spaceItem, reportItem, spaceItem, nil];
+        }else{
+            _items = [NSArray arrayWithObjects:spaceItem, recommendItem, spaceItem, shareItem, spaceItem, agreeItem, spaceItem, collectItem, spaceItem, reportItem, spaceItem, nil];
+        }
+       
     }
     return _items;
 }

@@ -28,5 +28,6 @@
 @property (nonatomic, strong) UIBarButtonItem *backItem;
 @property (nonatomic, strong) ReportViewController *reportController;
 @property (nonatomic, strong) CommentViewController *commentController;
+@property BOOL isDynamic;
 
 @end
