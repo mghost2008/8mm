@@ -37,7 +37,8 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.rootTabController;
+//    self.window.rootViewController = self.rootTabController;
+    self.window.rootViewController = self.rootNavController;
     [self.window makeKeyAndVisible];
     self.mastToSetting = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(needLogin) name:NEED_LOGIN object:nil];
@@ -129,6 +130,13 @@
     return _rootTabController;
 }
 
+- (UINavigationController *)rootNavController{
+    if (!_rootNavController) {
+        _rootNavController = [[UINavigationController alloc] initWithRootViewController:self.rootTabController];
+    }
+    return _rootNavController;
+}
+
 - (LoginRootViewController *)loginController{
     if (!_loginController) {
         _loginController = [[LoginRootViewController alloc] init];
@@ -137,20 +145,26 @@
 }
 
 - (void)needLogin{
-    NSLog(@"%f    %f    %f    %f", self.loginController.view.frame.origin.x, self.loginController.view.frame.origin.y, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height);
-    [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
-    [self.window.rootViewController.view addSubview:self.loginController.view];
-    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear  animations:^{
-        [self.loginController.view setFrame:CGRectMake(0, 0, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
-    } completion:^(BOOL finish){}];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.5f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    transition.delegate = self;
+    [self.rootNavController.view.layer addAnimation:transition forKey:nil];
+    [self.rootNavController pushViewController:self.loginController animated:NO];
 }
 
 - (void)closeLoginView{
-    [UIView animateKeyframesWithDuration:0.3f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
-        [self.loginController.view setFrame:CGRectMake(0, self.window.frame.size.height, self.loginController.view.frame.size.width, self.loginController.view.frame.size.height)];
-    } completion:^(BOOL finish){
-        [self.loginController.view removeFromSuperview];
-    }];
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.5f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
+    transition.delegate = self;
+    [self.rootTabController.view.layer addAnimation:transition forKey:nil];
+    [self.rootNavController popToViewController:self.rootTabController animated:NO];
 }
 
 //用户信息改变
