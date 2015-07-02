@@ -187,6 +187,7 @@
     else
         dic = [NSMutableDictionary dictionaryWithDictionary:[((SmallCell *)cell) infoDic]];
     [detailCtl setInofDic:dic];
+    [detailCtl setIsDynamic:YES];
     [detailCtl setHidesBottomBarWhenPushed:YES];
     [self.navController pushViewController:detailCtl animated:YES];
 }
